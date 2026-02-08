@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Primary palette: vibrant purple-blue -->
+    <color name="primary">#6C63FF</color>
+    <color name="primaryDark">#5A52D5</color>
+    <color name="primaryLight">#B8B5FF</color>
+    <color name="onPrimary">#FFFFFF</color>
+
+    <!-- Secondary: warm coral pink -->
+    <color name="secondary">#FF6584</color>
+    <color name="secondaryDark">#E04E6A</color>
+    <color name="onSecondary">#FFFFFF</color>
+
+    <!-- Surfaces -->
+    <color name="background">#F5F5FA</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surfaceVariant">#EEEDF5</color>
+
+    <!-- Text -->
+    <color name="textPrimary">#1A1A2E</color>
+    <color name="textSecondary">#6B6B8D</color>
+    <color name="textOnDark">#FFFFFF</color>
+    <color name="textOnDarkSecondary">#D0CEF5</color>
+
+    <!-- Header gradient -->
+    <color name="gradientStart">#6C63FF</color>
+    <color name="gradientEnd">#B86CFF</color>
+
+    <!-- Accent greens for success states -->
+    <color name="success">#4CD964</color>
+    <color name="warning">#FFB74D</color>
+    <color name="error">#FF5252</color>
+</resources>

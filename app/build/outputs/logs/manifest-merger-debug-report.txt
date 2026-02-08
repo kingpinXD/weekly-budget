@@ -1,0 +1,659 @@
+-- Merging decision tree log ---
+manifest
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-60:12
+INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-60:12
+MERGED from [com.google.android.material:material:1.11.0] /Users/tanmay/.gradle/caches/transforms-3/936694d50863bb2b2ce359d10412e2cf/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tanmay/.gradle/caches/transforms-3/c0d8a11f186f150bd63e210ac264ed65/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/tanmay/.gradle/caches/transforms-3/2fe93699af3d53d7d8168fbca95cfaaa/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/tanmay/.gradle/caches/transforms-3/b9b8555a230de4ffa219ed0f7079a956/transformed/appcompat-1.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:17:1-40:12
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /Users/tanmay/.gradle/caches/transforms-3/30c7805450e64fa0ecaa76dea14996f6/transformed/recyclerview-1.3.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /Users/tanmay/.gradle/caches/transforms-3/d035ae25ec382ce301f593074909d4b3/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:2:1-17:12
+MERGED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:17:1-75:12
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/tanmay/.gradle/caches/transforms-3/cad859837a25be59a1734a7610380fd2/transformed/play-services-auth-api-phone-18.0.1/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/tanmay/.gradle/caches/transforms-3/d3586629e41d76bc629f677f5287631b/transformed/play-services-auth-base-18.0.4/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/tanmay/.gradle/caches/transforms-3/8e0d34c3795099a6169111fce1bc3855/transformed/play-services-fido-20.0.1/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:15:1-38:12
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:2:1-18:12
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/tanmay/.gradle/caches/transforms-3/4c3bfb77179ad96ac9e68b5f45ca9101/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:2:1-10:12
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:15:1-41:12
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/tanmay/.gradle/caches/transforms-3/0d9d1ff9789998872aae8ff12a51c559/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:15:1-23:12
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/tanmay/.gradle/caches/transforms-3/96aa435fd48a3773f96544c2cd54adb9/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:2:1-9:12
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:16:1-24:12
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:2:1-11:12
+MERGED from [com.google.android.play:integrity:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/23778a09e1e7586ccfdfa352617f8042/transformed/integrity-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:17:1-31:12
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/363bc5aab80c5460541bd3e788ed804f/transformed/room-ktx-2.6.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/4461f443d128a3823ea53e5c8753abde/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/0caed84b8769990475a2c8bb7f4bdb5b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/107a0f1a687596097577f5454f451927/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/61141538bf2bd08d28a9c73414262d7d/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.transition:transition:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/5834003ba8191cc71dcfa086aa5b8cb4/transformed/transition-1.2.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/173c471dbe93783c2ca6dd13d3ff44cd/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/27419e3fd60d4c10dca36a1d6820cb1c/transformed/vectordrawable-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/d9f40ca1f3063d0f768c3feedfedf77d/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.loader:loader:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/6e689e9d59d37de1d49621cedd23a603/transformed/loader-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1f54ab747e651c82bf979517dd920d38/transformed/viewpager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.customview:customview:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/26e928ddec93ad97c29cd98789b3b37a/transformed/customview-1.1.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.browser:browser:1.4.0] /Users/tanmay/.gradle/caches/transforms-3/ba1de936392ab12de0add76d1b212402/transformed/browser-1.4.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:17:1-30:12
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/tanmay/.gradle/caches/transforms-3/3b09e716421d6d10d7b84f15784b125c/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/tanmay/.gradle/caches/transforms-3/6304d7d562192ab11f15ba006646c216/transformed/savedstate-1.2.1/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/1a636b47896bf6b49075485a7f71b6d3/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/4414b07e3dfaeb17a2c6ce467efa8c38/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:17:1-35:12
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/98b8c4fcb009422da485c00c7180ae60/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/b79fcd5ba6e190491741fe6b437faa14/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/aa524b358c50cf14a565ed85e6b7bc0a/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/8e0cff95c13aa30d6ab12453fce43e41/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/1aade9fced5e144bc4e5484fd750bddc/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/b22167845198289202b72ef686d3f92a/transformed/lifecycle-livedata-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/6671a3ed97a47578fda2192ef1a08277/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:2:1-7:12
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/tanmay/.gradle/caches/transforms-3/4ebd8a656ccd6670c7191a3afc1a1f94/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:2:1-6:12
+MERGED from [com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:16:1-26:12
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/tanmay/.gradle/caches/transforms-3/b34e43a7cb2882c422b6e7a72abfc1ef/transformed/fragment-1.3.6/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.activity:activity:1.8.2] /Users/tanmay/.gradle/caches/transforms-3/d6fa020f8084808188cbd681ea03cea0/transformed/activity-1.8.2/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/tanmay/.gradle/caches/transforms-3/6ddc1e192715e7d7faa21433a797a194/transformed/activity-ktx-1.8.2/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1a2a01dc18724b83b21c86837e2536ac/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:17:1-23:12
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3af9776871238c7cee7b8f53f81b2475/transformed/core-ktx-1.12.0/AndroidManifest.xml:2:1-7:12
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/tanmay/.gradle/caches/transforms-3/5bebd448b3bc259a812795fabb6bb6cb/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/tanmay/.gradle/caches/transforms-3/e658b55bddc799321c486010ba486b5e/transformed/sqlite-2.4.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/680a99a05927613b1a88faa1ce131541/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1ea3d259f4a0db4f72582a3cd207993c/transformed/cursoradapter-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/25806bffd90f040f6ffddaf37a6a93f4/transformed/cardview-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/tanmay/.gradle/caches/transforms-3/eaed9f840fd7e3d8f9b4b857a3c8934c/transformed/core-runtime-2.2.0/AndroidManifest.xml:17:1-22:12
+MERGED from [com.google.firebase:firebase-components:17.1.5] /Users/tanmay/.gradle/caches/transforms-3/ad05197a48229eb205205fa1a82819cc/transformed/firebase-components-17.1.5/AndroidManifest.xml:15:1-20:12
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/0d244c83bcf2063b7c90f2cd40303154/transformed/interpolator-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/92c07afbc1761ecef7e6e28d977acda1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:17:1-27:12
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:17:1-55:12
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/9e3cb24a12458109a6068691f4cc859e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:17:1-33:12
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1182202695a3a0eefd3d139a2b7171e9/transformed/tracing-1.0.0/AndroidManifest.xml:17:1-24:12
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/a41e1aeb8989c784b20e9c026321a3cc/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/51facf24c1c64fc96b615f301a8c2316/transformed/documentfile-1.0.0/AndroidManifest.xml:17:1-22:12
+MERGED from [androidx.print:print:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/8c3cc23a790ce981a2bd2e3a44c9706a/transformed/print-1.0.0/AndroidManifest.xml:17:1-22:12
+	package
+		INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml
+	android:versionName
+		INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml
+	android:versionCode
+		INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml
+	xmlns:android
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:11-69
+uses-permission#android.permission.RECEIVE_SMS
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:4:5-70
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:4:22-67
+uses-permission#android.permission.READ_SMS
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:5:5-67
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:5:22-64
+application
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:7:5-58:19
+INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:7:5-58:19
+MERGED from [com.google.android.material:material:1.11.0] /Users/tanmay/.gradle/caches/transforms-3/936694d50863bb2b2ce359d10412e2cf/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [com.google.android.material:material:1.11.0] /Users/tanmay/.gradle/caches/transforms-3/936694d50863bb2b2ce359d10412e2cf/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tanmay/.gradle/caches/transforms-3/c0d8a11f186f150bd63e210ac264ed65/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tanmay/.gradle/caches/transforms-3/c0d8a11f186f150bd63e210ac264ed65/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:22:5-38:19
+MERGED from [com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:7:5-15:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:28:5-73:19
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/tanmay/.gradle/caches/transforms-3/8e0d34c3795099a6169111fce1bc3855/transformed/play-services-fido-20.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/tanmay/.gradle/caches/transforms-3/8e0d34c3795099a6169111fce1bc3855/transformed/play-services-fido-20.0.1/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:25:5-36:19
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:25:5-36:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:8:5-16:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/tanmay/.gradle/caches/transforms-3/4c3bfb77179ad96ac9e68b5f45ca9101/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/tanmay/.gradle/caches/transforms-3/4c3bfb77179ad96ac9e68b5f45ca9101/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:7:5-8:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:22:5-39:19
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/tanmay/.gradle/caches/transforms-3/0d9d1ff9789998872aae8ff12a51c559/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:21:5-20
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/tanmay/.gradle/caches/transforms-3/0d9d1ff9789998872aae8ff12a51c559/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:21:5-20
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:19:5-23:19
+MERGED from [com.google.android.play:integrity:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/23778a09e1e7586ccfdfa352617f8042/transformed/integrity-1.2.0/AndroidManifest.xml:5:5-6:19
+MERGED from [com.google.android.play:integrity:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/23778a09e1e7586ccfdfa352617f8042/transformed/integrity-1.2.0/AndroidManifest.xml:5:5-6:19
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:23:5-29:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:28:5-89
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:23:5-33:19
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/tanmay/.gradle/caches/transforms-3/4ebd8a656ccd6670c7191a3afc1a1f94/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/tanmay/.gradle/caches/transforms-3/4ebd8a656ccd6670c7191a3afc1a1f94/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:5:5-20
+MERGED from [com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:20:5-24:19
+MERGED from [com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:20:5-24:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/92c07afbc1761ecef7e6e28d977acda1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/92c07afbc1761ecef7e6e28d977acda1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:24:5-25:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:23:5-53:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/9e3cb24a12458109a6068691f4cc859e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/9e3cb24a12458109a6068691f4cc859e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:25:5-31:19
+	android:extractNativeLibs
+		INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml
+	android:appComponentFactory
+		ADDED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+	android:label
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:10:9-41
+	android:allowBackup
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:9:9-35
+	android:theme
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:11:9-76
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:8:9-40
+activity#com.example.weeklytotals.LoginActivity
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:13:9-20:20
+	android:exported
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:15:13-36
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:14:13-42
+intent-filter#action:name:android.intent.action.MAIN+category:name:android.intent.category.LAUNCHER
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:16:13-19:29
+action#android.intent.action.MAIN
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:17:17-69
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:17:25-66
+category#android.intent.category.LAUNCHER
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:18:17-77
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:18:27-74
+activity#com.example.weeklytotals.MainActivity
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:22:9-24:40
+	android:exported
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:24:13-37
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:23:13-41
+activity#com.example.weeklytotals.BudgetSetupActivity
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:26:9-28:40
+	android:exported
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:28:13-37
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:27:13-48
+activity#com.example.weeklytotals.SettingsActivity
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:30:9-32:40
+	android:exported
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:32:13-37
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:31:13-45
+activity#com.example.weeklytotals.HistoryActivity
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:34:9-36:40
+	android:exported
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:36:13-37
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:35:13-44
+activity#com.example.weeklytotals.ManageCategoriesActivity
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:38:9-40:40
+	android:exported
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:40:13-37
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:39:13-53
+activity#com.example.weeklytotals.TransactionPromptActivity
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:42:9-47:39
+	android:excludeFromRecents
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:46:13-46
+	android:exported
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:44:13-37
+	android:theme
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:45:13-73
+	android:taskAffinity
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:47:13-36
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:43:13-54
+receiver#com.example.weeklytotals.sms.SmsBroadcastReceiver
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:49:9-56:20
+	android:exported
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:51:13-36
+	android:permission
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:52:13-66
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:50:13-53
+intent-filter#action:name:android.provider.Telephony.SMS_RECEIVED
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:53:13-55:29
+	android:priority
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:53:28-50
+action#android.provider.Telephony.SMS_RECEIVED
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:54:17-82
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:54:25-79
+uses-sdk
+INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
+INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml
+INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml
+MERGED from [com.google.android.material:material:1.11.0] /Users/tanmay/.gradle/caches/transforms-3/936694d50863bb2b2ce359d10412e2cf/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.material:material:1.11.0] /Users/tanmay/.gradle/caches/transforms-3/936694d50863bb2b2ce359d10412e2cf/transformed/material-1.11.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tanmay/.gradle/caches/transforms-3/c0d8a11f186f150bd63e210ac264ed65/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tanmay/.gradle/caches/transforms-3/c0d8a11f186f150bd63e210ac264ed65/transformed/constraintlayout-2.1.4/AndroidManifest.xml:5:5-7:41
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/tanmay/.gradle/caches/transforms-3/2fe93699af3d53d7d8168fbca95cfaaa/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/tanmay/.gradle/caches/transforms-3/2fe93699af3d53d7d8168fbca95cfaaa/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/tanmay/.gradle/caches/transforms-3/b9b8555a230de4ffa219ed0f7079a956/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.appcompat:appcompat:1.6.1] /Users/tanmay/.gradle/caches/transforms-3/b9b8555a230de4ffa219ed0f7079a956/transformed/appcompat-1.6.1/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /Users/tanmay/.gradle/caches/transforms-3/30c7805450e64fa0ecaa76dea14996f6/transformed/recyclerview-1.3.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.recyclerview:recyclerview:1.3.2] /Users/tanmay/.gradle/caches/transforms-3/30c7805450e64fa0ecaa76dea14996f6/transformed/recyclerview-1.3.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /Users/tanmay/.gradle/caches/transforms-3/d035ae25ec382ce301f593074909d4b3/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:5:5-44
+MERGED from [androidx.viewpager2:viewpager2:1.1.0-beta02] /Users/tanmay/.gradle/caches/transforms-3/d035ae25ec382ce301f593074909d4b3/transformed/viewpager2-1.1.0-beta02/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:21:5-23:64
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/tanmay/.gradle/caches/transforms-3/cad859837a25be59a1734a7610380fd2/transformed/play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-api-phone:18.0.1] /Users/tanmay/.gradle/caches/transforms-3/cad859837a25be59a1734a7610380fd2/transformed/play-services-auth-api-phone-18.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/tanmay/.gradle/caches/transforms-3/d3586629e41d76bc629f677f5287631b/transformed/play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-auth-base:18.0.4] /Users/tanmay/.gradle/caches/transforms-3/d3586629e41d76bc629f677f5287631b/transformed/play-services-auth-base-18.0.4/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/tanmay/.gradle/caches/transforms-3/8e0d34c3795099a6169111fce1bc3855/transformed/play-services-fido-20.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-fido:20.0.1] /Users/tanmay/.gradle/caches/transforms-3/8e0d34c3795099a6169111fce1bc3855/transformed/play-services-fido-20.0.1/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/tanmay/.gradle/caches/transforms-3/4c3bfb77179ad96ac9e68b5f45ca9101/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-auth-interop:20.0.0] /Users/tanmay/.gradle/caches/transforms-3/4c3bfb77179ad96ac9e68b5f45ca9101/transformed/firebase-auth-interop-20.0.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:19:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/tanmay/.gradle/caches/transforms-3/0d9d1ff9789998872aae8ff12a51c559/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-appcheck-interop:17.1.0] /Users/tanmay/.gradle/caches/transforms-3/0d9d1ff9789998872aae8ff12a51c559/transformed/firebase-appcheck-interop-17.1.0/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/tanmay/.gradle/caches/transforms-3/96aa435fd48a3773f96544c2cd54adb9/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.firebase:firebase-database-collection:18.0.1] /Users/tanmay/.gradle/caches/transforms-3/96aa435fd48a3773f96544c2cd54adb9/transformed/firebase-database-collection-18.0.1/AndroidManifest.xml:5:5-7:41
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/23778a09e1e7586ccfdfa352617f8042/transformed/integrity-1.2.0/AndroidManifest.xml:4:5-44
+MERGED from [com.google.android.play:integrity:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/23778a09e1e7586ccfdfa352617f8042/transformed/integrity-1.2.0/AndroidManifest.xml:4:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:21:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/363bc5aab80c5460541bd3e788ed804f/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.room:room-ktx:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/363bc5aab80c5460541bd3e788ed804f/transformed/room-ktx-2.6.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/4461f443d128a3823ea53e5c8753abde/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2-views-helper:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/4461f443d128a3823ea53e5c8753abde/transformed/emoji2-views-helper-1.2.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/0caed84b8769990475a2c8bb7f4bdb5b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.drawerlayout:drawerlayout:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/0caed84b8769990475a2c8bb7f4bdb5b/transformed/drawerlayout-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/107a0f1a687596097577f5454f451927/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.coordinatorlayout:coordinatorlayout:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/107a0f1a687596097577f5454f451927/transformed/coordinatorlayout-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/61141538bf2bd08d28a9c73414262d7d/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.dynamicanimation:dynamicanimation:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/61141538bf2bd08d28a9c73414262d7d/transformed/dynamicanimation-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.transition:transition:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/5834003ba8191cc71dcfa086aa5b8cb4/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.transition:transition:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/5834003ba8191cc71dcfa086aa5b8cb4/transformed/transition-1.2.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/173c471dbe93783c2ca6dd13d3ff44cd/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable-animated:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/173c471dbe93783c2ca6dd13d3ff44cd/transformed/vectordrawable-animated-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/27419e3fd60d4c10dca36a1d6820cb1c/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.vectordrawable:vectordrawable:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/27419e3fd60d4c10dca36a1d6820cb1c/transformed/vectordrawable-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/d9f40ca1f3063d0f768c3feedfedf77d/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.legacy:legacy-support-core-utils:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/d9f40ca1f3063d0f768c3feedfedf77d/transformed/legacy-support-core-utils-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/6e689e9d59d37de1d49621cedd23a603/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.loader:loader:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/6e689e9d59d37de1d49621cedd23a603/transformed/loader-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1f54ab747e651c82bf979517dd920d38/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.viewpager:viewpager:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1f54ab747e651c82bf979517dd920d38/transformed/viewpager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.customview:customview:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/26e928ddec93ad97c29cd98789b3b37a/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.customview:customview:1.1.0] /Users/tanmay/.gradle/caches/transforms-3/26e928ddec93ad97c29cd98789b3b37a/transformed/customview-1.1.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/tanmay/.gradle/caches/transforms-3/ba1de936392ab12de0add76d1b212402/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.browser:browser:1.4.0] /Users/tanmay/.gradle/caches/transforms-3/ba1de936392ab12de0add76d1b212402/transformed/browser-1.4.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/tanmay/.gradle/caches/transforms-3/3b09e716421d6d10d7b84f15784b125c/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate-ktx:1.2.1] /Users/tanmay/.gradle/caches/transforms-3/3b09e716421d6d10d7b84f15784b125c/transformed/savedstate-ktx-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/tanmay/.gradle/caches/transforms-3/6304d7d562192ab11f15ba006646c216/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.savedstate:savedstate:1.2.1] /Users/tanmay/.gradle/caches/transforms-3/6304d7d562192ab11f15ba006646c216/transformed/savedstate-1.2.1/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/1a636b47896bf6b49075485a7f71b6d3/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-savedstate:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/1a636b47896bf6b49075485a7f71b6d3/transformed/lifecycle-viewmodel-savedstate-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/4414b07e3dfaeb17a2c6ce467efa8c38/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/4414b07e3dfaeb17a2c6ce467efa8c38/transformed/lifecycle-livedata-core-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/98b8c4fcb009422da485c00c7180ae60/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/98b8c4fcb009422da485c00c7180ae60/transformed/lifecycle-runtime-ktx-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/b79fcd5ba6e190491741fe6b437faa14/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-core-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/b79fcd5ba6e190491741fe6b437faa14/transformed/lifecycle-livedata-core-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/aa524b358c50cf14a565ed85e6b7bc0a/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/aa524b358c50cf14a565ed85e6b7bc0a/transformed/lifecycle-livedata-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/8e0cff95c13aa30d6ab12453fce43e41/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-runtime:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/8e0cff95c13aa30d6ab12453fce43e41/transformed/lifecycle-runtime-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/1aade9fced5e144bc4e5484fd750bddc/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/1aade9fced5e144bc4e5484fd750bddc/transformed/lifecycle-viewmodel-2.7.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/b22167845198289202b72ef686d3f92a/transformed/lifecycle-livedata-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-livedata-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/b22167845198289202b72ef686d3f92a/transformed/lifecycle-livedata-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/6671a3ed97a47578fda2192ef1a08277/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.lifecycle:lifecycle-viewmodel-ktx:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/6671a3ed97a47578fda2192ef1a08277/transformed/lifecycle-viewmodel-ktx-2.7.0/AndroidManifest.xml:5:5-44
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/tanmay/.gradle/caches/transforms-3/4ebd8a656ccd6670c7191a3afc1a1f94/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-tasks:18.0.2] /Users/tanmay/.gradle/caches/transforms-3/4ebd8a656ccd6670c7191a3afc1a1f94/transformed/play-services-tasks-18.0.2/AndroidManifest.xml:4:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:18:5-43
+MERGED from [com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:18:5-43
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/tanmay/.gradle/caches/transforms-3/b34e43a7cb2882c422b6e7a72abfc1ef/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.fragment:fragment:1.3.6] /Users/tanmay/.gradle/caches/transforms-3/b34e43a7cb2882c422b6e7a72abfc1ef/transformed/fragment-1.3.6/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.activity:activity:1.8.2] /Users/tanmay/.gradle/caches/transforms-3/d6fa020f8084808188cbd681ea03cea0/transformed/activity-1.8.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity:1.8.2] /Users/tanmay/.gradle/caches/transforms-3/d6fa020f8084808188cbd681ea03cea0/transformed/activity-1.8.2/AndroidManifest.xml:20:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/tanmay/.gradle/caches/transforms-3/6ddc1e192715e7d7faa21433a797a194/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.activity:activity-ktx:1.8.2] /Users/tanmay/.gradle/caches/transforms-3/6ddc1e192715e7d7faa21433a797a194/transformed/activity-ktx-1.8.2/AndroidManifest.xml:5:5-44
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1a2a01dc18724b83b21c86837e2536ac/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.customview:customview-poolingcontainer:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1a2a01dc18724b83b21c86837e2536ac/transformed/customview-poolingcontainer-1.0.0/AndroidManifest.xml:20:5-21:38
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3af9776871238c7cee7b8f53f81b2475/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.core:core-ktx:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3af9776871238c7cee7b8f53f81b2475/transformed/core-ktx-1.12.0/AndroidManifest.xml:5:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/tanmay/.gradle/caches/transforms-3/5bebd448b3bc259a812795fabb6bb6cb/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite-framework:2.4.0] /Users/tanmay/.gradle/caches/transforms-3/5bebd448b3bc259a812795fabb6bb6cb/transformed/sqlite-framework-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/tanmay/.gradle/caches/transforms-3/e658b55bddc799321c486010ba486b5e/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.sqlite:sqlite:2.4.0] /Users/tanmay/.gradle/caches/transforms-3/e658b55bddc799321c486010ba486b5e/transformed/sqlite-2.4.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/680a99a05927613b1a88faa1ce131541/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.annotation:annotation-experimental:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/680a99a05927613b1a88faa1ce131541/transformed/annotation-experimental-1.3.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1ea3d259f4a0db4f72582a3cd207993c/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cursoradapter:cursoradapter:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1ea3d259f4a0db4f72582a3cd207993c/transformed/cursoradapter-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/25806bffd90f040f6ffddaf37a6a93f4/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.cardview:cardview:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/25806bffd90f040f6ffddaf37a6a93f4/transformed/cardview-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/tanmay/.gradle/caches/transforms-3/eaed9f840fd7e3d8f9b4b857a3c8934c/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.arch.core:core-runtime:2.2.0] /Users/tanmay/.gradle/caches/transforms-3/eaed9f840fd7e3d8f9b4b857a3c8934c/transformed/core-runtime-2.2.0/AndroidManifest.xml:20:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.5] /Users/tanmay/.gradle/caches/transforms-3/ad05197a48229eb205205fa1a82819cc/transformed/firebase-components-17.1.5/AndroidManifest.xml:18:5-44
+MERGED from [com.google.firebase:firebase-components:17.1.5] /Users/tanmay/.gradle/caches/transforms-3/ad05197a48229eb205205fa1a82819cc/transformed/firebase-components-17.1.5/AndroidManifest.xml:18:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/0d244c83bcf2063b7c90f2cd40303154/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.interpolator:interpolator:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/0d244c83bcf2063b7c90f2cd40303154/transformed/interpolator-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/92c07afbc1761ecef7e6e28d977acda1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.versionedparcelable:versionedparcelable:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/92c07afbc1761ecef7e6e28d977acda1/transformed/versionedparcelable-1.1.1/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:21:5-44
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/9e3cb24a12458109a6068691f4cc859e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/9e3cb24a12458109a6068691f4cc859e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:21:5-23:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1182202695a3a0eefd3d139a2b7171e9/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.tracing:tracing:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/1182202695a3a0eefd3d139a2b7171e9/transformed/tracing-1.0.0/AndroidManifest.xml:20:5-22:41
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/a41e1aeb8989c784b20e9c026321a3cc/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.localbroadcastmanager:localbroadcastmanager:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/a41e1aeb8989c784b20e9c026321a3cc/transformed/localbroadcastmanager-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/51facf24c1c64fc96b615f301a8c2316/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.documentfile:documentfile:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/51facf24c1c64fc96b615f301a8c2316/transformed/documentfile-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/8c3cc23a790ce981a2bd2e3a44c9706a/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+MERGED from [androidx.print:print:1.0.0] /Users/tanmay/.gradle/caches/transforms-3/8c3cc23a790ce981a2bd2e3a44c9706a/transformed/print-1.0.0/AndroidManifest.xml:20:5-44
+	tools:overrideLibrary
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:23:9-61
+	android:targetSdkVersion
+		INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml
+	android:minSdkVersion
+		INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml
+activity#com.google.android.gms.auth.api.signin.internal.SignInHubActivity
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
+	android:excludeFromRecents
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
+	android:theme
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
+service#com.google.android.gms.auth.api.signin.RevocationBoundService
+ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
+	android:exported
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
+	android:visibleToInstantApps
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
+	android:permission
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
+	android:name
+		ADDED from [com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
+service#com.google.firebase.components.ComponentDiscoveryService
+ADDED from [com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:8:9-14:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:66:9-72:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:26:9-35:19
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:26:9-35:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:9:9-15:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:30:9-38:19
+MERGED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:30:9-38:19
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:10:13-37
+	tools:targetApi
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:34:13-32
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:32:13-43
+	android:name
+		ADDED from [com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:9:13-84
+meta-data#com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar
+ADDED from [com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:11:13-13:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:13:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:12:17-119
+uses-permission#android.permission.INTERNET
+ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:25:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:23:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:7:5-67
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:7:5-67
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:25:22-64
+uses-permission#android.permission.ACCESS_NETWORK_STATE
+ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:26:5-79
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:22:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:8:5-79
+MERGED from [com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:8:5-79
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:26:22-76
+activity#com.google.firebase.auth.internal.GenericIdpActivity
+ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:29:9-46:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:31:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:33:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:32:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:34:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:30:13-80
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:genericidp
+ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:35:13-45:29
+action#android.intent.action.VIEW
+ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:17-69
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:25-66
+category#android.intent.category.DEFAULT
+ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:17-76
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:27-73
+category#android.intent.category.BROWSABLE
+ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:17-78
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:27-75
+data
+ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:41:17-44:51
+	android:path
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:43:21-37
+	android:host
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:42:21-49
+	android:scheme
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:44:21-48
+activity#com.google.firebase.auth.internal.RecaptchaActivity
+ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:47:9-64:20
+	android:excludeFromRecents
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:49:13-46
+	android:launchMode
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:51:13-44
+	android:exported
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:50:13-36
+	android:theme
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:52:13-72
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:48:13-79
+intent-filter#action:name:android.intent.action.VIEW+category:name:android.intent.category.BROWSABLE+category:name:android.intent.category.DEFAULT+data:host:firebase.auth+data:path:/+data:scheme:recaptcha
+ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:53:13-63:29
+meta-data#com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar
+ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:69:13-71:85
+	android:value
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:71:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:70:17-109
+meta-data#com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseLegacyRegistrar
+ADDED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:13:17-127
+meta-data#com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar
+ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:29:13-31:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:31:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:30:17-120
+meta-data#com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar
+ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:32:13-34:85
+	android:value
+		ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:34:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:33:17-109
+meta-data#com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar
+ADDED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:12:13-14:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:14:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:13:17-116
+provider#com.google.firebase.provider.FirebaseInitProvider
+ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
+	android:authorities
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:25:13-72
+	android:exported
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:27:13-37
+	android:directBootAware
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:26:13-43
+	android:initOrder
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:28:13-36
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:24:13-77
+meta-data#com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar
+ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:35:13-37:85
+	android:value
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:37:17-82
+	android:name
+		ADDED from [com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:36:17-109
+activity#com.google.android.gms.common.api.GoogleApiActivity
+ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+	android:exported
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+	android:theme
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+	android:name
+		ADDED from [com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+uses-permission#com.google.android.providers.gsf.permission.READ_GSERVICES
+ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:9:5-98
+	android:name
+		ADDED from [com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:9:22-95
+service#androidx.room.MultiInstanceInvalidationService
+ADDED from [androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+	android:exported
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+	tools:ignore
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:28:13-60
+	android:directBootAware
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+	android:name
+		ADDED from [androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+provider#androidx.startup.InitializationProvider
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:24:9-32:20
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/9e3cb24a12458109a6068691f4cc859e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+MERGED from [androidx.startup:startup-runtime:1.1.1] /Users/tanmay/.gradle/caches/transforms-3/9e3cb24a12458109a6068691f4cc859e/transformed/startup-runtime-1.1.1/AndroidManifest.xml:26:9-30:34
+	tools:node
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:28:13-31
+	android:authorities
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+	android:exported
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+meta-data#androidx.emoji2.text.EmojiCompatInitializer
+ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+permission#com.example.weeklytotals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+	android:protectionLevel
+		ADDED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+uses-permission#${applicationId}.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+uses-permission#com.example.weeklytotals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION
+ADDED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+	android:name
+		ADDED from [androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+meta-data#androidx.lifecycle.ProcessLifecycleInitializer
+ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+meta-data#com.google.android.gms.version
+ADDED from [com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
+	android:value
+		ADDED from [com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:23:13-66
+	android:name
+		ADDED from [com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:22:13-58
+meta-data#androidx.profileinstaller.ProfileInstallerInitializer
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+	android:value
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+receiver#androidx.profileinstaller.ProfileInstallReceiver
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+	android:enabled
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+	android:exported
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+	android:permission
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+	android:directBootAware
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+intent-filter#action:name:androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+action#androidx.profileinstaller.action.INSTALL_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+intent-filter#action:name:androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+action#androidx.profileinstaller.action.SKIP_FILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+intent-filter#action:name:androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+action#androidx.profileinstaller.action.SAVE_PROFILE
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+intent-filter#action:name:androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+action#androidx.profileinstaller.action.BENCHMARK_OPERATION
+ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+	android:name
+		ADDED from [androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92

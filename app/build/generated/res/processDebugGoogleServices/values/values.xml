@@ -1,0 +1,10 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="default_web_client_id" translatable="false">230715917738-5p02ii222rlrlvjh1ul21mnq4sb6aflv.apps.googleusercontent.com</string>
+    <string name="gcm_defaultSenderId" translatable="false">230715917738</string>
+    <string name="google_api_key" translatable="false">AIzaSyA75OPypJzR3BuBidbLlpNTmw7JYdAiIYE</string>
+    <string name="google_app_id" translatable="false">1:230715917738:android:36779ae5a71f81526a57d3</string>
+    <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA75OPypJzR3BuBidbLlpNTmw7JYdAiIYE</string>
+    <string name="google_storage_bucket" translatable="false">weekly-totals.firebasestorage.app</string>
+    <string name="project_id" translatable="false">weekly-totals</string>
+</resources>
