@@ -75,6 +75,14 @@
     <string name="prompt_category_label">Category</string>
     <string name="prompt_dismiss">Dismiss</string>
     <string name="prompt_no_categories">No categories available</string>
+    <string name="reset_button">Reset All Data</string>
+    <string name="reset_complete">All data has been cleared</string>
+    <string name="reset_confirm_message">This will clear all transactions, categories, and budget settings on ALL synced devices. This cannot be undone.</string>
+    <string name="reset_confirm_title">Reset All Data?</string>
+    <string name="reset_description">Reset will permanently delete all transactions, categories, and budget data from this device and all synced devices.</string>
+    <string name="reset_no">Cancel</string>
+    <string name="reset_section_title">Danger Zone</string>
+    <string name="reset_yes">Yes, Reset</string>
     <string name="save">Save</string>
     <string name="settings">Settings</string>
     <string name="settings_title">Settings</string>

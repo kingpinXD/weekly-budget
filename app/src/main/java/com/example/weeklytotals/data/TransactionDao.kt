@@ -35,4 +35,7 @@ interface TransactionDao {
 
     @Query("SELECT DISTINCT substr(weekStartDate, 1, 4) as year FROM transactions ORDER BY year DESC")
     suspend fun getDistinctYears(): List<String>
+
+    @Query("DELETE FROM transactions")
+    suspend fun deleteAll()
 }

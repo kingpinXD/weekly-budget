@@ -7,21 +7,31 @@
     android:background="@color/background">
 
     <!-- Gradient header with gauge -->
-    <LinearLayout
+    <RelativeLayout
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:orientation="vertical"
         android:background="@drawable/gradient_header"
         android:paddingTop="24dp"
         android:paddingBottom="28dp"
         android:paddingStart="16dp"
-        android:paddingEnd="16dp"
-        android:gravity="center_horizontal">
+        android:paddingEnd="16dp">
+
+        <ImageButton
+            android:id="@+id/buttonSettings"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:layout_alignParentEnd="true"
+            android:layout_alignParentTop="true"
+            android:background="?attr/selectableItemBackgroundBorderless"
+            android:src="@android:drawable/ic_menu_manage"
+            android:contentDescription="@string/settings"
+            app:tint="@color/textOnDark" />
 
         <TextView
             android:id="@+id/textViewWeekName"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
             android:textColor="@color/textOnDark"
             android:textSize="18sp"
             android:textStyle="bold"
@@ -31,9 +41,11 @@
             android:id="@+id/budgetGaugeView"
             android:layout_width="170dp"
             android:layout_height="170dp"
+            android:layout_below="@id/textViewWeekName"
+            android:layout_centerHorizontal="true"
             android:layout_marginTop="12dp" />
 
-    </LinearLayout>
+    </RelativeLayout>
 
     <!-- Input card -->
     <com.google.android.material.card.MaterialCardView

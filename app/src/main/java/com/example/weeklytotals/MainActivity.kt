@@ -4,9 +4,8 @@ import android.Manifest
 import android.content.Intent
 import android.content.pm.PackageManager
 import android.os.Bundle
-import android.view.Menu
-import android.view.MenuItem
 import android.view.View
+import android.widget.ImageButton
 import android.widget.ArrayAdapter
 import android.widget.EditText
 import android.widget.Spinner
@@ -115,6 +114,11 @@ class MainActivity : AppCompatActivity() {
             editTextAmount.text.clear()
         }
 
+        // Settings button
+        findViewById<ImageButton>(R.id.buttonSettings).setOnClickListener {
+            startActivity(Intent(this, SettingsActivity::class.java))
+        }
+
         // Request SMS permission if auto-transactions is enabled
         requestSmsPermissionIfNeeded()
     }
@@ -127,21 +131,6 @@ class MainActivity : AppCompatActivity() {
             != PackageManager.PERMISSION_GRANTED
         ) {
             smsPermissionLauncher.launch(Manifest.permission.RECEIVE_SMS)
-        }
-    }
-
-    override fun onCreateOptionsMenu(menu: Menu): Boolean {
-        menuInflater.inflate(R.menu.menu_main, menu)
-        return true
-    }
-
-    override fun onOptionsItemSelected(item: MenuItem): Boolean {
-        return when (item.itemId) {
-            R.id.action_settings -> {
-                startActivity(Intent(this, SettingsActivity::class.java))
-                true
-            }
-            else -> super.onOptionsItemSelected(item)
         }
     }
 

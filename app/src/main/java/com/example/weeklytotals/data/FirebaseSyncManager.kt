@@ -336,6 +336,21 @@ class FirebaseSyncManager(context: Context) {
         startBudgetListener()
     }
 
+    // ── Reset ─────────────────────────────────────────────────────────
+
+    /**
+     * Clears all data from Firebase RTDB (transactions, categories, budget).
+     * Other synced devices will pick up the deletion via their listeners.
+     */
+    fun clearAllData(onComplete: (() -> Unit)? = null) {
+        rootRef.removeValue()
+            .addOnSuccessListener { onComplete?.invoke() }
+            .addOnFailureListener { e ->
+                Log.e(TAG, "Failed to clear Firebase data", e)
+                onComplete?.invoke()
+            }
+    }
+
     // ── Utility ─────────────────────────────────────────────────────────
 
     private fun toDouble(value: Any): Double {

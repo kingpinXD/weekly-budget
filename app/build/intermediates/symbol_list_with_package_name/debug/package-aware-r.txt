@@ -3258,7 +3258,9 @@ id buttonHistory
 id buttonManageCategories
 id buttonMonth
 id buttonPanel
+id buttonReset
 id buttonSetBudget
+id buttonSettings
 id buttonSignIn
 id buttonUpdateBudget
 id buttonYear
@@ -4131,6 +4133,14 @@ string prompt_added
 string prompt_category_label
 string prompt_dismiss
 string prompt_no_categories
+string reset_button
+string reset_complete
+string reset_confirm_message
+string reset_confirm_title
+string reset_description
+string reset_no
+string reset_section_title
+string reset_yes
 string save
 string search_menu_title
 string searchbar_scrolling_view_behavior
