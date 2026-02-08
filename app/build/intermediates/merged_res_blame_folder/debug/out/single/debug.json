@@ -1,11 +1,7 @@
 [
     {
-        "merged": "com.example.weeklytotals.app-merged_res-48:/layout_item_category.xml.flat",
-        "source": "com.example.weeklytotals.app-main-50:/layout/item_category.xml"
-    },
-    {
-        "merged": "com.example.weeklytotals.app-merged_res-48:/menu_menu_main.xml.flat",
-        "source": "com.example.weeklytotals.app-main-50:/menu/menu_main.xml"
+        "merged": "com.example.weeklytotals.app-merged_res-48:/drawable_gradient_header.xml.flat",
+        "source": "com.example.weeklytotals.app-main-50:/drawable/gradient_header.xml"
     },
     {
         "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_login.xml.flat",
@@ -16,24 +12,84 @@
         "source": "com.example.weeklytotals.app-main-50:/layout/activity_manage_categories.xml"
     },
     {
-        "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_settings.xml.flat",
-        "source": "com.example.weeklytotals.app-main-50:/layout/activity_settings.xml"
+        "merged": "com.example.weeklytotals.app-merged_res-48:/drawable_rounded_card.xml.flat",
+        "source": "com.example.weeklytotals.app-main-50:/drawable/rounded_card.xml"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/drawable_rounded_input_bg.xml.flat",
+        "source": "com.example.weeklytotals.app-main-50:/drawable/rounded_input_bg.xml"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/layout_item_category.xml.flat",
+        "source": "com.example.weeklytotals.app-main-50:/layout/item_category.xml"
+    },
+    {
+        "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_item_category.xml.flat",
+        "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/item_category.xml"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/drawable_google_signin_bg.xml.flat",
+        "source": "com.example.weeklytotals.app-main-50:/drawable/google_signin_bg.xml"
+    },
+    {
+        "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_main.xml.flat",
+        "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_main.xml"
     },
     {
         "merged": "com.example.weeklytotals.app-merged_res-48:/layout_item_transaction.xml.flat",
         "source": "com.example.weeklytotals.app-main-50:/layout/item_transaction.xml"
     },
     {
-        "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_budget_setup.xml.flat",
-        "source": "com.example.weeklytotals.app-main-50:/layout/activity_budget_setup.xml"
-    },
-    {
         "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_transaction_prompt.xml.flat",
         "source": "com.example.weeklytotals.app-main-50:/layout/activity_transaction_prompt.xml"
     },
     {
+        "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_item_transaction.xml.flat",
+        "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/item_transaction.xml"
+    },
+    {
         "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_main.xml.flat",
         "source": "com.example.weeklytotals.app-main-50:/layout/activity_main.xml"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/drawable_gradient_login.xml.flat",
+        "source": "com.example.weeklytotals.app-main-50:/drawable/gradient_login.xml"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_settings.xml.flat",
+        "source": "com.example.weeklytotals.app-main-50:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_manage_categories.xml.flat",
+        "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_manage_categories.xml"
+    },
+    {
+        "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_settings.xml.flat",
+        "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_settings.xml"
+    },
+    {
+        "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/menu_menu_main.xml.flat",
+        "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/menu/menu_main.xml"
+    },
+    {
+        "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_budget_setup.xml.flat",
+        "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_budget_setup.xml"
+    },
+    {
+        "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_transaction_prompt.xml.flat",
+        "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_transaction_prompt.xml"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_budget_setup.xml.flat",
+        "source": "com.example.weeklytotals.app-main-50:/layout/activity_budget_setup.xml"
+    },
+    {
+        "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_history.xml.flat",
+        "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_history.xml"
+    },
+    {
+        "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_login.xml.flat",
+        "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_login.xml"
     },
     {
         "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_history.xml.flat",

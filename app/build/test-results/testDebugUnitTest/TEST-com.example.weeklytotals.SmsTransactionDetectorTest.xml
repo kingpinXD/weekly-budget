@@ -1,18 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.weeklytotals.SmsTransactionDetectorTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-02-08T19:47:55" hostname="Sentinel.local" time="0.015">
+<testsuite name="com.example.weeklytotals.SmsTransactionDetectorTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-02-08T20:04:52" hostname="Sentinel.local" time="0.015">
   <properties/>
   <testcase name="detectsCadPrefix" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.012"/>
   <testcase name="detectsLargeAmountWithComma" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.001"/>
   <testcase name="rawMessagePreservedInResult" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="ignoresRefundMessage" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
-  <testcase name="ignoresETransferReceived" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.001"/>
+  <testcase name="ignoresETransferReceived" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="detectsCadAmountSuffix" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="detectsFrenchFormatCommaDecimal" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="detectsDollarSignAfterAmount" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="detectsTdPurchaseAlert" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="detectsPaymentKeyword" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="detectsInteracPayment" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
-  <testcase name="detectsWithdrawalMessage" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.001"/>
+  <testcase name="detectsWithdrawalMessage" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="detectsRbcTransactionNotification" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="ignoresNonBankMessage" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="ignoresDepositMessage" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>

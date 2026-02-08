@@ -1,5 +1,29 @@
 R_DEF: Internal format may change without notice
 local
+color background
+color error
+color gradientEnd
+color gradientStart
+color onPrimary
+color onSecondary
+color primary
+color primaryDark
+color primaryLight
+color secondary
+color secondaryDark
+color success
+color surface
+color surfaceVariant
+color textOnDark
+color textOnDarkSecondary
+color textPrimary
+color textSecondary
+color warning
+drawable google_signin_bg
+drawable gradient_header
+drawable gradient_login
+drawable rounded_card
+drawable rounded_input_bg
 id action_settings
 id budgetGaugeView
 id buttonAdd
@@ -110,3 +134,11 @@ string sms_permission_required
 string spent_format
 string transaction_detected_title
 string update_budget_button
+style AppActionBar
+style AppButton
+style AppButtonOutlined
+style AppButtonSecondary
+style AppTextInput
+style AppTheme
+style AppTheme.ActionBar
+style AppTheme.Dialog

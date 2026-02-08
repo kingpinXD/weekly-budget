@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.weeklytotals.WeekCalculatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-02-08T19:47:56" hostname="Sentinel.local" time="0.014">
+<testsuite name="com.example.weeklytotals.WeekCalculatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-02-08T20:04:52" hostname="Sentinel.local" time="0.015">
   <properties/>
   <testcase name="getWeekNameSpansYearBoundary" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.008"/>
   <testcase name="getCurrentWeekStartReturnsSaturday" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.004"/>
   <testcase name="midWeekWednesdayReturnsCorrectSaturday" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
   <testcase name="saturdayReturnsItself" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
-  <testcase name="getCurrentWeekStartIsNotInTheFuture" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.001"/>
+  <testcase name="getCurrentWeekStartIsNotInTheFuture" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
   <testcase name="fridayReturnsPreviousSaturday" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
   <testcase name="previousAndNextAreInverses" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
   <testcase name="getWeekNameFormatsCorrectly" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>

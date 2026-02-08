@@ -27,7 +27,7 @@
         android:debuggable="true"
         android:extractNativeLibs="false"
         android:label="@string/app_name"
-        android:theme="@style/Theme.MaterialComponents.Light.DarkActionBar" >
+        android:theme="@style/AppTheme" >
         <activity
             android:name="com.example.weeklytotals.LoginActivity"
             android:exported="true" >
@@ -45,19 +45,22 @@
             android:exported="false" />
         <activity
             android:name="com.example.weeklytotals.SettingsActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name="com.example.weeklytotals.HistoryActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name="com.example.weeklytotals.ManageCategoriesActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name="com.example.weeklytotals.TransactionPromptActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:taskAffinity=""
-            android:theme="@style/Theme.MaterialComponents.Light.Dialog" />
+            android:theme="@style/AppTheme.Dialog" />
 
         <receiver
             android:name="com.example.weeklytotals.sms.SmsBroadcastReceiver"

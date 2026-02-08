@@ -1,5 +1,24 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
+    <color name="background">#F5F5FA</color>
+    <color name="error">#FF5252</color>
+    <color name="gradientEnd">#B86CFF</color>
+    <color name="gradientStart">#6C63FF</color>
+    <color name="onPrimary">#FFFFFF</color>
+    <color name="onSecondary">#FFFFFF</color>
+    <color name="primary">#6C63FF</color>
+    <color name="primaryDark">#5A52D5</color>
+    <color name="primaryLight">#B8B5FF</color>
+    <color name="secondary">#FF6584</color>
+    <color name="secondaryDark">#E04E6A</color>
+    <color name="success">#4CD964</color>
+    <color name="surface">#FFFFFF</color>
+    <color name="surfaceVariant">#EEEDF5</color>
+    <color name="textOnDark">#FFFFFF</color>
+    <color name="textOnDarkSecondary">#D0CEF5</color>
+    <color name="textPrimary">#1A1A2E</color>
+    <color name="textSecondary">#6B6B8D</color>
+    <color name="warning">#FFB74D</color>
     <string name="access_denied">Access denied. This app is private.</string>
     <string name="add_button">Add</string>
     <string name="add_category_button">Add Category</string>
@@ -65,4 +84,55 @@
     <string name="spent_format">Spent: $%1$.2f / $%2$.2f CAD</string>
     <string name="transaction_detected_title">Transaction Detected</string>
     <string name="update_budget_button">Update Budget</string>
+    <style name="AppActionBar" parent="Widget.MaterialComponents.ActionBar.Solid">
+        <item name="background">@color/primary</item>
+        <item name="titleTextColor">@color/onPrimary</item>
+    </style>
+    <style name="AppButton" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">12dp</item>
+        <item name="backgroundTint">@color/primary</item>
+        <item name="android:textColor">@color/onPrimary</item>
+    </style>
+    <style name="AppButtonOutlined" parent="Widget.MaterialComponents.Button.OutlinedButton">
+        <item name="cornerRadius">12dp</item>
+        <item name="strokeColor">@color/primary</item>
+        <item name="android:textColor">@color/primary</item>
+    </style>
+    <style name="AppButtonSecondary" parent="Widget.MaterialComponents.Button">
+        <item name="cornerRadius">12dp</item>
+        <item name="backgroundTint">@color/secondary</item>
+        <item name="android:textColor">@color/onSecondary</item>
+    </style>
+    <style name="AppTextInput" parent="Widget.MaterialComponents.TextInputLayout.OutlinedBox">
+        <item name="boxCornerRadiusTopStart">12dp</item>
+        <item name="boxCornerRadiusTopEnd">12dp</item>
+        <item name="boxCornerRadiusBottomStart">12dp</item>
+        <item name="boxCornerRadiusBottomEnd">12dp</item>
+        <item name="boxStrokeColor">@color/primary</item>
+        <item name="hintTextColor">@color/primary</item>
+    </style>
+    <style name="AppTheme" parent="Theme.MaterialComponents.Light.NoActionBar">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorPrimaryDark">@color/primaryDark</item>
+        <item name="colorAccent">@color/secondary</item>
+        <item name="colorSecondary">@color/secondary</item>
+        <item name="android:colorBackground">@color/background</item>
+        <item name="android:statusBarColor">@color/primaryDark</item>
+        <item name="android:textColorPrimary">@color/textPrimary</item>
+        <item name="android:textColorSecondary">@color/textSecondary</item>
+
+        
+        <item name="materialButtonStyle">@style/AppButton</item>
+        <item name="materialButtonOutlinedStyle">@style/AppButtonOutlined</item>
+        <item name="textInputStyle">@style/AppTextInput</item>
+    </style>
+    <style name="AppTheme.ActionBar" parent="AppTheme">
+        <item name="windowActionBar">true</item>
+        <item name="windowNoTitle">false</item>
+        <item name="actionBarStyle">@style/AppActionBar</item>
+    </style>
+    <style name="AppTheme.Dialog" parent="Theme.MaterialComponents.Light.Dialog">
+        <item name="colorPrimary">@color/primary</item>
+        <item name="colorAccent">@color/secondary</item>
+    </style>
 </resources>

@@ -1,0 +1,17 @@
+# Build outputs
+build/
+app/build/
+
+# Gradle
+.gradle/
+local.properties
+
+# IDE
+.idea/
+*.iml
+
+# Firebase config (contains API keys)
+app/google-services.json
+
+# OS files
+.DS_Store
