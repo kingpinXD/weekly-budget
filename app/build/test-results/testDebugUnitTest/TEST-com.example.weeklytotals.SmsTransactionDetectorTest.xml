@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.weeklytotals.SmsTransactionDetectorTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-02-08T20:18:04" hostname="Sentinel.local" time="0.014">
+<testsuite name="com.example.weeklytotals.SmsTransactionDetectorTest" tests="15" skipped="0" failures="0" errors="0" timestamp="2026-02-08T20:32:16" hostname="Sentinel.local" time="0.015">
   <properties/>
-  <testcase name="detectsCadPrefix" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.011"/>
+  <testcase name="detectsCadPrefix" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.012"/>
   <testcase name="detectsLargeAmountWithComma" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="rawMessagePreservedInResult" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>
   <testcase name="ignoresRefundMessage" classname="com.example.weeklytotals.SmsTransactionDetectorTest" time="0.0"/>

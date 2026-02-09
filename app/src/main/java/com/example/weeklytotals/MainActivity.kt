@@ -22,6 +22,7 @@ import com.example.weeklytotals.data.BudgetPreferences
 import com.example.weeklytotals.data.CategoryEntity
 import com.example.weeklytotals.data.Transaction
 import com.google.android.material.button.MaterialButton
+import com.google.firebase.database.FirebaseDatabase
 
 class MainActivity : AppCompatActivity() {
 
@@ -43,13 +44,45 @@ class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
 
-        // Redirect to budget setup if budget is not set
+        // Redirect to budget setup if budget is not set locally
         if (!BudgetPreferences(this).isBudgetSet()) {
-            startActivity(Intent(this, BudgetSetupActivity::class.java))
-            finish()
+            // Check Firebase first — another user may have already set the budget
+            checkFirebaseBudget()
             return
         }
 
+        initMainScreen()
+    }
+
+    private fun checkFirebaseBudget() {
+        val budgetRef = FirebaseDatabase.getInstance().getReference("weekly_totals/budget")
+        budgetRef.get().addOnSuccessListener { snapshot ->
+            val amount = snapshot.child("amount").value?.let {
+                when (it) {
+                    is Double -> it
+                    is Long -> it.toDouble()
+                    else -> null
+                }
+            }
+            val isSet = snapshot.child("isSet").value as? Boolean ?: false
+
+            if (amount != null && isSet && amount > 0) {
+                // Budget exists in Firebase — save locally and proceed
+                BudgetPreferences(this).setBudget(amount)
+                initMainScreen()
+            } else {
+                // No budget anywhere — go to setup
+                startActivity(Intent(this, BudgetSetupActivity::class.java))
+                finish()
+            }
+        }.addOnFailureListener {
+            // Network error — fall back to setup screen
+            startActivity(Intent(this, BudgetSetupActivity::class.java))
+            finish()
+        }
+    }
+
+    private fun initMainScreen() {
         setContentView(R.layout.activity_main)
 
         val textViewWeekName = findViewById<TextView>(R.id.textViewWeekName)
