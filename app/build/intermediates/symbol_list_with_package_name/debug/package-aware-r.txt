@@ -3636,6 +3636,7 @@ id textViewEmpty
 id textViewNotice
 id textViewRawMessage
 id textViewTotal
+id textViewVersion
 id textViewWeekName
 id text_input_end_icon
 id text_input_error_icon
@@ -4155,6 +4156,7 @@ string sign_in_with_google
 string sms_permission_required
 string spent_format
 string status_bar_notification_info_overflow
+string total_spent_label
 string transaction_detected_title
 string update_budget_button
 style AlertDialog_AppCompat

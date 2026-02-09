@@ -94,16 +94,12 @@ class BudgetGaugeView @JvmOverloads constructor(
             canvas.drawArc(arcRect, -90f, sweepAngle, false, arcPaint)
         }
 
-        // Center text: spent amount
-        spentTextPaint.textSize = size * 0.16f
-        spentTextPaint.color = if (overBudget) Color.parseColor("#F44336") else Color.parseColor("#333333")
-        val spentStr = String.format("$%.2f", spent)
-        canvas.drawText(spentStr, cx, cy + spentTextPaint.textSize * 0.15f, spentTextPaint)
-
-        // Sub text: "of $XX.XX CAD"
-        budgetTextPaint.textSize = size * 0.09f
-        val budgetStr = String.format("of $%.2f CAD", budget)
-        canvas.drawText(budgetStr, cx, cy + spentTextPaint.textSize * 0.15f + budgetTextPaint.textSize * 1.5f, budgetTextPaint)
+        // Center text: amount remaining
+        val remaining = budget - spent
+        spentTextPaint.textSize = size * 0.18f
+        spentTextPaint.color = if (overBudget) Color.parseColor("#F44336") else Color.WHITE
+        val remainStr = if (overBudget) String.format("-$%.0f", -remaining) else String.format("$%.0f", remaining)
+        canvas.drawText(remainStr, cx, cy + spentTextPaint.textSize * 0.35f, spentTextPaint)
     }
 
     private fun interpolateColor(startColor: Int, endColor: Int, fraction: Float): Int {

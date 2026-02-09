@@ -90,6 +90,7 @@
     <string name="sign_in_with_google">Sign in with Google</string>
     <string name="sms_permission_required">SMS permission is required for auto transaction detection</string>
     <string name="spent_format">Spent: $%1$.2f / $%2$.2f CAD</string>
+    <string name="total_spent_label">Total Spent</string>
     <string name="transaction_detected_title">Transaction Detected</string>
     <string name="update_budget_button">Update Budget</string>
     <style name="AppActionBar" parent="Widget.MaterialComponents.ActionBar.Solid">

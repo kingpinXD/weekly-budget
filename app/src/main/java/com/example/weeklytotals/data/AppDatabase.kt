@@ -27,12 +27,23 @@ abstract class AppDatabase : RoomDatabase() {
                         isSystem INTEGER NOT NULL DEFAULT 0
                     )"""
                 )
-                db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('GROCERY', 'Grocery', '#4CAF50', 0)")
-                db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('GAS', 'Gas', '#2196F3', 0)")
-                db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('ENTERTAINMENT', 'Entertainment', '#FF9800', 0)")
-                db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('TRAVEL', 'Travel', '#9C27B0', 0)")
-                db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('ADJUSTMENT', 'Adjustment', '#FF5722', 1)")
+                seedDefaultCategories(db)
             }
+        }
+
+        private fun seedDefaultCategories(db: SupportSQLiteDatabase) {
+            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('GAS', 'Gas', '#2196F3', 0)")
+            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('TRAVEL', 'Travel', '#9C27B0', 0)")
+            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('DINING_OUT', 'Dining Out', '#FF9800', 0)")
+            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('ORDERING_IN', 'Ordering In', '#4CAF50', 0)")
+            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('AMAZON', 'Amazon', '#FF5722', 0)")
+            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('MISC', 'Misc Purchases', '#607D8B', 0)")
+            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('ADJUSTMENT', 'Adjustment', '#F44336', 1)")
+        }
+
+        fun reseedDefaultCategories(context: Context) {
+            val db = getInstance(context).openHelper.writableDatabase
+            seedDefaultCategories(db)
         }
 
         fun getInstance(context: Context): AppDatabase {
@@ -46,11 +57,7 @@ abstract class AppDatabase : RoomDatabase() {
                     .addCallback(object : Callback() {
                         override fun onCreate(db: SupportSQLiteDatabase) {
                             super.onCreate(db)
-                            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('GROCERY', 'Grocery', '#4CAF50', 0)")
-                            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('GAS', 'Gas', '#2196F3', 0)")
-                            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('ENTERTAINMENT', 'Entertainment', '#FF9800', 0)")
-                            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('TRAVEL', 'Travel', '#9C27B0', 0)")
-                            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('ADJUSTMENT', 'Adjustment', '#FF5722', 1)")
+                            seedDefaultCategories(db)
                         }
                     })
                     .build().also { INSTANCE = it }

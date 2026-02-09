@@ -26,6 +26,8 @@ class SettingsActivity : AppCompatActivity() {
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
         supportActionBar?.title = getString(R.string.settings_title)
 
+        findViewById<TextView>(R.id.textViewVersion).text = "v${BuildConfig.VERSION_NAME}"
+
         val budgetPreferences = BudgetPreferences(this)
 
         val textViewCurrentBudget = findViewById<TextView>(R.id.textViewCurrentBudget)

@@ -148,9 +148,12 @@ class FirebaseSyncManager(context: Context) {
         }
 
         // Delete local transactions that are not in Firebase
-        for (local in localTransactions) {
-            if (local.createdAt !in remoteTransactions) {
-                transactionDao.delete(local)
+        // Skip if Firebase is empty — avoids race condition on first sync / fresh DB
+        if (remoteTransactions.isNotEmpty()) {
+            for (local in localTransactions) {
+                if (local.createdAt !in remoteTransactions) {
+                    transactionDao.delete(local)
+                }
             }
         }
     }
@@ -261,9 +264,12 @@ class FirebaseSyncManager(context: Context) {
         }
 
         // Delete local categories not in Firebase
-        for (local in localCategories) {
-            if (local.name !in remoteCategories) {
-                categoryDao.delete(local)
+        // Skip if Firebase is empty — avoids race condition on first sync / fresh DB
+        if (remoteCategories.isNotEmpty()) {
+            for (local in localCategories) {
+                if (local.name !in remoteCategories) {
+                    categoryDao.delete(local)
+                }
             }
         }
     }

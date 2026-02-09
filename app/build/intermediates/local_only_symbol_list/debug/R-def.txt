@@ -58,6 +58,7 @@ id textViewEmpty
 id textViewNotice
 id textViewRawMessage
 id textViewTotal
+id textViewVersion
 id textViewWeekName
 id viewCategoryColor
 id viewColorDot
@@ -142,6 +143,7 @@ string sign_in_failed
 string sign_in_with_google
 string sms_permission_required
 string spent_format
+string total_spent_label
 string transaction_detected_title
 string update_budget_button
 style AppActionBar

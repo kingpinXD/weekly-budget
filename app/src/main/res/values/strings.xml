@@ -14,6 +14,7 @@
     <string name="amount_hint">Amount</string>
     <string name="add_button">Add</string>
     <string name="no_transactions">No transactions this week</string>
+    <string name="total_spent_label">Total Spent</string>
     <string name="settings">Settings</string>
 
     <!-- Transaction Item -->
