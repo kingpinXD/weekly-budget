@@ -96,6 +96,11 @@ class MainActivity : AppCompatActivity() {
         // Header
         textViewWeekName.text = viewModel.weekName
 
+        // Tap gauge to open spending history
+        budgetGaugeView.setOnClickListener {
+            startActivity(Intent(this, HistoryActivity::class.java))
+        }
+
         // Transaction list
         val adapter = TransactionAdapter(
             onItemClick = { transaction -> showEditDialog(transaction) },
