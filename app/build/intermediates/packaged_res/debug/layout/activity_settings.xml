@@ -163,7 +163,27 @@
                     android:layout_height="wrap_content"
                     android:text="@string/auto_transactions_description"
                     android:textColor="@color/textSecondary"
-                    android:textSize="13sp" />
+                    android:textSize="13sp"
+                    android:layout_marginBottom="12dp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonMonitoredApps"
+                    style="@style/AppButtonOutlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/manage_monitored_apps_button"
+                    android:layout_marginBottom="8dp"
+                    app:icon="@android:drawable/ic_menu_manage"
+                    app:iconGravity="textStart" />
+
+                <TextView
+                    android:id="@+id/textViewNotificationStatus"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/notification_access_required"
+                    android:textColor="@color/error"
+                    android:textSize="13sp"
+                    android:visibility="gone" />
 
             </LinearLayout>
 

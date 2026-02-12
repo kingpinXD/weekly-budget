@@ -51,6 +51,16 @@ class BudgetPreferences(context: Context) {
             .apply()
     }
 
+    fun getMonitoredApps(): Set<String> {
+        return prefs.getStringSet(KEY_MONITORED_APPS, emptySet()) ?: emptySet()
+    }
+
+    fun setMonitoredApps(packages: Set<String>) {
+        prefs.edit()
+            .putStringSet(KEY_MONITORED_APPS, packages)
+            .apply()
+    }
+
     fun clearAll() {
         prefs.edit().clear().apply()
     }
@@ -60,5 +70,6 @@ class BudgetPreferences(context: Context) {
         private const val KEY_PENDING_BUDGET = "pending_budget"
         private const val KEY_IS_BUDGET_SET = "is_budget_set"
         private const val KEY_AUTO_TRANSACTIONS = "auto_transactions_enabled"
+        private const val KEY_MONITORED_APPS = "monitored_app_packages"
     }
 }

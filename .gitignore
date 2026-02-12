@@ -13,5 +13,8 @@ local.properties
 # Firebase config (contains API keys)
 app/google-services.json
 
+# Claude context
+.claude/
+
 # OS files
 .DS_Store

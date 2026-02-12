@@ -56,11 +56,24 @@
             android:exported="false"
             android:theme="@style/AppTheme.ActionBar" />
         <activity
+            android:name="com.example.weeklytotals.MonitoredAppsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity
             android:name="com.example.weeklytotals.TransactionPromptActivity"
             android:excludeFromRecents="true"
             android:exported="false"
             android:taskAffinity=""
             android:theme="@style/AppTheme.Dialog" />
+
+        <service
+            android:name="com.example.weeklytotals.notification.TransactionNotificationListenerService"
+            android:exported="true"
+            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+            <intent-filter>
+                <action android:name="android.service.notification.NotificationListenerService" />
+            </intent-filter>
+        </service>
 
         <receiver
             android:name="com.example.weeklytotals.sms.SmsBroadcastReceiver"

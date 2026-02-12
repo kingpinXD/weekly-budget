@@ -26,10 +26,11 @@
     <string name="adjustment_label">Adjustment (over budget)</string>
     <string name="amount_format">$%.2f CAD</string>
     <string name="amount_hint">Amount</string>
+    <string name="app_icon_description">App icon</string>
     <string name="app_name">Weekly Totals</string>
-    <string name="auto_transactions_description">When enabled, bank SMS notifications will trigger a popup to quickly add the transaction to your budget.</string>
+    <string name="auto_transactions_description">When enabled, bank SMS messages and app notifications will trigger a popup to quickly add the transaction to your budget.</string>
     <string name="auto_transactions_section_title">Auto Transactions</string>
-    <string name="auto_transactions_toggle">Detect transactions from SMS</string>
+    <string name="auto_transactions_toggle">Auto detect transactions</string>
     <string name="budget_setup_button">Set Budget</string>
     <string name="budget_setup_error">Please enter a valid amount</string>
     <string name="budget_setup_hint">Budget amount (CAD)</string>
@@ -66,9 +67,16 @@
     <string name="history_year">Year</string>
     <string name="manage_categories_button">Manage Categories</string>
     <string name="manage_categories_title">Manage Categories</string>
+    <string name="manage_monitored_apps_button">Manage Monitored Apps</string>
+    <string name="monitored_apps_description">Select apps whose notifications should be checked for transactions.</string>
+    <string name="monitored_apps_title">Monitored Apps</string>
     <string name="new_budget_hint">New budget amount (CAD)</string>
     <string name="no_colors_available">All preset colors are in use</string>
     <string name="no_transactions">No transactions this week</string>
+    <string name="notification_access_message">To detect transactions from app notifications, please grant notification access in system settings.</string>
+    <string name="notification_access_required">Notification access not granted</string>
+    <string name="notification_access_title">Notification Access Required</string>
+    <string name="open_settings">Open Settings</string>
     <string name="project_id" translatable="false">weekly-totals</string>
     <string name="prompt_add">Add</string>
     <string name="prompt_added">$%.2f added to budget</string>

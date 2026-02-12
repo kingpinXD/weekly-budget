@@ -3256,6 +3256,7 @@ id buttonDismiss
 id buttonEditCategory
 id buttonHistory
 id buttonManageCategories
+id buttonMonitoredApps
 id buttonMonth
 id buttonPanel
 id buttonReset
@@ -3276,6 +3277,7 @@ id center_vertical
 id chain
 id chain2
 id chains
+id checkBoxMonitored
 id checkbox
 id checked
 id chronometer
@@ -3390,6 +3392,7 @@ id ifRoom
 id ignore
 id ignoreRequest
 id image
+id imageViewAppIcon
 id immediateStop
 id included
 id indeterminate
@@ -3533,6 +3536,7 @@ id progress_horizontal
 id radio
 id ratio
 id rectangles
+id recyclerViewApps
 id recyclerViewCategories
 id recyclerViewTransactions
 id report_drawn
@@ -3629,11 +3633,14 @@ id textSpacerNoTitle
 id textStart
 id textTop
 id textViewAmount
+id textViewAppName
 id textViewCategory
 id textViewCategoryName
 id textViewCurrentBudget
 id textViewEmpty
 id textViewNotice
+id textViewNotificationStatus
+id textViewPackageName
 id textViewRawMessage
 id textViewTotal
 id textViewVersion
@@ -3809,6 +3816,7 @@ layout activity_history
 layout activity_login
 layout activity_main
 layout activity_manage_categories
+layout activity_monitored_apps
 layout activity_settings
 layout activity_transaction_prompt
 layout browser_actions_context_menu_page
@@ -3832,6 +3840,7 @@ layout design_text_input_start_icon
 layout ime_base_split_test_activity
 layout ime_secondary_split_test_activity
 layout item_category
+layout item_monitored_app
 layout item_transaction
 layout m3_alert_dialog
 layout m3_alert_dialog_actions
@@ -3932,6 +3941,7 @@ string adjustment_label
 string amount_format
 string amount_hint
 string androidx_startup
+string app_icon_description
 string app_name
 string appbar_scrolling_view_behavior
 string auto_transactions_description
@@ -4036,6 +4046,7 @@ string m3_sys_motion_easing_standard_accelerate
 string m3_sys_motion_easing_standard_decelerate
 string manage_categories_button
 string manage_categories_title
+string manage_monitored_apps_button
 string material_clock_display_divider
 string material_clock_toggle_content_description
 string material_hour_24h_suffix
@@ -4058,6 +4069,8 @@ string material_timepicker_minute
 string material_timepicker_pm
 string material_timepicker_select_time
 string material_timepicker_text_input_mode_description
+string monitored_apps_description
+string monitored_apps_title
 string mtrl_badge_numberless_content_description
 string mtrl_checkbox_button_icon_path_checked
 string mtrl_checkbox_button_icon_path_group_name
@@ -4123,6 +4136,10 @@ string mtrl_timepicker_confirm
 string new_budget_hint
 string no_colors_available
 string no_transactions
+string notification_access_message
+string notification_access_required
+string notification_access_title
+string open_settings
 string password_toggle_content_description
 string path_password_eye
 string path_password_eye_mask_strike_through

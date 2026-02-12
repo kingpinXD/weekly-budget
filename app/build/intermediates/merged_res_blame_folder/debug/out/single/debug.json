@@ -4,6 +4,10 @@
         "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/drawable/rounded_input_bg.xml"
     },
     {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/layout_item_monitored_app.xml.flat",
+        "source": "com.example.weeklytotals.app-main-50:/layout/item_monitored_app.xml"
+    },
+    {
         "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_settings.xml.flat",
         "source": "com.example.weeklytotals.app-main-50:/layout/activity_settings.xml"
     },
@@ -34,6 +38,10 @@
     {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_item_category.xml.flat",
         "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/item_category.xml"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_monitored_apps.xml.flat",
+        "source": "com.example.weeklytotals.app-main-50:/layout/activity_monitored_apps.xml"
     },
     {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_main.xml.flat",

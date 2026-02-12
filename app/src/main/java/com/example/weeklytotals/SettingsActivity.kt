@@ -2,10 +2,13 @@ package com.example.weeklytotals
 
 import android.content.Intent
 import android.os.Bundle
+import android.provider.Settings
+import android.view.View
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
 import androidx.appcompat.app.AppCompatActivity
+import androidx.core.app.NotificationManagerCompat
 import androidx.lifecycle.lifecycleScope
 import com.example.weeklytotals.data.AppDatabase
 import com.example.weeklytotals.data.BudgetPreferences
@@ -18,6 +21,8 @@ import kotlinx.coroutines.launch
 import kotlinx.coroutines.withContext
 
 class SettingsActivity : AppCompatActivity() {
+
+    private lateinit var textViewNotificationStatus: TextView
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -51,7 +56,19 @@ class SettingsActivity : AppCompatActivity() {
         switchAutoTransactions.isChecked = budgetPreferences.isAutoTransactionsEnabled()
         switchAutoTransactions.setOnCheckedChangeListener { _, isChecked ->
             budgetPreferences.setAutoTransactionsEnabled(isChecked)
+            if (isChecked && !isNotificationAccessGranted()) {
+                showNotificationAccessDialog()
+            }
         }
+
+        // Monitored Apps button
+        findViewById<MaterialButton>(R.id.buttonMonitoredApps).setOnClickListener {
+            startActivity(Intent(this, MonitoredAppsActivity::class.java))
+        }
+
+        // Notification status warning
+        textViewNotificationStatus = findViewById(R.id.textViewNotificationStatus)
+        updateNotificationStatus()
 
         buttonUpdateBudget.setOnClickListener {
             val text = editTextNewBudget.text?.toString()?.trim() ?: ""
@@ -77,6 +94,34 @@ class SettingsActivity : AppCompatActivity() {
                 .setNegativeButton(R.string.reset_no, null)
                 .show()
         }
+    }
+
+    override fun onResume() {
+        super.onResume()
+        updateNotificationStatus()
+    }
+
+    private fun isNotificationAccessGranted(): Boolean {
+        return packageName in NotificationManagerCompat.getEnabledListenerPackages(this)
+    }
+
+    private fun updateNotificationStatus() {
+        if (isNotificationAccessGranted()) {
+            textViewNotificationStatus.visibility = View.GONE
+        } else {
+            textViewNotificationStatus.visibility = View.VISIBLE
+        }
+    }
+
+    private fun showNotificationAccessDialog() {
+        AlertDialog.Builder(this)
+            .setTitle(R.string.notification_access_title)
+            .setMessage(R.string.notification_access_message)
+            .setPositiveButton(R.string.open_settings) { _, _ ->
+                startActivity(Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS))
+            }
+            .setNegativeButton(R.string.cancel, null)
+            .show()
     }
 
     private fun performReset() {
