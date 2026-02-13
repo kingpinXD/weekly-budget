@@ -73,16 +73,13 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             // Apply any pending budget change
             budgetPreferences.applyPendingBudget()
 
-            // If adjustment already exists for this week, nothing to do
-            val hasAdjustment = dao.hasAdjustmentForWeek(weekStartDate)
-            if (hasAdjustment) return@launch
-
-            // Carry over previous week's overage as an adjustment
             val previousWeekStart = weekCalculator.getPreviousWeekStart(weekStartDate)
             val previousTotal = getPreviousWeekTotal(previousWeekStart)
             val previousBudget = budget
 
-            if (previousTotal > previousBudget) {
+            // Carry over previous week's overage as an adjustment
+            val hasAdjustment = dao.hasAdjustmentForWeek(weekStartDate)
+            if (!hasAdjustment && previousTotal > previousBudget) {
                 val overage = previousTotal - previousBudget
                 val adjustment = Transaction(
                     weekStartDate = weekStartDate,
@@ -92,6 +89,15 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                 )
                 dao.insert(adjustment)
                 syncManager.pushTransaction(adjustment)
+            }
+
+            // Accumulate savings if under budget
+            if (budgetPreferences.getLastSavingsProcessedWeek() != weekStartDate) {
+                if (previousTotal > 0 && previousTotal < previousBudget) {
+                    val savings = previousBudget - previousTotal
+                    budgetPreferences.addToSavings(savings)
+                }
+                budgetPreferences.setLastSavingsProcessedWeek(weekStartDate)
             }
         }
     }

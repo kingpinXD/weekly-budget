@@ -51,6 +51,19 @@ class SettingsActivity : AppCompatActivity() {
             startActivity(Intent(this, ManageCategoriesActivity::class.java))
         }
 
+        findViewById<MaterialButton>(R.id.buttonSavings).setOnClickListener {
+            val savings = budgetPreferences.getTotalSavings()
+            AlertDialog.Builder(this)
+                .setTitle(R.string.savings_title)
+                .setMessage(String.format(
+                    "%s\n\n%s",
+                    getString(R.string.savings_amount_format, savings),
+                    getString(R.string.savings_description)
+                ))
+                .setPositiveButton(android.R.string.ok, null)
+                .show()
+        }
+
         // Auto Transactions toggle
         val switchAutoTransactions = findViewById<SwitchMaterial>(R.id.switchAutoTransactions)
         switchAutoTransactions.isChecked = budgetPreferences.isAutoTransactionsEnabled()

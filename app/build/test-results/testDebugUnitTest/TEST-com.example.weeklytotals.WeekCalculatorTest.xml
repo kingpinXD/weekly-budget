@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testsuite name="com.example.weeklytotals.WeekCalculatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-02-12T18:44:08" hostname="MacBookPro" time="0.015">
+<testsuite name="com.example.weeklytotals.WeekCalculatorTest" tests="11" skipped="0" failures="0" errors="0" timestamp="2026-02-13T00:15:24" hostname="MacBookPro" time="0.015">
   <properties/>
-  <testcase name="getWeekNameSpansYearBoundary" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.01"/>
+  <testcase name="getWeekNameSpansYearBoundary" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.009"/>
   <testcase name="getCurrentWeekStartReturnsSaturday" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.003"/>
-  <testcase name="midWeekWednesdayReturnsCorrectSaturday" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
+  <testcase name="midWeekWednesdayReturnsCorrectSaturday" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.001"/>
   <testcase name="saturdayReturnsItself" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
   <testcase name="getCurrentWeekStartIsNotInTheFuture" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
   <testcase name="fridayReturnsPreviousSaturday" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
   <testcase name="previousAndNextAreInverses" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
-  <testcase name="getWeekNameFormatsCorrectly" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
+  <testcase name="getWeekNameFormatsCorrectly" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.001"/>
   <testcase name="getNextWeekStartReturnsSevenDaysLater" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
   <testcase name="getPreviousWeekStartReturnsSevenDaysEarlier" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>
   <testcase name="getWeekNameSpansMonthBoundary" classname="com.example.weeklytotals.WeekCalculatorTest" time="0.0"/>

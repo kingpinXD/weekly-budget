@@ -119,7 +119,17 @@
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
                     android:text="@string/manage_categories_button"
+                    android:layout_marginBottom="8dp"
                     app:icon="@android:drawable/ic_menu_sort_by_size"
+                    app:iconGravity="textStart" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonSavings"
+                    style="@style/AppButtonOutlined"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:text="@string/savings_button"
+                    app:icon="@android:drawable/ic_menu_save"
                     app:iconGravity="textStart" />
 
             </LinearLayout>

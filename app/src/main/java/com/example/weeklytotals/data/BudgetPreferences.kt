@@ -51,6 +51,27 @@ class BudgetPreferences(context: Context) {
             .apply()
     }
 
+    fun getTotalSavings(): Double {
+        return Double.fromBits(prefs.getLong(KEY_TOTAL_SAVINGS, (0.0).toRawBits()))
+    }
+
+    fun addToSavings(amount: Double) {
+        val current = getTotalSavings()
+        prefs.edit()
+            .putLong(KEY_TOTAL_SAVINGS, (current + amount).toRawBits())
+            .apply()
+    }
+
+    fun getLastSavingsProcessedWeek(): String? {
+        return prefs.getString(KEY_LAST_SAVINGS_WEEK, null)
+    }
+
+    fun setLastSavingsProcessedWeek(weekStartDate: String) {
+        prefs.edit()
+            .putString(KEY_LAST_SAVINGS_WEEK, weekStartDate)
+            .apply()
+    }
+
     fun getMonitoredApps(): Set<String> {
         return prefs.getStringSet(KEY_MONITORED_APPS, emptySet()) ?: emptySet()
     }
@@ -70,6 +91,8 @@ class BudgetPreferences(context: Context) {
         private const val KEY_PENDING_BUDGET = "pending_budget"
         private const val KEY_IS_BUDGET_SET = "is_budget_set"
         private const val KEY_AUTO_TRANSACTIONS = "auto_transactions_enabled"
+        private const val KEY_TOTAL_SAVINGS = "total_savings"
+        private const val KEY_LAST_SAVINGS_WEEK = "last_savings_processed_week"
         private const val KEY_MONITORED_APPS = "monitored_app_packages"
     }
 }

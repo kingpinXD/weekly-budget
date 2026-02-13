@@ -6,7 +6,8 @@ PKG := com.example.weeklytotals
 
 build:
 	./gradlew assembleDebug
-	cp -f app/build/outputs/apk/debug/app-debug.apk $(HOME)/Downloads/WeeklyTotals.apk
+	rm -f $(HOME)/Downloads/WeeklyTotals.apk
+	cp app/build/outputs/apk/debug/app-debug.apk $(HOME)/Downloads/WeeklyTotals.apk
 	@echo "APK copied to ~/Downloads/WeeklyTotals.apk"
 
 test:

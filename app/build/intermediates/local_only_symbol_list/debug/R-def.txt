@@ -36,6 +36,7 @@ id buttonManageCategories
 id buttonMonitoredApps
 id buttonMonth
 id buttonReset
+id buttonSavings
 id buttonSetBudget
 id buttonSettings
 id buttonSignIn
@@ -45,6 +46,7 @@ id checkBoxMonitored
 id editTextAmount
 id editTextBudget
 id editTextNewBudget
+id editTextSearch
 id imageViewAppIcon
 id layoutCategoryList
 id pieChartView
@@ -154,6 +156,11 @@ string reset_no
 string reset_section_title
 string reset_yes
 string save
+string savings_amount_format
+string savings_button
+string savings_description
+string savings_title
+string search_apps_hint
 string settings
 string settings_title
 string sign_in_failed

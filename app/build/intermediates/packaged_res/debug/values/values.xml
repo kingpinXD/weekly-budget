@@ -92,6 +92,11 @@
     <string name="reset_section_title">Danger Zone</string>
     <string name="reset_yes">Yes, Reset</string>
     <string name="save">Save</string>
+    <string name="savings_amount_format">$%.2f CAD</string>
+    <string name="savings_button">Savings</string>
+    <string name="savings_description">Accumulated from leftover budget at the end of each week.</string>
+    <string name="savings_title">Total Savings</string>
+    <string name="search_apps_hint">Search apps</string>
     <string name="settings">Settings</string>
     <string name="settings_title">Settings</string>
     <string name="sign_in_failed">Sign-in failed. Please try again.</string>

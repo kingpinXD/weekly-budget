@@ -14,398 +14,401 @@
 12    <uses-permission android:name="android.permission.READ_SMS" />
 12-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:5:5-67
 12-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:5:22-64
-13    <uses-permission android:name="android.permission.INTERNET" />
-13-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:25:5-67
-13-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:25:22-64
-14    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
-14-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:26:5-79
-14-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:26:22-76
-15    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
-15-->[com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:9:5-98
-15-->[com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:9:22-95
-16
-17    <permission
-17-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
-18        android:name="com.example.weeklytotals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
-18-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
-19        android:protectionLevel="signature" />
-19-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
-20
-21    <uses-permission android:name="com.example.weeklytotals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
-21-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
-21-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
-22
-23    <application
-23-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:7:5-75:19
-24        android:name="com.example.weeklytotals.WeeklyTotalsApp"
-24-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:8:9-40
-25        android:allowBackup="true"
-25-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:9:9-35
-26        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
-26-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
-27        android:debuggable="true"
-28        android:extractNativeLibs="false"
-29        android:label="@string/app_name"
-29-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:10:9-41
-30        android:theme="@style/AppTheme" >
-30-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:11:9-40
-31        <activity
-31-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:13:9-20:20
-32            android:name="com.example.weeklytotals.LoginActivity"
-32-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:14:13-42
-33            android:exported="true" >
-33-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:15:13-36
-34            <intent-filter>
-34-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:16:13-19:29
-35                <action android:name="android.intent.action.MAIN" />
-35-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:17:17-69
-35-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:17:25-66
-36
-37                <category android:name="android.intent.category.LAUNCHER" />
-37-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:18:17-77
-37-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:18:27-74
-38            </intent-filter>
-39        </activity>
-40        <activity
-40-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:22:9-24:40
-41            android:name="com.example.weeklytotals.MainActivity"
-41-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:23:13-41
-42            android:exported="false" />
-42-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:24:13-37
-43        <activity
-43-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:26:9-28:40
-44            android:name="com.example.weeklytotals.BudgetSetupActivity"
-44-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:27:13-48
-45            android:exported="false" />
-45-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:28:13-37
-46        <activity
-46-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:30:9-33:57
-47            android:name="com.example.weeklytotals.SettingsActivity"
-47-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:31:13-45
-48            android:exported="false"
-48-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:32:13-37
-49            android:theme="@style/AppTheme.ActionBar" />
-49-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:33:13-54
-50        <activity
-50-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:35:9-38:57
-51            android:name="com.example.weeklytotals.HistoryActivity"
-51-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:36:13-44
-52            android:exported="false"
-52-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:37:13-37
-53            android:theme="@style/AppTheme.ActionBar" />
-53-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:38:13-54
-54        <activity
-54-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:40:9-43:57
-55            android:name="com.example.weeklytotals.ManageCategoriesActivity"
-55-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:41:13-53
-56            android:exported="false"
-56-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:42:13-37
-57            android:theme="@style/AppTheme.ActionBar" />
-57-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:43:13-54
-58        <activity
-58-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:45:9-48:57
-59            android:name="com.example.weeklytotals.MonitoredAppsActivity"
-59-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:46:13-50
-60            android:exported="false"
-60-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:47:13-37
-61            android:theme="@style/AppTheme.ActionBar" />
-61-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:48:13-54
-62        <activity
-62-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:50:9-55:39
-63            android:name="com.example.weeklytotals.TransactionPromptActivity"
-63-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:51:13-54
-64            android:excludeFromRecents="true"
-64-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:54:13-46
-65            android:exported="false"
-65-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:52:13-37
-66            android:taskAffinity=""
-66-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:55:13-36
-67            android:theme="@style/AppTheme.Dialog" />
-67-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:53:13-51
-68
-69        <service
-69-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:57:9-64:19
-70            android:name="com.example.weeklytotals.notification.TransactionNotificationListenerService"
-70-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:58:13-80
-71            android:exported="true"
-71-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:59:13-36
-72            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
-72-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:60:13-87
-73            <intent-filter>
-73-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:61:13-63:29
-74                <action android:name="android.service.notification.NotificationListenerService" />
-74-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:62:17-99
-74-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:62:25-96
-75            </intent-filter>
-76        </service>
-77
-78        <receiver
-78-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:66:9-73:20
-79            android:name="com.example.weeklytotals.sms.SmsBroadcastReceiver"
-79-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:67:13-53
-80            android:exported="true"
-80-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:68:13-36
-81            android:permission="android.permission.BROADCAST_SMS" >
-81-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:69:13-66
-82            <intent-filter android:priority="999" >
-82-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:70:13-72:29
-82-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:70:28-50
-83                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
-83-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:71:17-82
-83-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:71:25-79
-84            </intent-filter>
-85        </receiver>
-86
-87        <activity
-87-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
-88            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
-88-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
-89            android:excludeFromRecents="true"
-89-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
-90            android:exported="false"
-90-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
-91            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-91-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
-92        <!--
-93            Service handling Google Sign-In user revocation. For apps that do not integrate with
-94            Google Sign-In, this service will never be started.
-95        -->
-96        <service
-96-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
-97            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
-97-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
-98            android:exported="true"
-98-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
-99            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
-99-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
-100            android:visibleToInstantApps="true" />
-100-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
-101        <service
-101-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:8:9-14:19
-102            android:name="com.google.firebase.components.ComponentDiscoveryService"
-102-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:9:13-84
-103            android:directBootAware="true"
-103-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:32:13-43
-104            android:exported="false" >
-104-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:10:13-37
-105            <meta-data
-105-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:11:13-13:85
-106                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar"
-106-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:12:17-119
-107                android:value="com.google.firebase.components.ComponentRegistrar" />
-107-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:13:17-82
-108            <meta-data
-108-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:69:13-71:85
-109                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
-109-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:70:17-109
-110                android:value="com.google.firebase.components.ComponentRegistrar" />
-110-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:71:17-82
-111            <meta-data
-111-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:12:13-14:85
-112                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseLegacyRegistrar"
-112-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:13:17-127
-113                android:value="com.google.firebase.components.ComponentRegistrar" />
-113-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:14:17-82
-114            <meta-data
-114-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:29:13-31:85
-115                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
-115-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:30:17-120
-116                android:value="com.google.firebase.components.ComponentRegistrar" />
-116-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:31:17-82
-117            <meta-data
-117-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:32:13-34:85
-118                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
-118-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:33:17-109
-119                android:value="com.google.firebase.components.ComponentRegistrar" />
-119-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:34:17-82
-120            <meta-data
-120-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:12:13-14:85
-121                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
-121-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:13:17-116
-122                android:value="com.google.firebase.components.ComponentRegistrar" />
-122-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:14:17-82
-123            <meta-data
-123-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:35:13-37:85
-124                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
-124-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:36:17-109
-125                android:value="com.google.firebase.components.ComponentRegistrar" />
-125-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:37:17-82
-126        </service>
-127
-128        <activity
-128-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:29:9-46:20
-129            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
-129-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:30:13-80
-130            android:excludeFromRecents="true"
-130-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:31:13-46
-131            android:exported="true"
-131-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:32:13-36
-132            android:launchMode="singleTask"
-132-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:33:13-44
-133            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-133-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:34:13-72
-134            <intent-filter>
-134-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:35:13-45:29
-135                <action android:name="android.intent.action.VIEW" />
-135-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:17-69
-135-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:25-66
-136
-137                <category android:name="android.intent.category.DEFAULT" />
-137-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:17-76
-137-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:27-73
-138                <category android:name="android.intent.category.BROWSABLE" />
-138-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:17-78
-138-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:27-75
-139
-140                <data
-140-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:41:17-44:51
-141                    android:host="firebase.auth"
-141-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:42:21-49
-142                    android:path="/"
-142-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:43:21-37
-143                    android:scheme="genericidp" />
-143-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:44:21-48
-144            </intent-filter>
-145        </activity>
-146        <activity
-146-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:47:9-64:20
-147            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
-147-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:48:13-79
-148            android:excludeFromRecents="true"
-148-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:49:13-46
-149            android:exported="true"
-149-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:50:13-36
-150            android:launchMode="singleTask"
-150-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:51:13-44
-151            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
-151-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:52:13-72
-152            <intent-filter>
-152-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:53:13-63:29
-153                <action android:name="android.intent.action.VIEW" />
-153-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:17-69
-153-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:25-66
-154
-155                <category android:name="android.intent.category.DEFAULT" />
-155-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:17-76
-155-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:27-73
-156                <category android:name="android.intent.category.BROWSABLE" />
-156-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:17-78
-156-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:27-75
-157
-158                <data
-158-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:41:17-44:51
-159                    android:host="firebase.auth"
-159-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:42:21-49
-160                    android:path="/"
-160-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:43:21-37
-161                    android:scheme="recaptcha" />
-161-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:44:21-48
-162            </intent-filter>
-163        </activity>
-164
-165        <provider
-165-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
-166            android:name="com.google.firebase.provider.FirebaseInitProvider"
-166-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:24:13-77
-167            android:authorities="com.example.weeklytotals.firebaseinitprovider"
-167-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:25:13-72
-168            android:directBootAware="true"
-168-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:26:13-43
-169            android:exported="false"
-169-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:27:13-37
-170            android:initOrder="100" />
-170-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:28:13-36
-171
-172        <activity
-172-->[com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
-173            android:name="com.google.android.gms.common.api.GoogleApiActivity"
-173-->[com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
-174            android:exported="false"
-174-->[com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
-175            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
-175-->[com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
-176
-177        <service
-177-->[androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
-178            android:name="androidx.room.MultiInstanceInvalidationService"
-178-->[androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
-179            android:directBootAware="true"
-179-->[androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
-180            android:exported="false" />
-180-->[androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
-181
-182        <provider
-182-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
-183            android:name="androidx.startup.InitializationProvider"
-183-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
-184            android:authorities="com.example.weeklytotals.androidx-startup"
-184-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
-185            android:exported="false" >
-185-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
-186            <meta-data
-186-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
-187                android:name="androidx.emoji2.text.EmojiCompatInitializer"
-187-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
-188                android:value="androidx.startup" />
-188-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
-189            <meta-data
-189-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
-190                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
-190-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
-191                android:value="androidx.startup" />
-191-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
-192            <meta-data
-192-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
-193                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
-193-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
-194                android:value="androidx.startup" />
-194-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
-195        </provider>
-196
-197        <meta-data
-197-->[com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
-198            android:name="com.google.android.gms.version"
-198-->[com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:22:13-58
-199            android:value="@integer/google_play_services_version" />
-199-->[com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:23:13-66
-200
-201        <receiver
-201-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
-202            android:name="androidx.profileinstaller.ProfileInstallReceiver"
-202-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
-203            android:directBootAware="false"
-203-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
-204            android:enabled="true"
-204-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
-205            android:exported="true"
-205-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
-206            android:permission="android.permission.DUMP" >
-206-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
-207            <intent-filter>
-207-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
-208                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
-208-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
-208-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
-209            </intent-filter>
-210            <intent-filter>
-210-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
-211                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
-211-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
-211-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
-212            </intent-filter>
-213            <intent-filter>
-213-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
-214                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
-214-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
-214-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
-215            </intent-filter>
-216            <intent-filter>
-216-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
-217                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
-217-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
-217-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
-218            </intent-filter>
-219        </receiver>
-220    </application>
-221
-222</manifest>
+13    <uses-permission android:name="android.permission.QUERY_ALL_PACKAGES" />
+13-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:6:5-77
+13-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:6:22-74
+14    <uses-permission android:name="android.permission.INTERNET" />
+14-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:25:5-67
+14-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:25:22-64
+15    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+15-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:26:5-79
+15-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:26:22-76
+16    <uses-permission android:name="com.google.android.providers.gsf.permission.READ_GSERVICES" />
+16-->[com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:9:5-98
+16-->[com.google.android.recaptcha:recaptcha:18.4.0] /Users/tanmay/.gradle/caches/transforms-3/59a7f46db6197e08c3d6b003be5e9137/transformed/recaptcha-18.4.0/AndroidManifest.xml:9:22-95
+17
+18    <permission
+18-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:22:5-24:47
+19        android:name="com.example.weeklytotals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION"
+19-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:23:9-81
+20        android:protectionLevel="signature" />
+20-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:24:9-44
+21
+22    <uses-permission android:name="com.example.weeklytotals.DYNAMIC_RECEIVER_NOT_EXPORTED_PERMISSION" />
+22-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:26:5-97
+22-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:26:22-94
+23
+24    <application
+24-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:8:5-76:19
+25        android:name="com.example.weeklytotals.WeeklyTotalsApp"
+25-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:9:9-40
+26        android:allowBackup="true"
+26-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:10:9-35
+27        android:appComponentFactory="androidx.core.app.CoreComponentFactory"
+27-->[androidx.core:core:1.12.0] /Users/tanmay/.gradle/caches/transforms-3/3abdf5722e3f791a4eb2faa9b7c0676e/transformed/core-1.12.0/AndroidManifest.xml:28:18-86
+28        android:debuggable="true"
+29        android:extractNativeLibs="false"
+30        android:label="@string/app_name"
+30-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:11:9-41
+31        android:theme="@style/AppTheme" >
+31-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:12:9-40
+32        <activity
+32-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:14:9-21:20
+33            android:name="com.example.weeklytotals.LoginActivity"
+33-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:15:13-42
+34            android:exported="true" >
+34-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:16:13-36
+35            <intent-filter>
+35-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:17:13-20:29
+36                <action android:name="android.intent.action.MAIN" />
+36-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:18:17-69
+36-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:18:25-66
+37
+38                <category android:name="android.intent.category.LAUNCHER" />
+38-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:19:17-77
+38-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:19:27-74
+39            </intent-filter>
+40        </activity>
+41        <activity
+41-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:23:9-25:40
+42            android:name="com.example.weeklytotals.MainActivity"
+42-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:24:13-41
+43            android:exported="false" />
+43-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:25:13-37
+44        <activity
+44-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:27:9-29:40
+45            android:name="com.example.weeklytotals.BudgetSetupActivity"
+45-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:28:13-48
+46            android:exported="false" />
+46-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:29:13-37
+47        <activity
+47-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:31:9-34:57
+48            android:name="com.example.weeklytotals.SettingsActivity"
+48-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:32:13-45
+49            android:exported="false"
+49-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:33:13-37
+50            android:theme="@style/AppTheme.ActionBar" />
+50-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:34:13-54
+51        <activity
+51-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:36:9-39:57
+52            android:name="com.example.weeklytotals.HistoryActivity"
+52-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:37:13-44
+53            android:exported="false"
+53-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:38:13-37
+54            android:theme="@style/AppTheme.ActionBar" />
+54-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:39:13-54
+55        <activity
+55-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:41:9-44:57
+56            android:name="com.example.weeklytotals.ManageCategoriesActivity"
+56-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:42:13-53
+57            android:exported="false"
+57-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:43:13-37
+58            android:theme="@style/AppTheme.ActionBar" />
+58-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:44:13-54
+59        <activity
+59-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:46:9-49:57
+60            android:name="com.example.weeklytotals.MonitoredAppsActivity"
+60-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:47:13-50
+61            android:exported="false"
+61-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:48:13-37
+62            android:theme="@style/AppTheme.ActionBar" />
+62-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:49:13-54
+63        <activity
+63-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:51:9-56:39
+64            android:name="com.example.weeklytotals.TransactionPromptActivity"
+64-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:52:13-54
+65            android:excludeFromRecents="true"
+65-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:55:13-46
+66            android:exported="false"
+66-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:53:13-37
+67            android:taskAffinity=""
+67-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:56:13-36
+68            android:theme="@style/AppTheme.Dialog" />
+68-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:54:13-51
+69
+70        <service
+70-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:58:9-65:19
+71            android:name="com.example.weeklytotals.notification.TransactionNotificationListenerService"
+71-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:59:13-80
+72            android:exported="true"
+72-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:60:13-36
+73            android:permission="android.permission.BIND_NOTIFICATION_LISTENER_SERVICE" >
+73-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:61:13-87
+74            <intent-filter>
+74-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:62:13-64:29
+75                <action android:name="android.service.notification.NotificationListenerService" />
+75-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:63:17-99
+75-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:63:25-96
+76            </intent-filter>
+77        </service>
+78
+79        <receiver
+79-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:67:9-74:20
+80            android:name="com.example.weeklytotals.sms.SmsBroadcastReceiver"
+80-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:68:13-53
+81            android:exported="true"
+81-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:69:13-36
+82            android:permission="android.permission.BROADCAST_SMS" >
+82-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:70:13-66
+83            <intent-filter android:priority="999" >
+83-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:71:13-73:29
+83-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:71:28-50
+84                <action android:name="android.provider.Telephony.SMS_RECEIVED" />
+84-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:72:17-82
+84-->/Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:72:25-79
+85            </intent-filter>
+86        </receiver>
+87
+88        <activity
+88-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:23:9-27:75
+89            android:name="com.google.android.gms.auth.api.signin.internal.SignInHubActivity"
+89-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:24:13-93
+90            android:excludeFromRecents="true"
+90-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:25:13-46
+91            android:exported="false"
+91-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:26:13-37
+92            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+92-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:27:13-72
+93        <!--
+94            Service handling Google Sign-In user revocation. For apps that do not integrate with
+95            Google Sign-In, this service will never be started.
+96        -->
+97        <service
+97-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:33:9-37:51
+98            android:name="com.google.android.gms.auth.api.signin.RevocationBoundService"
+98-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:34:13-89
+99            android:exported="true"
+99-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:35:13-36
+100            android:permission="com.google.android.gms.auth.api.signin.permission.REVOCATION_NOTIFICATION"
+100-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:36:13-107
+101            android:visibleToInstantApps="true" />
+101-->[com.google.android.gms:play-services-auth:20.7.0] /Users/tanmay/.gradle/caches/transforms-3/70da6828f068d4a42272026b0fef06f0/transformed/play-services-auth-20.7.0/AndroidManifest.xml:37:13-48
+102        <service
+102-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:8:9-14:19
+103            android:name="com.google.firebase.components.ComponentDiscoveryService"
+103-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:9:13-84
+104            android:directBootAware="true"
+104-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:32:13-43
+105            android:exported="false" >
+105-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:10:13-37
+106            <meta-data
+106-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:11:13-13:85
+107                android:name="com.google.firebase.components:com.google.firebase.auth.ktx.FirebaseAuthLegacyRegistrar"
+107-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:12:17-119
+108                android:value="com.google.firebase.components.ComponentRegistrar" />
+108-->[com.google.firebase:firebase-auth-ktx:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/1666382f8a108271d433a21ebbca36e0/transformed/firebase-auth-ktx-22.3.1/AndroidManifest.xml:13:17-82
+109            <meta-data
+109-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:69:13-71:85
+110                android:name="com.google.firebase.components:com.google.firebase.auth.FirebaseAuthRegistrar"
+110-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:70:17-109
+111                android:value="com.google.firebase.components.ComponentRegistrar" />
+111-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:71:17-82
+112            <meta-data
+112-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:12:13-14:85
+113                android:name="com.google.firebase.components:com.google.firebase.database.ktx.FirebaseDatabaseLegacyRegistrar"
+113-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:13:17-127
+114                android:value="com.google.firebase.components.ComponentRegistrar" />
+114-->[com.google.firebase:firebase-database-ktx:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/1f2a8687d34ba84b78355aeb6667fcd5/transformed/firebase-database-ktx-20.3.0/AndroidManifest.xml:14:17-82
+115            <meta-data
+115-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:29:13-31:85
+116                android:name="com.google.firebase.components:com.google.firebase.database.FirebaseDatabaseKtxRegistrar"
+116-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:30:17-120
+117                android:value="com.google.firebase.components.ComponentRegistrar" />
+117-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:31:17-82
+118            <meta-data
+118-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:32:13-34:85
+119                android:name="com.google.firebase.components:com.google.firebase.database.DatabaseRegistrar"
+119-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:33:17-109
+120                android:value="com.google.firebase.components.ComponentRegistrar" />
+120-->[com.google.firebase:firebase-database:20.3.0] /Users/tanmay/.gradle/caches/transforms-3/f369d1eefdb5d718a285a10bfe9f5c4a/transformed/firebase-database-20.3.0/AndroidManifest.xml:34:17-82
+121            <meta-data
+121-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:12:13-14:85
+122                android:name="com.google.firebase.components:com.google.firebase.ktx.FirebaseCommonLegacyRegistrar"
+122-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:13:17-116
+123                android:value="com.google.firebase.components.ComponentRegistrar" />
+123-->[com.google.firebase:firebase-common-ktx:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/3efe1de331890085599902fd7b01d5c1/transformed/firebase-common-ktx-20.4.2/AndroidManifest.xml:14:17-82
+124            <meta-data
+124-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:35:13-37:85
+125                android:name="com.google.firebase.components:com.google.firebase.FirebaseCommonKtxRegistrar"
+125-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:36:17-109
+126                android:value="com.google.firebase.components.ComponentRegistrar" />
+126-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:37:17-82
+127        </service>
+128
+129        <activity
+129-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:29:9-46:20
+130            android:name="com.google.firebase.auth.internal.GenericIdpActivity"
+130-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:30:13-80
+131            android:excludeFromRecents="true"
+131-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:31:13-46
+132            android:exported="true"
+132-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:32:13-36
+133            android:launchMode="singleTask"
+133-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:33:13-44
+134            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+134-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:34:13-72
+135            <intent-filter>
+135-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:35:13-45:29
+136                <action android:name="android.intent.action.VIEW" />
+136-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:17-69
+136-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:25-66
+137
+138                <category android:name="android.intent.category.DEFAULT" />
+138-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:17-76
+138-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:27-73
+139                <category android:name="android.intent.category.BROWSABLE" />
+139-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:17-78
+139-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:27-75
+140
+141                <data
+141-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:41:17-44:51
+142                    android:host="firebase.auth"
+142-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:42:21-49
+143                    android:path="/"
+143-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:43:21-37
+144                    android:scheme="genericidp" />
+144-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:44:21-48
+145            </intent-filter>
+146        </activity>
+147        <activity
+147-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:47:9-64:20
+148            android:name="com.google.firebase.auth.internal.RecaptchaActivity"
+148-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:48:13-79
+149            android:excludeFromRecents="true"
+149-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:49:13-46
+150            android:exported="true"
+150-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:50:13-36
+151            android:launchMode="singleTask"
+151-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:51:13-44
+152            android:theme="@android:style/Theme.Translucent.NoTitleBar" >
+152-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:52:13-72
+153            <intent-filter>
+153-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:53:13-63:29
+154                <action android:name="android.intent.action.VIEW" />
+154-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:17-69
+154-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:36:25-66
+155
+156                <category android:name="android.intent.category.DEFAULT" />
+156-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:17-76
+156-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:38:27-73
+157                <category android:name="android.intent.category.BROWSABLE" />
+157-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:17-78
+157-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:39:27-75
+158
+159                <data
+159-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:41:17-44:51
+160                    android:host="firebase.auth"
+160-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:42:21-49
+161                    android:path="/"
+161-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:43:21-37
+162                    android:scheme="recaptcha" />
+162-->[com.google.firebase:firebase-auth:22.3.1] /Users/tanmay/.gradle/caches/transforms-3/5a371dd91474c67fada72decf09da461/transformed/firebase-auth-22.3.1/AndroidManifest.xml:44:21-48
+163            </intent-filter>
+164        </activity>
+165
+166        <provider
+166-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:23:9-28:39
+167            android:name="com.google.firebase.provider.FirebaseInitProvider"
+167-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:24:13-77
+168            android:authorities="com.example.weeklytotals.firebaseinitprovider"
+168-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:25:13-72
+169            android:directBootAware="true"
+169-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:26:13-43
+170            android:exported="false"
+170-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:27:13-37
+171            android:initOrder="100" />
+171-->[com.google.firebase:firebase-common:20.4.2] /Users/tanmay/.gradle/caches/transforms-3/fdfa9ab799230785c4c5fcc8e805b2ae/transformed/firebase-common-20.4.2/AndroidManifest.xml:28:13-36
+172
+173        <activity
+173-->[com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:9-22:45
+174            android:name="com.google.android.gms.common.api.GoogleApiActivity"
+174-->[com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:20:19-85
+175            android:exported="false"
+175-->[com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:22:19-43
+176            android:theme="@android:style/Theme.Translucent.NoTitleBar" />
+176-->[com.google.android.gms:play-services-base:18.1.0] /Users/tanmay/.gradle/caches/transforms-3/97788f295a294726de1929604a4393d9/transformed/play-services-base-18.1.0/AndroidManifest.xml:21:19-78
+177
+178        <service
+178-->[androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:24:9-28:63
+179            android:name="androidx.room.MultiInstanceInvalidationService"
+179-->[androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:25:13-74
+180            android:directBootAware="true"
+180-->[androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:26:13-43
+181            android:exported="false" />
+181-->[androidx.room:room-runtime:2.6.1] /Users/tanmay/.gradle/caches/transforms-3/b578c2efd4d6669e6da153e0bece4543/transformed/room-runtime-2.6.1/AndroidManifest.xml:27:13-37
+182
+183        <provider
+183-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:24:9-32:20
+184            android:name="androidx.startup.InitializationProvider"
+184-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:25:13-67
+185            android:authorities="com.example.weeklytotals.androidx-startup"
+185-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:26:13-68
+186            android:exported="false" >
+186-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:27:13-37
+187            <meta-data
+187-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:29:13-31:52
+188                android:name="androidx.emoji2.text.EmojiCompatInitializer"
+188-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:30:17-75
+189                android:value="androidx.startup" />
+189-->[androidx.emoji2:emoji2:1.2.0] /Users/tanmay/.gradle/caches/transforms-3/60b175399f33613e87348caab3bb04a7/transformed/emoji2-1.2.0/AndroidManifest.xml:31:17-49
+190            <meta-data
+190-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:29:13-31:52
+191                android:name="androidx.lifecycle.ProcessLifecycleInitializer"
+191-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:30:17-78
+192                android:value="androidx.startup" />
+192-->[androidx.lifecycle:lifecycle-process:2.7.0] /Users/tanmay/.gradle/caches/transforms-3/2e06d668a871cdc8fe59922357c15fe1/transformed/lifecycle-process-2.7.0/AndroidManifest.xml:31:17-49
+193            <meta-data
+193-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:29:13-31:52
+194                android:name="androidx.profileinstaller.ProfileInstallerInitializer"
+194-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:30:17-85
+195                android:value="androidx.startup" />
+195-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:31:17-49
+196        </provider>
+197
+198        <meta-data
+198-->[com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:21:9-23:69
+199            android:name="com.google.android.gms.version"
+199-->[com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:22:13-58
+200            android:value="@integer/google_play_services_version" />
+200-->[com.google.android.gms:play-services-basement:18.2.0] /Users/tanmay/.gradle/caches/transforms-3/387c04c36d3bb6272c136473e7174e25/transformed/play-services-basement-18.2.0/AndroidManifest.xml:23:13-66
+201
+202        <receiver
+202-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:34:9-52:20
+203            android:name="androidx.profileinstaller.ProfileInstallReceiver"
+203-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:35:13-76
+204            android:directBootAware="false"
+204-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:36:13-44
+205            android:enabled="true"
+205-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:37:13-35
+206            android:exported="true"
+206-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:38:13-36
+207            android:permission="android.permission.DUMP" >
+207-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:39:13-57
+208            <intent-filter>
+208-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:40:13-42:29
+209                <action android:name="androidx.profileinstaller.action.INSTALL_PROFILE" />
+209-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:17-91
+209-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:41:25-88
+210            </intent-filter>
+211            <intent-filter>
+211-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:43:13-45:29
+212                <action android:name="androidx.profileinstaller.action.SKIP_FILE" />
+212-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:17-85
+212-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:44:25-82
+213            </intent-filter>
+214            <intent-filter>
+214-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:46:13-48:29
+215                <action android:name="androidx.profileinstaller.action.SAVE_PROFILE" />
+215-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:17-88
+215-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:47:25-85
+216            </intent-filter>
+217            <intent-filter>
+217-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:49:13-51:29
+218                <action android:name="androidx.profileinstaller.action.BENCHMARK_OPERATION" />
+218-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:17-95
+218-->[androidx.profileinstaller:profileinstaller:1.3.0] /Users/tanmay/.gradle/caches/transforms-3/a5011db43f3c5bde046fa49a3d338c87/transformed/profileinstaller-1.3.0/AndroidManifest.xml:50:25-92
+219            </intent-filter>
+220        </receiver>
+221    </application>
+222
+223</manifest>

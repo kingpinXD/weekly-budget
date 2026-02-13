@@ -2,10 +2,13 @@ package com.example.weeklytotals
 
 import android.content.pm.ApplicationInfo
 import android.os.Bundle
+import android.text.Editable
+import android.text.TextWatcher
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.CheckBox
+import android.widget.EditText
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.appcompat.app.AppCompatActivity
@@ -38,6 +41,14 @@ class MonitoredAppsActivity : AppCompatActivity() {
         )
         recyclerView.layoutManager = LinearLayoutManager(this)
         recyclerView.adapter = adapter
+
+        findViewById<EditText>(R.id.editTextSearch).addTextChangedListener(object : TextWatcher {
+            override fun beforeTextChanged(s: CharSequence?, start: Int, count: Int, after: Int) {}
+            override fun onTextChanged(s: CharSequence?, start: Int, before: Int, count: Int) {}
+            override fun afterTextChanged(s: Editable?) {
+                adapter.filter(s?.toString() ?: "")
+            }
+        })
 
         loadApps()
     }
@@ -77,10 +88,26 @@ class MonitoredAppsActivity : AppCompatActivity() {
         private val onToggle: (Set<String>) -> Unit
     ) : RecyclerView.Adapter<AppListAdapter.ViewHolder>() {
 
+        private var allApps: List<AppItem> = emptyList()
         private var apps: List<AppItem> = emptyList()
+        private var query: String = ""
 
         fun setApps(list: List<AppItem>) {
-            apps = list
+            allApps = list
+            applyFilter()
+        }
+
+        fun filter(text: String) {
+            query = text.trim().lowercase()
+            applyFilter()
+        }
+
+        private fun applyFilter() {
+            apps = if (query.isEmpty()) {
+                allApps
+            } else {
+                allApps.filter { it.label.lowercase().contains(query) }
+            }
             notifyDataSetChanged()
         }
 

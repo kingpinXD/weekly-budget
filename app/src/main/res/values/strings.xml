@@ -77,6 +77,13 @@
     <string name="notification_access_title">Notification Access Required</string>
     <string name="notification_access_message">To detect transactions from app notifications, please grant notification access in system settings.</string>
     <string name="open_settings">Open Settings</string>
+    <string name="search_apps_hint">Search apps</string>
+
+    <!-- Savings -->
+    <string name="savings_button">Savings</string>
+    <string name="savings_title">Total Savings</string>
+    <string name="savings_amount_format">$%.2f CAD</string>
+    <string name="savings_description">Accumulated from leftover budget at the end of each week.</string>
     <string name="transaction_detected_title">Transaction Detected</string>
     <string name="prompt_category_label">Category</string>
     <string name="prompt_add">Add</string>
