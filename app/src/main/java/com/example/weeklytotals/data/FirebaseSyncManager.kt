@@ -120,16 +120,41 @@ class FirebaseSyncManager(context: Context) {
             val isAdjustment = data["isAdjustment"] as Boolean
 
             if (local == null) {
-                // New transaction from remote - insert locally
-                transactionDao.insert(
-                    Transaction(
-                        weekStartDate = weekStartDate,
-                        category = category,
-                        amount = amount,
-                        isAdjustment = isAdjustment,
-                        createdAt = createdAt
+                if (isAdjustment) {
+                    // Special handling: at most one adjustment per week.
+                    // A local adjustment may already exist (from checkWeekRollover)
+                    // with a different createdAt. Update it to align with remote.
+                    val existingAdjustment = transactionDao.getAdjustmentForWeek(weekStartDate)
+                    if (existingAdjustment != null) {
+                        transactionDao.update(
+                            existingAdjustment.copy(
+                                amount = amount,
+                                createdAt = createdAt
+                            )
+                        )
+                    } else {
+                        transactionDao.insert(
+                            Transaction(
+                                weekStartDate = weekStartDate,
+                                category = category,
+                                amount = amount,
+                                isAdjustment = isAdjustment,
+                                createdAt = createdAt
+                            )
+                        )
+                    }
+                } else {
+                    // New non-adjustment transaction from remote - insert locally
+                    transactionDao.insert(
+                        Transaction(
+                            weekStartDate = weekStartDate,
+                            category = category,
+                            amount = amount,
+                            isAdjustment = isAdjustment,
+                            createdAt = createdAt
+                        )
                     )
-                )
+                }
             } else if (local.weekStartDate != weekStartDate ||
                 local.category != category ||
                 local.amount != amount ||
@@ -147,11 +172,22 @@ class FirebaseSyncManager(context: Context) {
             }
         }
 
+        // Collect weeks that have adjustments in Firebase, so we don't
+        // accidentally delete a local adjustment whose createdAt was just re-aligned.
+        val remoteAdjustmentWeeks = remoteTransactions.values
+            .filter { it["isAdjustment"] as? Boolean == true }
+            .mapTo(mutableSetOf()) { it["weekStartDate"] as String }
+
         // Delete local transactions that are not in Firebase
         // Skip if Firebase is empty — avoids race condition on first sync / fresh DB
         if (remoteTransactions.isNotEmpty()) {
             for (local in localTransactions) {
                 if (local.createdAt !in remoteTransactions) {
+                    // Don't delete a local adjustment if Firebase still has one
+                    // for the same week (its createdAt may have been re-aligned above)
+                    if (local.isAdjustment && local.weekStartDate in remoteAdjustmentWeeks) {
+                        continue
+                    }
                     transactionDao.delete(local)
                 }
             }

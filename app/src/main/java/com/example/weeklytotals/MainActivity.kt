@@ -179,20 +179,28 @@ class MainActivity : AppCompatActivity() {
             selectAll()
         }
 
-        val categoryNames = userCategories.map { it.displayName }.toTypedArray()
-        val currentCategoryIndex = userCategories.indexOfFirst { it.name == transaction.category }.coerceAtLeast(0)
-
-        val spinner = Spinner(this)
-        val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, categoryNames)
-        spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
-        spinner.adapter = spinnerAdapter
-        spinner.setSelection(currentCategoryIndex)
-
         val container = android.widget.LinearLayout(this).apply {
             orientation = android.widget.LinearLayout.VERTICAL
             setPadding(64, 32, 64, 0)
-            addView(spinner)
-            addView(editText)
+        }
+
+        // Adjustments only allow editing the amount (category is fixed)
+        val spinner: Spinner?
+        if (transaction.isAdjustment) {
+            spinner = null
+            container.addView(editText)
+        } else {
+            val categoryNames = userCategories.map { it.displayName }.toTypedArray()
+            val currentCategoryIndex = userCategories.indexOfFirst { it.name == transaction.category }.coerceAtLeast(0)
+
+            spinner = Spinner(this)
+            val spinnerAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, categoryNames)
+            spinnerAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+            spinner.adapter = spinnerAdapter
+            spinner.setSelection(currentCategoryIndex)
+
+            container.addView(spinner)
+            container.addView(editText)
         }
 
         AlertDialog.Builder(this)
@@ -200,11 +208,15 @@ class MainActivity : AppCompatActivity() {
             .setView(container)
             .setPositiveButton(R.string.save) { _, _ ->
                 val newAmount = editText.text.toString().trim().toDoubleOrNull()
-                if (newAmount != null && newAmount > 0 && userCategories.isNotEmpty()) {
-                    val newCategory = userCategories[spinner.selectedItemPosition]
-                    viewModel.updateTransaction(
-                        transaction.copy(category = newCategory.name, amount = newAmount)
-                    )
+                if (newAmount != null && newAmount > 0) {
+                    if (transaction.isAdjustment) {
+                        viewModel.updateTransaction(transaction.copy(amount = newAmount))
+                    } else if (userCategories.isNotEmpty() && spinner != null) {
+                        val newCategory = userCategories[spinner.selectedItemPosition]
+                        viewModel.updateTransaction(
+                            transaction.copy(category = newCategory.name, amount = newAmount)
+                        )
+                    }
                 }
             }
             .setNegativeButton(R.string.cancel, null)

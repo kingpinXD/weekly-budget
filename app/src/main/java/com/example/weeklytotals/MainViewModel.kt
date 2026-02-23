@@ -78,8 +78,7 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
             val previousBudget = budget
 
             // Carry over previous week's overage as an adjustment
-            val hasAdjustment = dao.hasAdjustmentForWeek(weekStartDate)
-            if (!hasAdjustment && previousTotal > previousBudget) {
+            if (previousTotal > previousBudget) {
                 val overage = previousTotal - previousBudget
                 val adjustment = Transaction(
                     weekStartDate = weekStartDate,
@@ -87,8 +86,10 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
                     amount = overage,
                     isAdjustment = true
                 )
-                dao.insert(adjustment)
-                syncManager.pushTransaction(adjustment)
+                val id = dao.insertAdjustmentIfNotExists(adjustment)
+                if (id != -1L) {
+                    syncManager.pushTransaction(adjustment)
+                }
             }
 
             // Accumulate savings if under budget

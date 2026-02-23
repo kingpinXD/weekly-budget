@@ -9,6 +9,7 @@ import androidx.room.CoroutinesRoom;
 import androidx.room.EntityDeletionOrUpdateAdapter;
 import androidx.room.EntityInsertionAdapter;
 import androidx.room.RoomDatabase;
+import androidx.room.RoomDatabaseKt;
 import androidx.room.RoomSQLiteQuery;
 import androidx.room.SharedSQLiteStatement;
 import androidx.room.util.CursorUtil;
@@ -166,6 +167,12 @@ public final class TransactionDao_Impl implements TransactionDao {
   }
 
   @Override
+  public Object insertAdjustmentIfNotExists(final Transaction transaction,
+      final Continuation<? super Long> $completion) {
+    return RoomDatabaseKt.withTransaction(__db, (__cont) -> TransactionDao.DefaultImpls.insertAdjustmentIfNotExists(TransactionDao_Impl.this, transaction, __cont), $completion);
+  }
+
+  @Override
   public Object deleteAll(final Continuation<? super Unit> $completion) {
     return CoroutinesRoom.execute(__db, true, new Callable<Unit>() {
       @Override
@@ -297,6 +304,55 @@ public final class TransactionDao_Impl implements TransactionDao {
             _result = _tmp != 0;
           } else {
             _result = false;
+          }
+          return _result;
+        } finally {
+          _cursor.close();
+          _statement.release();
+        }
+      }
+    }, $completion);
+  }
+
+  @Override
+  public Object getAdjustmentForWeek(final String weekStart,
+      final Continuation<? super Transaction> $completion) {
+    final String _sql = "SELECT * FROM transactions WHERE weekStartDate = ? AND isAdjustment = 1 LIMIT 1";
+    final RoomSQLiteQuery _statement = RoomSQLiteQuery.acquire(_sql, 1);
+    int _argIndex = 1;
+    _statement.bindString(_argIndex, weekStart);
+    final CancellationSignal _cancellationSignal = DBUtil.createCancellationSignal();
+    return CoroutinesRoom.execute(__db, false, _cancellationSignal, new Callable<Transaction>() {
+      @Override
+      @Nullable
+      public Transaction call() throws Exception {
+        final Cursor _cursor = DBUtil.query(__db, _statement, false, null);
+        try {
+          final int _cursorIndexOfId = CursorUtil.getColumnIndexOrThrow(_cursor, "id");
+          final int _cursorIndexOfWeekStartDate = CursorUtil.getColumnIndexOrThrow(_cursor, "weekStartDate");
+          final int _cursorIndexOfCategory = CursorUtil.getColumnIndexOrThrow(_cursor, "category");
+          final int _cursorIndexOfAmount = CursorUtil.getColumnIndexOrThrow(_cursor, "amount");
+          final int _cursorIndexOfIsAdjustment = CursorUtil.getColumnIndexOrThrow(_cursor, "isAdjustment");
+          final int _cursorIndexOfCreatedAt = CursorUtil.getColumnIndexOrThrow(_cursor, "createdAt");
+          final Transaction _result;
+          if (_cursor.moveToFirst()) {
+            final long _tmpId;
+            _tmpId = _cursor.getLong(_cursorIndexOfId);
+            final String _tmpWeekStartDate;
+            _tmpWeekStartDate = _cursor.getString(_cursorIndexOfWeekStartDate);
+            final String _tmpCategory;
+            _tmpCategory = _cursor.getString(_cursorIndexOfCategory);
+            final double _tmpAmount;
+            _tmpAmount = _cursor.getDouble(_cursorIndexOfAmount);
+            final boolean _tmpIsAdjustment;
+            final int _tmp;
+            _tmp = _cursor.getInt(_cursorIndexOfIsAdjustment);
+            _tmpIsAdjustment = _tmp != 0;
+            final long _tmpCreatedAt;
+            _tmpCreatedAt = _cursor.getLong(_cursorIndexOfCreatedAt);
+            _result = new Transaction(_tmpId,_tmpWeekStartDate,_tmpCategory,_tmpAmount,_tmpIsAdjustment,_tmpCreatedAt);
+          } else {
+            _result = null;
           }
           return _result;
         } finally {

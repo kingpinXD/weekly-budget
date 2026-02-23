@@ -27,6 +27,25 @@ interface TransactionDao {
     @Query("SELECT EXISTS(SELECT 1 FROM transactions WHERE weekStartDate = :weekStart AND isAdjustment = 1)")
     suspend fun hasAdjustmentForWeek(weekStart: String): Boolean
 
+    @Query("SELECT * FROM transactions WHERE weekStartDate = :weekStart AND isAdjustment = 1 LIMIT 1")
+    suspend fun getAdjustmentForWeek(weekStart: String): Transaction?
+
+    /**
+     * Atomically checks if an adjustment already exists for the given week and inserts
+     * only if none exists. Prevents duplicate adjustments from race conditions between
+     * checkWeekRollover() and Firebase sync.
+     * @return the inserted row ID, or -1 if an adjustment already existed.
+     */
+    @androidx.room.Transaction
+    suspend fun insertAdjustmentIfNotExists(transaction: Transaction): Long {
+        val existing = getAdjustmentForWeek(transaction.weekStartDate)
+        return if (existing == null) {
+            insert(transaction)
+        } else {
+            -1L
+        }
+    }
+
     @Query("SELECT category, SUM(amount) as total FROM transactions WHERE substr(weekStartDate, 1, 7) = :yearMonth AND isAdjustment = 0 GROUP BY category")
     suspend fun getCategoryTotalsForMonth(yearMonth: String): List<CategoryTotal>
 

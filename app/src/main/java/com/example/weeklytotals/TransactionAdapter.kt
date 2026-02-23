@@ -65,15 +65,11 @@ class TransactionAdapter(
         holder.textAmount.text = String.format("$%.2f CAD", transaction.amount)
 
         holder.itemView.setOnClickListener {
-            if (!transaction.isAdjustment) {
-                onItemClick(transaction)
-            }
+            onItemClick(transaction)
         }
 
         holder.itemView.setOnLongClickListener {
-            if (!transaction.isAdjustment) {
-                onItemLongClick(transaction)
-            }
+            onItemLongClick(transaction)
             true
         }
     }
