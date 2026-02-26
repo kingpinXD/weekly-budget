@@ -4,10 +4,6 @@
         "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/drawable/rounded_input_bg.xml"
     },
     {
-        "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_settings.xml.flat",
-        "source": "com.example.weeklytotals.app-main-50:/layout/activity_settings.xml"
-    },
-    {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_manage_categories.xml.flat",
         "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_manage_categories.xml"
     },
@@ -62,6 +58,10 @@
     {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_item_transaction.xml.flat",
         "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/item_transaction.xml"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_main.xml.flat",
+        "source": "com.example.weeklytotals.app-main-50:/layout/activity_main.xml"
     },
     {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_monitored_apps.xml.flat",

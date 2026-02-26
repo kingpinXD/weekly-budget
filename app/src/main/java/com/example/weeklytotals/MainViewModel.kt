@@ -42,12 +42,14 @@ class MainViewModel(application: Application) : AndroidViewModel(application) {
         checkWeekRollover()
     }
 
-    fun addTransaction(categoryName: String, amount: Double) {
+    fun addTransaction(categoryName: String, amount: Double, details: String? = null) {
         viewModelScope.launch(Dispatchers.IO) {
+            val effectiveAmount = if (categoryName == "REFUND") -amount else amount
             val transaction = Transaction(
                 weekStartDate = weekStartDate,
                 category = categoryName,
-                amount = amount
+                amount = effectiveAmount,
+                details = details?.takeIf { it.isNotBlank() }
             )
             dao.insert(transaction)
             syncManager.pushTransaction(transaction)

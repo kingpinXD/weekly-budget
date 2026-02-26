@@ -51,7 +51,7 @@ public final class TransactionDao_Impl implements TransactionDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "INSERT OR ABORT INTO `transactions` (`id`,`weekStartDate`,`category`,`amount`,`isAdjustment`,`createdAt`) VALUES (nullif(?, 0),?,?,?,?,?)";
+        return "INSERT OR ABORT INTO `transactions` (`id`,`weekStartDate`,`category`,`amount`,`isAdjustment`,`createdAt`,`details`) VALUES (nullif(?, 0),?,?,?,?,?,?)";
       }
 
       @Override
@@ -64,6 +64,11 @@ public final class TransactionDao_Impl implements TransactionDao {
         final int _tmp = entity.isAdjustment() ? 1 : 0;
         statement.bindLong(5, _tmp);
         statement.bindLong(6, entity.getCreatedAt());
+        if (entity.getDetails() == null) {
+          statement.bindNull(7);
+        } else {
+          statement.bindString(7, entity.getDetails());
+        }
       }
     };
     this.__deletionAdapterOfTransaction = new EntityDeletionOrUpdateAdapter<Transaction>(__db) {
@@ -83,7 +88,7 @@ public final class TransactionDao_Impl implements TransactionDao {
       @Override
       @NonNull
       protected String createQuery() {
-        return "UPDATE OR ABORT `transactions` SET `id` = ?,`weekStartDate` = ?,`category` = ?,`amount` = ?,`isAdjustment` = ?,`createdAt` = ? WHERE `id` = ?";
+        return "UPDATE OR ABORT `transactions` SET `id` = ?,`weekStartDate` = ?,`category` = ?,`amount` = ?,`isAdjustment` = ?,`createdAt` = ?,`details` = ? WHERE `id` = ?";
       }
 
       @Override
@@ -96,7 +101,12 @@ public final class TransactionDao_Impl implements TransactionDao {
         final int _tmp = entity.isAdjustment() ? 1 : 0;
         statement.bindLong(5, _tmp);
         statement.bindLong(6, entity.getCreatedAt());
-        statement.bindLong(7, entity.getId());
+        if (entity.getDetails() == null) {
+          statement.bindNull(7);
+        } else {
+          statement.bindString(7, entity.getDetails());
+        }
+        statement.bindLong(8, entity.getId());
       }
     };
     this.__preparedStmtOfDeleteAll = new SharedSQLiteStatement(__db) {
@@ -213,6 +223,7 @@ public final class TransactionDao_Impl implements TransactionDao {
           final int _cursorIndexOfAmount = CursorUtil.getColumnIndexOrThrow(_cursor, "amount");
           final int _cursorIndexOfIsAdjustment = CursorUtil.getColumnIndexOrThrow(_cursor, "isAdjustment");
           final int _cursorIndexOfCreatedAt = CursorUtil.getColumnIndexOrThrow(_cursor, "createdAt");
+          final int _cursorIndexOfDetails = CursorUtil.getColumnIndexOrThrow(_cursor, "details");
           final List<Transaction> _result = new ArrayList<Transaction>(_cursor.getCount());
           while (_cursor.moveToNext()) {
             final Transaction _item;
@@ -230,7 +241,13 @@ public final class TransactionDao_Impl implements TransactionDao {
             _tmpIsAdjustment = _tmp != 0;
             final long _tmpCreatedAt;
             _tmpCreatedAt = _cursor.getLong(_cursorIndexOfCreatedAt);
-            _item = new Transaction(_tmpId,_tmpWeekStartDate,_tmpCategory,_tmpAmount,_tmpIsAdjustment,_tmpCreatedAt);
+            final String _tmpDetails;
+            if (_cursor.isNull(_cursorIndexOfDetails)) {
+              _tmpDetails = null;
+            } else {
+              _tmpDetails = _cursor.getString(_cursorIndexOfDetails);
+            }
+            _item = new Transaction(_tmpId,_tmpWeekStartDate,_tmpCategory,_tmpAmount,_tmpIsAdjustment,_tmpCreatedAt,_tmpDetails);
             _result.add(_item);
           }
           return _result;
@@ -334,6 +351,7 @@ public final class TransactionDao_Impl implements TransactionDao {
           final int _cursorIndexOfAmount = CursorUtil.getColumnIndexOrThrow(_cursor, "amount");
           final int _cursorIndexOfIsAdjustment = CursorUtil.getColumnIndexOrThrow(_cursor, "isAdjustment");
           final int _cursorIndexOfCreatedAt = CursorUtil.getColumnIndexOrThrow(_cursor, "createdAt");
+          final int _cursorIndexOfDetails = CursorUtil.getColumnIndexOrThrow(_cursor, "details");
           final Transaction _result;
           if (_cursor.moveToFirst()) {
             final long _tmpId;
@@ -350,7 +368,13 @@ public final class TransactionDao_Impl implements TransactionDao {
             _tmpIsAdjustment = _tmp != 0;
             final long _tmpCreatedAt;
             _tmpCreatedAt = _cursor.getLong(_cursorIndexOfCreatedAt);
-            _result = new Transaction(_tmpId,_tmpWeekStartDate,_tmpCategory,_tmpAmount,_tmpIsAdjustment,_tmpCreatedAt);
+            final String _tmpDetails;
+            if (_cursor.isNull(_cursorIndexOfDetails)) {
+              _tmpDetails = null;
+            } else {
+              _tmpDetails = _cursor.getString(_cursorIndexOfDetails);
+            }
+            _result = new Transaction(_tmpId,_tmpWeekStartDate,_tmpCategory,_tmpAmount,_tmpIsAdjustment,_tmpCreatedAt,_tmpDetails);
           } else {
             _result = null;
           }

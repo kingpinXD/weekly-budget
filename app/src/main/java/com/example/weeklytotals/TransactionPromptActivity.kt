@@ -30,6 +30,7 @@ class TransactionPromptActivity : AppCompatActivity() {
 
         val textViewRawMessage = findViewById<TextView>(R.id.textViewRawMessage)
         val editTextAmount = findViewById<TextInputEditText>(R.id.editTextAmount)
+        val editTextDetails = findViewById<TextInputEditText>(R.id.editTextDetails)
         val spinnerCategory = findViewById<Spinner>(R.id.spinnerCategory)
         val buttonAdd = findViewById<MaterialButton>(R.id.buttonAdd)
         val buttonDismiss = findViewById<MaterialButton>(R.id.buttonDismiss)
@@ -72,10 +73,14 @@ class TransactionPromptActivity : AppCompatActivity() {
 
             val selectedCategory = userCategories[spinnerCategory.selectedItemPosition]
             val weekCalculator = WeekCalculator()
+            val isRefund = selectedCategory.name == "REFUND"
+            val effectiveAmount = if (isRefund) -parsedAmount else parsedAmount
+            val details = editTextDetails?.text?.toString()?.trim()?.takeIf { it.isNotBlank() }
             val transaction = Transaction(
                 weekStartDate = weekCalculator.getCurrentWeekStart(),
                 category = selectedCategory.name,
-                amount = parsedAmount
+                amount = effectiveAmount,
+                details = details
             )
 
             CoroutineScope(Dispatchers.IO).launch {

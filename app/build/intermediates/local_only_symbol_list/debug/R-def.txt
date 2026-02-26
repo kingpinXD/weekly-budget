@@ -45,6 +45,7 @@ id buttonYear
 id checkBoxMonitored
 id editTextAmount
 id editTextBudget
+id editTextDetails
 id editTextNewBudget
 id editTextSearch
 id imageViewAppIcon
@@ -61,6 +62,7 @@ id textViewAppName
 id textViewCategory
 id textViewCategoryName
 id textViewCurrentBudget
+id textViewDetails
 id textViewEmpty
 id textViewNotice
 id textViewNotificationStatus

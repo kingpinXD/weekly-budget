@@ -29,6 +29,7 @@ class TransactionAdapter(
     class ViewHolder(itemView: View) : RecyclerView.ViewHolder(itemView) {
         val colorDot: View = itemView.findViewById(R.id.viewColorDot)
         val textCategory: TextView = itemView.findViewById(R.id.textViewCategory)
+        val textDetails: TextView = itemView.findViewById(R.id.textViewDetails)
         val textAmount: TextView = itemView.findViewById(R.id.textViewAmount)
     }
 
@@ -40,12 +41,18 @@ class TransactionAdapter(
 
     override fun onBindViewHolder(holder: ViewHolder, position: Int) {
         val transaction = getItem(position)
+        val isRefund = transaction.category == "REFUND"
 
         if (transaction.isAdjustment) {
             holder.textCategory.text = holder.itemView.context.getString(R.string.adjustment_label)
             holder.textCategory.setTypeface(null, Typeface.ITALIC)
             holder.textCategory.setTextColor(Color.parseColor("#FF6600"))
             holder.textAmount.setTextColor(Color.parseColor("#FF6600"))
+        } else if (isRefund) {
+            holder.textCategory.text = categoryDisplayNames[transaction.category] ?: "Refund"
+            holder.textCategory.setTypeface(null, Typeface.BOLD)
+            holder.textCategory.setTextColor(Color.parseColor("#009688"))
+            holder.textAmount.setTextColor(Color.parseColor("#009688"))
         } else {
             holder.textCategory.text = categoryDisplayNames[transaction.category] ?: transaction.category
             holder.textCategory.setTypeface(null, Typeface.BOLD)
@@ -62,7 +69,20 @@ class TransactionAdapter(
         }
         holder.colorDot.background = dotDrawable
 
-        holder.textAmount.text = String.format("$%.2f CAD", transaction.amount)
+        // Format amount: refunds show as "+$X.XX" with absolute value
+        if (isRefund) {
+            holder.textAmount.text = String.format("+$%.2f CAD", Math.abs(transaction.amount))
+        } else {
+            holder.textAmount.text = String.format("$%.2f CAD", transaction.amount)
+        }
+
+        // Details text (smaller font below category)
+        if (!transaction.details.isNullOrBlank()) {
+            holder.textDetails.text = transaction.details
+            holder.textDetails.visibility = View.VISIBLE
+        } else {
+            holder.textDetails.visibility = View.GONE
+        }
 
         holder.itemView.setOnClickListener {
             onItemClick(transaction)

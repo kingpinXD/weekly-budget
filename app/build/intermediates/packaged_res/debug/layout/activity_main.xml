@@ -61,45 +61,67 @@
         <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:orientation="horizontal"
-            android:padding="12dp"
-            android:gravity="center_vertical">
+            android:orientation="vertical">
 
-            <Spinner
-                android:id="@+id/spinnerCategory"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:layout_marginEnd="8dp"
-                android:background="@drawable/rounded_input_bg"
-                android:paddingStart="12dp"
-                android:paddingEnd="12dp" />
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:padding="12dp"
+                android:gravity="center_vertical">
+
+                <Spinner
+                    android:id="@+id/spinnerCategory"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/rounded_input_bg"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp" />
+
+                <EditText
+                    android:id="@+id/editTextAmount"
+                    android:layout_width="0dp"
+                    android:layout_height="48dp"
+                    android:layout_weight="1"
+                    android:hint="@string/amount_hint"
+                    android:inputType="numberDecimal"
+                    android:maxLines="1"
+                    android:layout_marginEnd="8dp"
+                    android:background="@drawable/rounded_input_bg"
+                    android:paddingStart="12dp"
+                    android:paddingEnd="12dp"
+                    android:textSize="15sp" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/buttonAdd"
+                    android:layout_width="52dp"
+                    android:layout_height="48dp"
+                    android:text="+"
+                    android:textSize="22sp"
+                    app:cornerRadius="14dp"
+                    style="@style/AppButtonSecondary"
+                    android:padding="0dp"
+                    android:insetTop="0dp"
+                    android:insetBottom="0dp" />
+
+            </LinearLayout>
 
             <EditText
-                android:id="@+id/editTextAmount"
-                android:layout_width="0dp"
-                android:layout_height="48dp"
-                android:layout_weight="1"
-                android:hint="@string/amount_hint"
-                android:inputType="numberDecimal"
+                android:id="@+id/editTextDetails"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:hint="Details (optional)"
+                android:inputType="text"
                 android:maxLines="1"
-                android:layout_marginEnd="8dp"
                 android:background="@drawable/rounded_input_bg"
                 android:paddingStart="12dp"
                 android:paddingEnd="12dp"
-                android:textSize="15sp" />
-
-            <com.google.android.material.button.MaterialButton
-                android:id="@+id/buttonAdd"
-                android:layout_width="52dp"
-                android:layout_height="48dp"
-                android:text="+"
-                android:textSize="22sp"
-                app:cornerRadius="14dp"
-                style="@style/AppButtonSecondary"
-                android:padding="0dp"
-                android:insetTop="0dp"
-                android:insetBottom="0dp" />
+                android:layout_marginStart="12dp"
+                android:layout_marginEnd="12dp"
+                android:layout_marginBottom="12dp"
+                android:textSize="13sp" />
 
         </LinearLayout>
 

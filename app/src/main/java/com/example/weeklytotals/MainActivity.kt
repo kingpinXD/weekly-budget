@@ -89,6 +89,7 @@ class MainActivity : AppCompatActivity() {
         val budgetGaugeView = findViewById<BudgetGaugeView>(R.id.budgetGaugeView)
         val spinnerCategory = findViewById<Spinner>(R.id.spinnerCategory)
         val editTextAmount = findViewById<EditText>(R.id.editTextAmount)
+        val editTextDetails = findViewById<EditText>(R.id.editTextDetails)
         val buttonAdd = findViewById<MaterialButton>(R.id.buttonAdd)
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewTransactions)
         val textViewEmpty = findViewById<TextView>(R.id.textViewEmpty)
@@ -148,8 +149,10 @@ class MainActivity : AppCompatActivity() {
             if (userCategories.isEmpty()) return@setOnClickListener
 
             val selectedCategory = userCategories[spinnerCategory.selectedItemPosition]
-            viewModel.addTransaction(selectedCategory.name, amount)
+            val details = editTextDetails.text.toString().trim().takeIf { it.isNotBlank() }
+            viewModel.addTransaction(selectedCategory.name, amount, details)
             editTextAmount.text.clear()
+            editTextDetails.text.clear()
         }
 
         // Settings button
@@ -173,10 +176,19 @@ class MainActivity : AppCompatActivity() {
     }
 
     private fun showEditDialog(transaction: Transaction) {
+        val isRefund = transaction.category == "REFUND"
+        val displayAmount = if (isRefund) Math.abs(transaction.amount) else transaction.amount
+
         val editText = EditText(this).apply {
             inputType = android.text.InputType.TYPE_CLASS_NUMBER or android.text.InputType.TYPE_NUMBER_FLAG_DECIMAL
-            setText(String.format("%.2f", transaction.amount))
+            setText(String.format("%.2f", displayAmount))
             selectAll()
+        }
+
+        val editDetails = EditText(this).apply {
+            inputType = android.text.InputType.TYPE_CLASS_TEXT
+            hint = "Details (optional)"
+            setText(transaction.details ?: "")
         }
 
         val container = android.widget.LinearLayout(this).apply {
@@ -202,19 +214,23 @@ class MainActivity : AppCompatActivity() {
             container.addView(spinner)
             container.addView(editText)
         }
+        container.addView(editDetails)
 
         AlertDialog.Builder(this)
             .setTitle(R.string.edit_title)
             .setView(container)
             .setPositiveButton(R.string.save) { _, _ ->
                 val newAmount = editText.text.toString().trim().toDoubleOrNull()
+                val newDetails = editDetails.text.toString().trim().takeIf { it.isNotBlank() }
                 if (newAmount != null && newAmount > 0) {
                     if (transaction.isAdjustment) {
-                        viewModel.updateTransaction(transaction.copy(amount = newAmount))
+                        viewModel.updateTransaction(transaction.copy(amount = newAmount, details = newDetails))
                     } else if (userCategories.isNotEmpty() && spinner != null) {
                         val newCategory = userCategories[spinner.selectedItemPosition]
+                        val isNewRefund = newCategory.name == "REFUND"
+                        val effectiveAmount = if (isNewRefund) -newAmount else newAmount
                         viewModel.updateTransaction(
-                            transaction.copy(category = newCategory.name, amount = newAmount)
+                            transaction.copy(category = newCategory.name, amount = effectiveAmount, details = newDetails)
                         )
                     }
                 }

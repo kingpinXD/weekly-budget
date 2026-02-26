@@ -223,4 +223,106 @@ class AdjustmentTest {
         assertEquals(2000L, result!!.createdAt)
         assertEquals(60.0, result.amount, 0.01)
     }
+
+    // --- Refund transactions ---
+
+    @Test
+    fun `refund transaction stores negative amount`() = runTest {
+        val refund = Transaction(
+            weekStartDate = "2024-01-06",
+            category = "REFUND",
+            amount = -25.0,
+            createdAt = 3000L
+        )
+        dao.insert(refund)
+
+        val cursor = db.openHelper.readableDatabase.query(
+            "SELECT COALESCE(SUM(amount), 0.0) FROM transactions WHERE weekStartDate = ?",
+            arrayOf<Any>("2024-01-06")
+        )
+        cursor.moveToFirst()
+        val total = cursor.getDouble(0)
+        cursor.close()
+
+        assertEquals(-25.0, total, 0.01)
+    }
+
+    @Test
+    fun `refund reduces weekly total and increases remaining budget`() = runTest {
+        // Add a regular expense
+        dao.insert(Transaction(weekStartDate = "2024-01-06", category = "GAS", amount = 100.0, createdAt = 1000L))
+        // Add a refund (stored as negative)
+        dao.insert(Transaction(weekStartDate = "2024-01-06", category = "REFUND", amount = -30.0, createdAt = 2000L))
+
+        val cursor = db.openHelper.readableDatabase.query(
+            "SELECT COALESCE(SUM(amount), 0.0) FROM transactions WHERE weekStartDate = ?",
+            arrayOf<Any>("2024-01-06")
+        )
+        cursor.moveToFirst()
+        val total = cursor.getDouble(0)
+        cursor.close()
+
+        // 100 - 30 = 70 spent, so remaining = budget - 70
+        assertEquals(70.0, total, 0.01)
+    }
+
+    @Test
+    fun `refund can push remaining beyond budget`() = runTest {
+        // Only add a refund with no expenses
+        dao.insert(Transaction(weekStartDate = "2024-01-06", category = "REFUND", amount = -50.0, createdAt = 1000L))
+
+        val cursor = db.openHelper.readableDatabase.query(
+            "SELECT COALESCE(SUM(amount), 0.0) FROM transactions WHERE weekStartDate = ?",
+            arrayOf<Any>("2024-01-06")
+        )
+        cursor.moveToFirst()
+        val total = cursor.getDouble(0)
+        cursor.close()
+
+        // Total is -50, so remaining = budget - (-50) = budget + 50
+        assertEquals(-50.0, total, 0.01)
+    }
+
+    // --- Transaction details ---
+
+    @Test
+    fun `transaction with details stores and retrieves correctly`() = runTest {
+        val transaction = Transaction(
+            weekStartDate = "2024-01-06",
+            category = "GAS",
+            amount = 40.0,
+            createdAt = 4000L,
+            details = "Shell station on Main St"
+        )
+        val id = dao.insert(transaction)
+
+        val cursor = db.openHelper.readableDatabase.query(
+            "SELECT details FROM transactions WHERE id = ?",
+            arrayOf<Any>(id)
+        )
+        cursor.moveToFirst()
+        val details = cursor.getString(0)
+        cursor.close()
+
+        assertEquals("Shell station on Main St", details)
+    }
+
+    @Test
+    fun `transaction without details stores null`() = runTest {
+        val transaction = Transaction(
+            weekStartDate = "2024-01-06",
+            category = "GAS",
+            amount = 40.0,
+            createdAt = 5000L
+        )
+        val id = dao.insert(transaction)
+
+        val cursor = db.openHelper.readableDatabase.query(
+            "SELECT details FROM transactions WHERE id = ?",
+            arrayOf<Any>(id)
+        )
+        cursor.moveToFirst()
+        assertTrue("Details should be null", cursor.isNull(0))
+        cursor.close()
+    }
 }

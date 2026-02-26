@@ -52,13 +52,16 @@ class FirebaseSyncManager(context: Context) {
     fun pushTransaction(transaction: Transaction) {
         if (suppressTransactionSync) return
         val key = transaction.createdAt.toString()
-        val data = mapOf(
+        val data = mutableMapOf<String, Any?>(
             "weekStartDate" to transaction.weekStartDate,
             "category" to transaction.category,
             "amount" to transaction.amount,
             "isAdjustment" to transaction.isAdjustment,
             "createdAt" to transaction.createdAt
         )
+        if (transaction.details != null) {
+            data["details"] = transaction.details
+        }
         transactionsRef.child(key).setValue(data)
             .addOnFailureListener { e -> Log.e(TAG, "Failed to push transaction", e) }
     }
@@ -103,7 +106,8 @@ class FirebaseSyncManager(context: Context) {
                 "category" to (child.child("category").value as? String ?: continue),
                 "amount" to (child.child("amount").value?.let { toDouble(it) } ?: continue),
                 "isAdjustment" to (child.child("isAdjustment").value as? Boolean ?: false),
-                "createdAt" to createdAt
+                "createdAt" to createdAt,
+                "details" to (child.child("details").value as? String)
             )
         }
 
@@ -118,12 +122,10 @@ class FirebaseSyncManager(context: Context) {
             val category = data["category"] as String
             val amount = data["amount"] as Double
             val isAdjustment = data["isAdjustment"] as Boolean
+            val details = data["details"] as? String
 
             if (local == null) {
                 if (isAdjustment) {
-                    // Special handling: at most one adjustment per week.
-                    // A local adjustment may already exist (from checkWeekRollover)
-                    // with a different createdAt. Update it to align with remote.
                     val existingAdjustment = transactionDao.getAdjustmentForWeek(weekStartDate)
                     if (existingAdjustment != null) {
                         transactionDao.update(
@@ -139,34 +141,36 @@ class FirebaseSyncManager(context: Context) {
                                 category = category,
                                 amount = amount,
                                 isAdjustment = isAdjustment,
-                                createdAt = createdAt
+                                createdAt = createdAt,
+                                details = details
                             )
                         )
                     }
                 } else {
-                    // New non-adjustment transaction from remote - insert locally
                     transactionDao.insert(
                         Transaction(
                             weekStartDate = weekStartDate,
                             category = category,
                             amount = amount,
                             isAdjustment = isAdjustment,
-                            createdAt = createdAt
+                            createdAt = createdAt,
+                            details = details
                         )
                     )
                 }
             } else if (local.weekStartDate != weekStartDate ||
                 local.category != category ||
                 local.amount != amount ||
-                local.isAdjustment != isAdjustment
+                local.isAdjustment != isAdjustment ||
+                local.details != details
             ) {
-                // Transaction exists but fields differ - update locally
                 transactionDao.update(
                     local.copy(
                         weekStartDate = weekStartDate,
                         category = category,
                         amount = amount,
-                        isAdjustment = isAdjustment
+                        isAdjustment = isAdjustment,
+                        details = details
                     )
                 )
             }
@@ -196,7 +200,7 @@ class FirebaseSyncManager(context: Context) {
 
     private fun getAllLocalTransactions(): List<Transaction> {
         val cursor = appDb.openHelper.readableDatabase.query(
-            "SELECT id, weekStartDate, category, amount, isAdjustment, createdAt FROM transactions"
+            "SELECT id, weekStartDate, category, amount, isAdjustment, createdAt, details FROM transactions"
         )
         val results = mutableListOf<Transaction>()
         while (cursor.moveToNext()) {
@@ -207,7 +211,8 @@ class FirebaseSyncManager(context: Context) {
                     category = cursor.getString(2),
                     amount = cursor.getDouble(3),
                     isAdjustment = cursor.getInt(4) == 1,
-                    createdAt = cursor.getLong(5)
+                    createdAt = cursor.getLong(5),
+                    details = if (cursor.isNull(6)) null else cursor.getString(6)
                 )
             )
         }

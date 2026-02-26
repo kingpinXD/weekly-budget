@@ -68,13 +68,16 @@ class BudgetGaugeView @JvmOverloads constructor(
         // Draw background track
         canvas.drawArc(arcRect, 0f, 360f, false, trackPaint)
 
-        // Calculate fill ratio
-        val ratio = if (budget > 0) (spent / budget).coerceAtMost(1.0) else 0.0
+        // Calculate fill ratio (spent can be negative due to refunds)
+        val effectiveSpent = spent.coerceAtLeast(0.0)
+        val ratio = if (budget > 0) (effectiveSpent / budget).coerceAtMost(1.0) else 0.0
         val sweepAngle = (ratio * 360.0).toFloat()
         val overBudget = budget > 0 && spent > budget
+        val hasRefundBonus = spent < 0 // More refunds than spending
 
-        // Arc color: blue → orange → red
+        // Arc color: blue → orange → red, or green if refund bonus
         arcPaint.color = when {
+            hasRefundBonus -> Color.parseColor("#009688")
             overBudget -> Color.parseColor("#F44336")
             ratio <= 0.5 -> interpolateColor(
                 Color.parseColor("#2196F3"),
@@ -97,7 +100,11 @@ class BudgetGaugeView @JvmOverloads constructor(
         // Center text: amount remaining
         val remaining = budget - spent
         spentTextPaint.textSize = size * 0.18f
-        spentTextPaint.color = if (overBudget) Color.parseColor("#F44336") else Color.WHITE
+        spentTextPaint.color = when {
+            overBudget -> Color.parseColor("#F44336")
+            remaining > budget -> Color.parseColor("#009688")
+            else -> Color.WHITE
+        }
         val remainStr = if (overBudget) String.format("-$%.0f", -remaining) else String.format("$%.0f", remaining)
         canvas.drawText(remainStr, cx, cy + spentTextPaint.textSize * 0.35f, spentTextPaint)
     }

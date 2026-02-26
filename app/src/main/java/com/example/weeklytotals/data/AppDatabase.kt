@@ -7,7 +7,7 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [Transaction::class, CategoryEntity::class], version = 2, exportSchema = false)
+@Database(entities = [Transaction::class, CategoryEntity::class], version = 3, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun transactionDao(): TransactionDao
     abstract fun categoryDao(): CategoryDao
@@ -31,6 +31,13 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        private val MIGRATION_2_3 = object : Migration(2, 3) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL("ALTER TABLE transactions ADD COLUMN details TEXT DEFAULT NULL")
+                db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) SELECT 'REFUND', 'Refund', '#009688', 0 WHERE NOT EXISTS (SELECT 1 FROM categories WHERE name = 'REFUND')")
+            }
+        }
+
         private fun seedDefaultCategories(db: SupportSQLiteDatabase) {
             db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('GAS', 'Gas', '#2196F3', 0)")
             db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('TRAVEL', 'Travel', '#9C27B0', 0)")
@@ -39,6 +46,7 @@ abstract class AppDatabase : RoomDatabase() {
             db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('AMAZON', 'Amazon', '#FF5722', 0)")
             db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('MISC', 'Misc Purchases', '#607D8B', 0)")
             db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('ADJUSTMENT', 'Adjustment', '#F44336', 1)")
+            db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('REFUND', 'Refund', '#009688', 0)")
         }
 
         fun reseedDefaultCategories(context: Context) {
@@ -53,7 +61,7 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "weekly_totals.db"
                 )
-                    .addMigrations(MIGRATION_1_2)
+                    .addMigrations(MIGRATION_1_2, MIGRATION_2_3)
                     .addCallback(object : Callback() {
                         override fun onCreate(db: SupportSQLiteDatabase) {
                             super.onCreate(db)

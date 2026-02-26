@@ -10,5 +10,6 @@ data class Transaction(
     val category: String,
     val amount: Double,
     val isAdjustment: Boolean = false,
-    val createdAt: Long = System.currentTimeMillis()
+    val createdAt: Long = System.currentTimeMillis(),
+    val details: String? = null
 )

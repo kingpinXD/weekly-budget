@@ -3342,6 +3342,7 @@ id east
 id edge
 id editTextAmount
 id editTextBudget
+id editTextDetails
 id editTextNewBudget
 id editTextSearch
 id edit_query
@@ -3639,6 +3640,7 @@ id textViewAppName
 id textViewCategory
 id textViewCategoryName
 id textViewCurrentBudget
+id textViewDetails
 id textViewEmpty
 id textViewNotice
 id textViewNotificationStatus

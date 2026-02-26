@@ -25,6 +25,7 @@ class BudgetSetupActivity : AppCompatActivity() {
         CategoryEntity(name = "AMAZON", displayName = "Amazon", color = "#FF5722", isSystem = false),
         CategoryEntity(name = "MISC", displayName = "Misc Purchases", color = "#607D8B", isSystem = false),
         CategoryEntity(name = "ADJUSTMENT", displayName = "Adjustment", color = "#F44336", isSystem = true),
+        CategoryEntity(name = "REFUND", displayName = "Refund", color = "#009688", isSystem = false),
     )
 
     override fun onCreate(savedInstanceState: Bundle?) {
