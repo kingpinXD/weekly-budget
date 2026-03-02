@@ -94,6 +94,11 @@ class MainActivity : AppCompatActivity() {
         val recyclerView = findViewById<RecyclerView>(R.id.recyclerViewTransactions)
         val textViewEmpty = findViewById<TextView>(R.id.textViewEmpty)
 
+        // Set amount hint to reflect input currency
+        val budgetPreferences = BudgetPreferences(this)
+        val currency = budgetPreferences.getInputCurrency()
+        editTextAmount.hint = "Amount ($currency)"
+
         // Header
         textViewWeekName.text = viewModel.weekName
 
@@ -148,9 +153,10 @@ class MainActivity : AppCompatActivity() {
 
             if (userCategories.isEmpty()) return@setOnClickListener
 
+            val cadAmount = budgetPreferences.convertToCad(amount)
             val selectedCategory = userCategories[spinnerCategory.selectedItemPosition]
             val details = editTextDetails.text.toString().trim().takeIf { it.isNotBlank() }
-            viewModel.addTransaction(selectedCategory.name, amount, details)
+            viewModel.addTransaction(selectedCategory.name, cadAmount, details)
             editTextAmount.text.clear()
             editTextDetails.text.clear()
         }
@@ -220,9 +226,10 @@ class MainActivity : AppCompatActivity() {
             .setTitle(R.string.edit_title)
             .setView(container)
             .setPositiveButton(R.string.save) { _, _ ->
-                val newAmount = editText.text.toString().trim().toDoubleOrNull()
+                val rawAmount = editText.text.toString().trim().toDoubleOrNull()
                 val newDetails = editDetails.text.toString().trim().takeIf { it.isNotBlank() }
-                if (newAmount != null && newAmount > 0) {
+                if (rawAmount != null && rawAmount > 0) {
+                    val newAmount = BudgetPreferences(this).convertToCad(rawAmount)
                     if (transaction.isAdjustment) {
                         viewModel.updateTransaction(transaction.copy(amount = newAmount, details = newDetails))
                     } else if (userCategories.isNotEmpty() && spinner != null) {

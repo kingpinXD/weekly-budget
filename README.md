@@ -6,7 +6,9 @@ A simple Android app for tracking weekly spending against a budget. Designed for
 
 - **Weekly budget tracking** — Set a weekly budget and log transactions by category
 - **Budget gauge** — Visual circular gauge shows how much is left for the week
-- **Categories** — Default categories: Gas, Travel, Dining Out, Ordering In, Amazon, Misc Purchases. Add, edit, or delete custom categories with color coding.
+- **Categories** — Default categories: Gas, Travel, Dining Out, Ordering In, Amazon, Misc Purchases, Refund. Add, edit, or delete custom categories with color coding.
+- **Refunds** — Refund category reduces weekly spending total, increasing remaining budget (even beyond the weekly limit)
+- **Transaction details** — Optional description/comment field when adding transactions, displayed in smaller text below the category in the current week view
 - **Two-user sync** — Firebase Realtime Database syncs transactions, categories, and budget across two devices in real time
 - **Google Sign-In** — Whitelisted email authentication (no passwords to remember)
 - **Spending history** — Pie chart breakdowns by month or year
@@ -40,6 +42,13 @@ A simple Android app for tracking weekly spending against a budget. Designed for
 | `make clean` | Clean build artifacts |
 | `make install` | Install APK on connected device |
 | `make run` | Build, install, and launch on device |
+
+## Device Versions
+
+| Device | Model | Serial | Current Version | Last Updated |
+|--------|-------|--------|-----------------|--------------|
+| Samsung Flip | SM-F741W | R5CX70D8MEH | v1.1.0 | 2026-03-01 |
+| Google Pixel 9 | Pixel 9 | 48131FDAQ003LD | v1.1.0 | 2026-03-01 |
 
 ## Tech Stack
 

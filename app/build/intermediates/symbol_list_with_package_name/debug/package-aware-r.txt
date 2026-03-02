@@ -3259,7 +3259,6 @@ id buttonManageCategories
 id buttonMonitoredApps
 id buttonMonth
 id buttonPanel
-id buttonReset
 id buttonSavings
 id buttonSetBudget
 id buttonSettings
@@ -3591,6 +3590,7 @@ id south
 id spacer
 id special_effects_controller_view_tag
 id spinnerCategory
+id spinnerInputCurrency
 id spinnerPeriod
 id spline
 id split_action_bar
@@ -3998,6 +3998,9 @@ string common_open_on_phone
 string common_signin_button_text
 string common_signin_button_text_long
 string copy_toast_msg
+string currency_cad
+string currency_inr
+string currency_label
 string current_budget_format
 string default_web_client_id
 string delete

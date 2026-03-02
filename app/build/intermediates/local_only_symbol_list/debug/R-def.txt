@@ -35,7 +35,6 @@ id buttonHistory
 id buttonManageCategories
 id buttonMonitoredApps
 id buttonMonth
-id buttonReset
 id buttonSavings
 id buttonSetBudget
 id buttonSettings
@@ -55,6 +54,7 @@ id recyclerViewApps
 id recyclerViewCategories
 id recyclerViewTransactions
 id spinnerCategory
+id spinnerInputCurrency
 id spinnerPeriod
 id switchAutoTransactions
 id textViewAmount
@@ -108,6 +108,9 @@ string cancel
 string category_already_exists
 string category_name_hint
 string category_name_required
+string currency_cad
+string currency_inr
+string currency_label
 string current_budget_format
 string default_web_client_id
 string delete

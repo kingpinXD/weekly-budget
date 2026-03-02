@@ -63,9 +63,10 @@ com.example.weeklytotals/
 | id | Long | Auto-generated PK |
 | weekStartDate | String | `yyyy-MM-dd` of the Saturday starting the week |
 | category | String | References `CategoryEntity.name` |
-| amount | Double | Spend amount |
+| amount | Double | Spend amount (negative for refunds) |
 | isAdjustment | Boolean | True for carry-over overage entries |
 | createdAt | Long | Epoch millis, also used as Firebase key |
+| details | String? | Optional description/comment (nullable) |
 
 **CategoryEntity** (`categories` table)
 
@@ -75,7 +76,7 @@ com.example.weeklytotals/
 | name | String | Unique key, e.g. `GAS`, `DINING_OUT` |
 | displayName | String | Human-readable, e.g. `Dining Out` |
 | color | String | Hex color, e.g. `#FF9800` |
-| isSystem | Boolean | True only for `ADJUSTMENT` |
+| isSystem | Boolean | True only for `ADJUSTMENT`. `REFUND` is a user-facing category (isSystem=false) |
 
 ### SharedPreferences (`BudgetPreferences`)
 
@@ -94,7 +95,7 @@ com.example.weeklytotals/
 ```
 weekly_totals/
 ├── transactions/{createdAt}/
-│   ├── weekStartDate, category, amount, isAdjustment, createdAt
+│   ├── weekStartDate, category, amount, isAdjustment, createdAt, details
 ├── categories/{name}/
 │   ├── name, displayName, color, isSystem
 └── budget/
@@ -122,18 +123,20 @@ Only whitelisted emails are permitted. If a non-whitelisted email signs in, the 
 
 The main screen shows the current week (Saturday to Friday) with:
 - A circular **BudgetGaugeView** showing spent vs. budget (blue → orange → red)
-- A category spinner + amount input for adding transactions
-- A RecyclerView listing all transactions for the current week
+- A category spinner + amount input + optional details field for adding transactions
+- A RecyclerView listing all transactions for the current week, with optional details shown in smaller text below the category
 
 ```
-User enters amount, selects category, taps Add
+User enters amount, selects category, optionally adds details, taps Add
   → MainViewModel.addTransaction()
   → TransactionDao.insert()
   → FirebaseSyncManager.pushTransaction()
   → LiveData updates RecyclerView + gauge automatically
 ```
 
-Tapping a transaction opens an edit dialog (amount + category).
+**Refunds**: Selecting the "Refund" category stores the amount as negative, reducing the weekly total and increasing remaining budget. Refunds can push the remaining balance beyond the weekly limit. Refund transactions display in teal with a "+$X.XX" format.
+
+Tapping a transaction opens an edit dialog (amount + category + details).
 Long-pressing a transaction opens a delete confirmation dialog.
 Adjustment entries can also be edited (amount only) and deleted.
 
@@ -268,7 +271,7 @@ make clean     # Clean build artifacts
 
 | Test | Purpose |
 |------|---------|
-| `AdjustmentTest.kt` | Adjustment deduplication, update, delete (Room + Robolectric) |
+| `AdjustmentTest.kt` | Adjustment deduplication, update, delete, refund behavior, transaction details (Room + Robolectric) |
 | `WeekCalculatorTest.kt` | Saturday-based week boundary calculations |
 | `SmsTransactionDetectorTest.kt` | Regex parsing for bank SMS formats |
 | `MainActivityTest.kt` | Basic sanity checks |

@@ -92,6 +92,11 @@
     <string name="prompt_no_categories">No categories available</string>
     <string name="sms_permission_required">SMS permission is required for auto transaction detection</string>
 
+    <!-- Currency -->
+    <string name="currency_label">Input Currency</string>
+    <string name="currency_cad">CAD</string>
+    <string name="currency_inr">INR</string>
+
     <!-- Reset -->
     <string name="reset_section_title">Danger Zone</string>
     <string name="reset_description">Reset will permanently delete all transactions, categories, and budget data from this device and all synced devices.</string>

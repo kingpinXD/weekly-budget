@@ -7,6 +7,7 @@ import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import com.example.weeklytotals.data.AppDatabase
+import com.example.weeklytotals.data.BudgetPreferences
 import com.example.weeklytotals.data.CategoryEntity
 import com.example.weeklytotals.data.Transaction
 import com.example.weeklytotals.data.WeekCalculator
@@ -34,6 +35,10 @@ class TransactionPromptActivity : AppCompatActivity() {
         val spinnerCategory = findViewById<Spinner>(R.id.spinnerCategory)
         val buttonAdd = findViewById<MaterialButton>(R.id.buttonAdd)
         val buttonDismiss = findViewById<MaterialButton>(R.id.buttonDismiss)
+
+        val budgetPreferences = BudgetPreferences(this)
+        val currency = budgetPreferences.getInputCurrency()
+        editTextAmount.hint = "Amount ($currency)"
 
         textViewRawMessage.text = rawMessage
         editTextAmount.setText(String.format("%.2f", amount))
@@ -71,10 +76,11 @@ class TransactionPromptActivity : AppCompatActivity() {
                 return@setOnClickListener
             }
 
+            val cadAmount = budgetPreferences.convertToCad(parsedAmount)
             val selectedCategory = userCategories[spinnerCategory.selectedItemPosition]
             val weekCalculator = WeekCalculator()
             val isRefund = selectedCategory.name == "REFUND"
-            val effectiveAmount = if (isRefund) -parsedAmount else parsedAmount
+            val effectiveAmount = if (isRefund) -cadAmount else cadAmount
             val details = editTextDetails?.text?.toString()?.trim()?.takeIf { it.isNotBlank() }
             val transaction = Transaction(
                 weekStartDate = weekCalculator.getCurrentWeekStart(),

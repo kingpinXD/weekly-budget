@@ -30,22 +30,26 @@ public final class AppDatabase_Impl extends AppDatabase {
 
   private volatile CategoryDao _categoryDao;
 
+  private volatile WeeklySavingsDao _weeklySavingsDao;
+
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(3) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(4) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `transactions` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `weekStartDate` TEXT NOT NULL, `category` TEXT NOT NULL, `amount` REAL NOT NULL, `isAdjustment` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `details` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `categories` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `displayName` TEXT NOT NULL, `color` TEXT NOT NULL, `isSystem` INTEGER NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `weekly_savings` (`weekStartDate` TEXT NOT NULL, `amount` REAL NOT NULL, PRIMARY KEY(`weekStartDate`))");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '879d129624f8cccec9f2858b665199a5')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6da12bc3fbee27b08299658b33c64352')");
       }
 
       @Override
       public void dropAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("DROP TABLE IF EXISTS `transactions`");
         db.execSQL("DROP TABLE IF EXISTS `categories`");
+        db.execSQL("DROP TABLE IF EXISTS `weekly_savings`");
         final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
         if (_callbacks != null) {
           for (RoomDatabase.Callback _callback : _callbacks) {
@@ -121,9 +125,21 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoCategories + "\n"
                   + " Found:\n" + _existingCategories);
         }
+        final HashMap<String, TableInfo.Column> _columnsWeeklySavings = new HashMap<String, TableInfo.Column>(2);
+        _columnsWeeklySavings.put("weekStartDate", new TableInfo.Column("weekStartDate", "TEXT", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsWeeklySavings.put("amount", new TableInfo.Column("amount", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysWeeklySavings = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesWeeklySavings = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoWeeklySavings = new TableInfo("weekly_savings", _columnsWeeklySavings, _foreignKeysWeeklySavings, _indicesWeeklySavings);
+        final TableInfo _existingWeeklySavings = TableInfo.read(db, "weekly_savings");
+        if (!_infoWeeklySavings.equals(_existingWeeklySavings)) {
+          return new RoomOpenHelper.ValidationResult(false, "weekly_savings(com.example.weeklytotals.data.WeeklySavings).\n"
+                  + " Expected:\n" + _infoWeeklySavings + "\n"
+                  + " Found:\n" + _existingWeeklySavings);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "879d129624f8cccec9f2858b665199a5", "05e60b1616a16c5c58520653f4524597");
+    }, "6da12bc3fbee27b08299658b33c64352", "92102b094806d551bf187df8d17eff24");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;
@@ -134,7 +150,7 @@ public final class AppDatabase_Impl extends AppDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     final HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "transactions","categories");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "transactions","categories","weekly_savings");
   }
 
   @Override
@@ -145,6 +161,7 @@ public final class AppDatabase_Impl extends AppDatabase {
       super.beginTransaction();
       _db.execSQL("DELETE FROM `transactions`");
       _db.execSQL("DELETE FROM `categories`");
+      _db.execSQL("DELETE FROM `weekly_savings`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -161,6 +178,7 @@ public final class AppDatabase_Impl extends AppDatabase {
     final HashMap<Class<?>, List<Class<?>>> _typeConvertersMap = new HashMap<Class<?>, List<Class<?>>>();
     _typeConvertersMap.put(TransactionDao.class, TransactionDao_Impl.getRequiredConverters());
     _typeConvertersMap.put(CategoryDao.class, CategoryDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(WeeklySavingsDao.class, WeeklySavingsDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
 
@@ -203,6 +221,20 @@ public final class AppDatabase_Impl extends AppDatabase {
           _categoryDao = new CategoryDao_Impl(this);
         }
         return _categoryDao;
+      }
+    }
+  }
+
+  @Override
+  public WeeklySavingsDao weeklySavingsDao() {
+    if (_weeklySavingsDao != null) {
+      return _weeklySavingsDao;
+    } else {
+      synchronized(this) {
+        if(_weeklySavingsDao == null) {
+          _weeklySavingsDao = new WeeklySavingsDao_Impl(this);
+        }
+        return _weeklySavingsDao;
       }
     }
   }

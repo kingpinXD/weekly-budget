@@ -72,6 +72,16 @@ class BudgetPreferences(context: Context) {
             .apply()
     }
 
+    fun isSavingsBootstrapDone(): Boolean {
+        return prefs.getBoolean(KEY_SAVINGS_BOOTSTRAP_DONE, false)
+    }
+
+    fun setSavingsBootstrapDone() {
+        prefs.edit()
+            .putBoolean(KEY_SAVINGS_BOOTSTRAP_DONE, true)
+            .apply()
+    }
+
     fun getMonitoredApps(): Set<String> {
         return prefs.getStringSet(KEY_MONITORED_APPS, emptySet()) ?: emptySet()
     }
@@ -80,6 +90,20 @@ class BudgetPreferences(context: Context) {
         prefs.edit()
             .putStringSet(KEY_MONITORED_APPS, packages)
             .apply()
+    }
+
+    fun getInputCurrency(): String {
+        return prefs.getString(KEY_INPUT_CURRENCY, "CAD") ?: "CAD"
+    }
+
+    fun setInputCurrency(currency: String) {
+        prefs.edit()
+            .putString(KEY_INPUT_CURRENCY, currency)
+            .apply()
+    }
+
+    fun convertToCad(amount: Double): Double {
+        return if (getInputCurrency() == "INR") amount / INR_TO_CAD_RATE else amount
     }
 
     fun clearAll() {
@@ -93,6 +117,9 @@ class BudgetPreferences(context: Context) {
         private const val KEY_AUTO_TRANSACTIONS = "auto_transactions_enabled"
         private const val KEY_TOTAL_SAVINGS = "total_savings"
         private const val KEY_LAST_SAVINGS_WEEK = "last_savings_processed_week"
+        private const val KEY_SAVINGS_BOOTSTRAP_DONE = "savings_bootstrap_done"
         private const val KEY_MONITORED_APPS = "monitored_app_packages"
+        private const val KEY_INPUT_CURRENCY = "input_currency"
+        const val INR_TO_CAD_RATE = 61.5
     }
 }

@@ -42,6 +42,9 @@
     <string name="category_already_exists">A category with that name already exists</string>
     <string name="category_name_hint">Category name</string>
     <string name="category_name_required">Please enter a category name</string>
+    <string name="currency_cad">CAD</string>
+    <string name="currency_inr">INR</string>
+    <string name="currency_label">Input Currency</string>
     <string name="current_budget_format">Current budget: $%.2f CAD</string>
     <string name="default_web_client_id" translatable="false">230715917738-5p02ii222rlrlvjh1ul21mnq4sb6aflv.apps.googleusercontent.com</string>
     <string name="delete">Delete</string>

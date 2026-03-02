@@ -7,6 +7,7 @@ import com.google.firebase.database.DatabaseError
 import com.google.firebase.database.DatabaseReference
 import com.google.firebase.database.FirebaseDatabase
 import com.google.firebase.database.ValueEventListener
+import kotlinx.coroutines.CompletableDeferred
 import kotlinx.coroutines.CoroutineScope
 import kotlinx.coroutines.Dispatchers
 import kotlinx.coroutines.launch
@@ -18,10 +19,12 @@ class FirebaseSyncManager(context: Context) {
     private val transactionsRef: DatabaseReference = rootRef.child("transactions")
     private val categoriesRef: DatabaseReference = rootRef.child("categories")
     private val budgetRef: DatabaseReference = rootRef.child("budget")
+    private val savingsRef: DatabaseReference = rootRef.child("savings")
 
     private val appDb = AppDatabase.getInstance(context)
     private val transactionDao = appDb.transactionDao()
     private val categoryDao = appDb.categoryDao()
+    private val weeklySavingsDao = appDb.weeklySavingsDao()
     private val budgetPreferences = BudgetPreferences(context)
 
     private val scope = CoroutineScope(Dispatchers.IO)
@@ -33,6 +36,11 @@ class FirebaseSyncManager(context: Context) {
     private var suppressTransactionSync = false
     @Volatile
     private var suppressCategorySync = false
+    @Volatile
+    private var suppressSavingsSync = false
+
+    /** Completes after the first onDataChange from the transaction listener. */
+    val initialTransactionSyncComplete = CompletableDeferred<Unit>()
 
     companion object {
         private const val TAG = "FirebaseSyncManager"
@@ -82,12 +90,14 @@ class FirebaseSyncManager(context: Context) {
                         syncTransactionsFromFirebase(snapshot)
                     } finally {
                         suppressTransactionSync = false
+                        initialTransactionSyncComplete.complete(Unit)
                     }
                 }
             }
 
             override fun onCancelled(error: DatabaseError) {
                 Log.e(TAG, "Transaction listener cancelled", error.toException())
+                initialTransactionSyncComplete.complete(Unit)
             }
         })
     }
@@ -306,10 +316,78 @@ class FirebaseSyncManager(context: Context) {
 
         // Delete local categories not in Firebase
         // Skip if Firebase is empty — avoids race condition on first sync / fresh DB
+        // Never delete default seeded categories — they may not have been pushed yet
         if (remoteCategories.isNotEmpty()) {
             for (local in localCategories) {
-                if (local.name !in remoteCategories) {
+                if (local.name !in remoteCategories && local.name !in AppDatabase.DEFAULT_CATEGORY_NAMES) {
                     categoryDao.delete(local)
+                }
+            }
+        }
+    }
+
+    // ── Savings sync ──────────────────────────────────────────────────────
+
+    fun pushSavings(savings: WeeklySavings) {
+        if (suppressSavingsSync) return
+        savingsRef.child(savings.weekStartDate).setValue(savings.amount)
+            .addOnFailureListener { e -> Log.e(TAG, "Failed to push savings", e) }
+    }
+
+    fun deleteSavingsEntry(weekStartDate: String) {
+        savingsRef.child(weekStartDate).removeValue()
+            .addOnFailureListener { e -> Log.e(TAG, "Failed to delete savings entry", e) }
+    }
+
+    fun startSavingsListener() {
+        savingsRef.addValueEventListener(object : ValueEventListener {
+            override fun onDataChange(snapshot: DataSnapshot) {
+                scope.launch {
+                    suppressSavingsSync = true
+                    try {
+                        syncSavingsFromFirebase(snapshot)
+                    } finally {
+                        suppressSavingsSync = false
+                    }
+                }
+            }
+
+            override fun onCancelled(error: DatabaseError) {
+                Log.e(TAG, "Savings listener cancelled", error.toException())
+            }
+        })
+    }
+
+    private suspend fun syncSavingsFromFirebase(snapshot: DataSnapshot) {
+        val remoteSavings = mutableMapOf<String, Double>()
+        for (child in snapshot.children) {
+            val weekStart = child.key ?: continue
+            val amount = child.value?.let { toDouble(it) } ?: continue
+            remoteSavings[weekStart] = amount
+        }
+
+        val localSavings = weeklySavingsDao.getAllSavingsSync()
+        val localByWeek = localSavings.associateBy { it.weekStartDate }
+
+        // Insert or update remote savings locally
+        for ((weekStart, amount) in remoteSavings) {
+            val local = localByWeek[weekStart]
+            if (local == null) {
+                weeklySavingsDao.upsert(WeeklySavings(weekStartDate = weekStart, amount = amount))
+            } else if (local.amount != amount) {
+                weeklySavingsDao.upsert(WeeklySavings(weekStartDate = weekStart, amount = amount))
+            }
+        }
+
+        // Delete local savings not in Firebase (only if Firebase has data)
+        if (remoteSavings.isNotEmpty()) {
+            for (local in localSavings) {
+                if (local.weekStartDate !in remoteSavings) {
+                    // Use raw delete since we only have upsert/deleteAll
+                    appDb.openHelper.writableDatabase.execSQL(
+                        "DELETE FROM weekly_savings WHERE weekStartDate = ?",
+                        arrayOf(local.weekStartDate)
+                    )
                 }
             }
         }
@@ -371,6 +449,12 @@ class FirebaseSyncManager(context: Context) {
             if (budgetPreferences.isBudgetSet()) {
                 pushBudget(budgetPreferences.getBudget(), true)
             }
+
+            // Push all local savings
+            val savings = weeklySavingsDao.getAllSavingsSync()
+            for (s in savings) {
+                pushSavings(s)
+            }
         }
     }
 
@@ -381,6 +465,7 @@ class FirebaseSyncManager(context: Context) {
         startTransactionListener()
         startCategoryListener()
         startBudgetListener()
+        startSavingsListener()
     }
 
     // ── Reset ─────────────────────────────────────────────────────────

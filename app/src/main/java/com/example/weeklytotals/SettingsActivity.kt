@@ -4,6 +4,9 @@ import android.content.Intent
 import android.os.Bundle
 import android.provider.Settings
 import android.view.View
+import android.widget.AdapterView
+import android.widget.ArrayAdapter
+import android.widget.Spinner
 import android.widget.TextView
 import android.widget.Toast
 import androidx.appcompat.app.AlertDialog
@@ -52,16 +55,21 @@ class SettingsActivity : AppCompatActivity() {
         }
 
         findViewById<MaterialButton>(R.id.buttonSavings).setOnClickListener {
-            val savings = budgetPreferences.getTotalSavings()
-            AlertDialog.Builder(this)
-                .setTitle(R.string.savings_title)
-                .setMessage(String.format(
-                    "%s\n\n%s",
-                    getString(R.string.savings_amount_format, savings),
-                    getString(R.string.savings_description)
-                ))
-                .setPositiveButton(android.R.string.ok, null)
-                .show()
+            val db = AppDatabase.getInstance(this)
+            lifecycleScope.launch {
+                val savings = withContext(Dispatchers.IO) {
+                    db.weeklySavingsDao().getTotalSavingsSync()
+                }
+                AlertDialog.Builder(this@SettingsActivity)
+                    .setTitle(R.string.savings_title)
+                    .setMessage(String.format(
+                        "%s\n\n%s",
+                        getString(R.string.savings_amount_format, savings),
+                        getString(R.string.savings_description)
+                    ))
+                    .setPositiveButton(android.R.string.ok, null)
+                    .show()
+            }
         }
 
         // Auto Transactions toggle
@@ -83,6 +91,20 @@ class SettingsActivity : AppCompatActivity() {
         textViewNotificationStatus = findViewById(R.id.textViewNotificationStatus)
         updateNotificationStatus()
 
+        // Currency spinner
+        val spinnerCurrency = findViewById<Spinner>(R.id.spinnerInputCurrency)
+        val currencies = arrayOf(getString(R.string.currency_cad), getString(R.string.currency_inr))
+        val currencyAdapter = ArrayAdapter(this, android.R.layout.simple_spinner_item, currencies)
+        currencyAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item)
+        spinnerCurrency.adapter = currencyAdapter
+        spinnerCurrency.setSelection(if (budgetPreferences.getInputCurrency() == "INR") 1 else 0)
+        spinnerCurrency.onItemSelectedListener = object : AdapterView.OnItemSelectedListener {
+            override fun onItemSelected(parent: AdapterView<*>?, view: View?, position: Int, id: Long) {
+                budgetPreferences.setInputCurrency(if (position == 1) "INR" else "CAD")
+            }
+            override fun onNothingSelected(parent: AdapterView<*>?) {}
+        }
+
         buttonUpdateBudget.setOnClickListener {
             val text = editTextNewBudget.text?.toString()?.trim() ?: ""
             val amount = text.toDoubleOrNull()
@@ -98,15 +120,6 @@ class SettingsActivity : AppCompatActivity() {
             editTextNewBudget.text?.clear()
         }
 
-        // Reset button
-        findViewById<MaterialButton>(R.id.buttonReset).setOnClickListener {
-            AlertDialog.Builder(this)
-                .setTitle(R.string.reset_confirm_title)
-                .setMessage(R.string.reset_confirm_message)
-                .setPositiveButton(R.string.reset_yes) { _, _ -> performReset() }
-                .setNegativeButton(R.string.reset_no, null)
-                .show()
-        }
     }
 
     override fun onResume() {
@@ -135,34 +148,6 @@ class SettingsActivity : AppCompatActivity() {
             }
             .setNegativeButton(R.string.cancel, null)
             .show()
-    }
-
-    private fun performReset() {
-        val db = AppDatabase.getInstance(this)
-        val budgetPrefs = BudgetPreferences(this)
-        val syncManager = FirebaseSyncManager.getInstance(this)
-
-        lifecycleScope.launch {
-            // Clear local DB
-            withContext(Dispatchers.IO) {
-                db.transactionDao().deleteAll()
-                db.categoryDao().deleteAll()
-            }
-
-            // Clear SharedPreferences
-            budgetPrefs.clearAll()
-
-            // Clear Firebase RTDB — this propagates deletion to all synced devices
-            syncManager.clearAllData {
-                runOnUiThread {
-                    Toast.makeText(this@SettingsActivity, R.string.reset_complete, Toast.LENGTH_SHORT).show()
-                    // Go back to budget setup
-                    val intent = Intent(this@SettingsActivity, BudgetSetupActivity::class.java)
-                    intent.flags = Intent.FLAG_ACTIVITY_NEW_TASK or Intent.FLAG_ACTIVITY_CLEAR_TASK
-                    startActivity(intent)
-                }
-            }
-        }
     }
 
     override fun onSupportNavigateUp(): Boolean {
