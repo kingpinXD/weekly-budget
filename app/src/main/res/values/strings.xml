@@ -97,6 +97,35 @@
     <string name="currency_cad">CAD</string>
     <string name="currency_inr">INR</string>
 
+    <!-- Bottom Nav -->
+    <string name="nav_weekly">Weekly</string>
+    <string name="nav_split">Split</string>
+
+    <!-- Split -->
+    <string name="split_title">Split</string>
+    <string name="split_equal">Split</string>
+    <string name="split_i_owe">Owe</string>
+    <string name="split_they_owe">Get</string>
+    <string name="split_comment_hint">Comment (required)</string>
+    <string name="split_no_entries">No split entries yet</string>
+    <string name="split_settle_up">Settle Up</string>
+    <string name="split_settle_title">Settle Up</string>
+    <string name="split_settle_hint">Settlement amount</string>
+    <string name="split_settle_comment_hint">Comment (e.g. e-transfer)</string>
+    <string name="split_comment_required">Comment is required</string>
+    <string name="split_balance_owe">You owe $%1$.2f to %2$s</string>
+    <string name="split_balance_get">You get $%1$.2f from %2$s</string>
+    <string name="split_balance_settled">All settled up</string>
+    <string name="split_settings_title">Split Settings</string>
+    <string name="split_categories_section">Categories</string>
+    <string name="split_manage_categories">Manage Split Categories</string>
+    <string name="split_manage_categories_title">Split Categories</string>
+    <string name="split_settlement_history">Settlement History</string>
+    <string name="split_no_settlements">No settlements yet</string>
+    <string name="split_delete_title">Delete Entry</string>
+    <string name="split_delete_message">Are you sure you want to delete this split entry?</string>
+    <string name="split_edit_title">Edit Split Entry</string>
+
     <!-- Reset -->
     <string name="reset_section_title">Danger Zone</string>
     <string name="reset_description">Reset will permanently delete all transactions, categories, and budget data from this device and all synced devices.</string>

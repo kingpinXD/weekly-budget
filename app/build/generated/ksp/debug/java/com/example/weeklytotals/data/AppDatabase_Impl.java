@@ -32,17 +32,23 @@ public final class AppDatabase_Impl extends AppDatabase {
 
   private volatile WeeklySavingsDao _weeklySavingsDao;
 
+  private volatile SplitEntryDao _splitEntryDao;
+
+  private volatile SplitCategoryDao _splitCategoryDao;
+
   @Override
   @NonNull
   protected SupportSQLiteOpenHelper createOpenHelper(@NonNull final DatabaseConfiguration config) {
-    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(4) {
+    final SupportSQLiteOpenHelper.Callback _openCallback = new RoomOpenHelper(config, new RoomOpenHelper.Delegate(6) {
       @Override
       public void createAllTables(@NonNull final SupportSQLiteDatabase db) {
         db.execSQL("CREATE TABLE IF NOT EXISTS `transactions` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `weekStartDate` TEXT NOT NULL, `category` TEXT NOT NULL, `amount` REAL NOT NULL, `isAdjustment` INTEGER NOT NULL, `createdAt` INTEGER NOT NULL, `details` TEXT)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `categories` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `displayName` TEXT NOT NULL, `color` TEXT NOT NULL, `isSystem` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS `weekly_savings` (`weekStartDate` TEXT NOT NULL, `amount` REAL NOT NULL, PRIMARY KEY(`weekStartDate`))");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `split_entries` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `category` TEXT NOT NULL, `amount` REAL NOT NULL, `comment` TEXT NOT NULL, `splitType` TEXT NOT NULL, `createdByEmail` TEXT NOT NULL, `createdAt` INTEGER NOT NULL)");
+        db.execSQL("CREATE TABLE IF NOT EXISTS `split_categories` (`id` INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL, `name` TEXT NOT NULL, `displayName` TEXT NOT NULL, `color` TEXT NOT NULL, `isSystem` INTEGER NOT NULL)");
         db.execSQL("CREATE TABLE IF NOT EXISTS room_master_table (id INTEGER PRIMARY KEY,identity_hash TEXT)");
-        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '6da12bc3fbee27b08299658b33c64352')");
+        db.execSQL("INSERT OR REPLACE INTO room_master_table (id,identity_hash) VALUES(42, '157363a042ce6151260d36ce5b0e2714')");
       }
 
       @Override
@@ -50,6 +56,8 @@ public final class AppDatabase_Impl extends AppDatabase {
         db.execSQL("DROP TABLE IF EXISTS `transactions`");
         db.execSQL("DROP TABLE IF EXISTS `categories`");
         db.execSQL("DROP TABLE IF EXISTS `weekly_savings`");
+        db.execSQL("DROP TABLE IF EXISTS `split_entries`");
+        db.execSQL("DROP TABLE IF EXISTS `split_categories`");
         final List<? extends RoomDatabase.Callback> _callbacks = mCallbacks;
         if (_callbacks != null) {
           for (RoomDatabase.Callback _callback : _callbacks) {
@@ -137,9 +145,41 @@ public final class AppDatabase_Impl extends AppDatabase {
                   + " Expected:\n" + _infoWeeklySavings + "\n"
                   + " Found:\n" + _existingWeeklySavings);
         }
+        final HashMap<String, TableInfo.Column> _columnsSplitEntries = new HashMap<String, TableInfo.Column>(7);
+        _columnsSplitEntries.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSplitEntries.put("category", new TableInfo.Column("category", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSplitEntries.put("amount", new TableInfo.Column("amount", "REAL", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSplitEntries.put("comment", new TableInfo.Column("comment", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSplitEntries.put("splitType", new TableInfo.Column("splitType", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSplitEntries.put("createdByEmail", new TableInfo.Column("createdByEmail", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSplitEntries.put("createdAt", new TableInfo.Column("createdAt", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysSplitEntries = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesSplitEntries = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoSplitEntries = new TableInfo("split_entries", _columnsSplitEntries, _foreignKeysSplitEntries, _indicesSplitEntries);
+        final TableInfo _existingSplitEntries = TableInfo.read(db, "split_entries");
+        if (!_infoSplitEntries.equals(_existingSplitEntries)) {
+          return new RoomOpenHelper.ValidationResult(false, "split_entries(com.example.weeklytotals.data.SplitEntry).\n"
+                  + " Expected:\n" + _infoSplitEntries + "\n"
+                  + " Found:\n" + _existingSplitEntries);
+        }
+        final HashMap<String, TableInfo.Column> _columnsSplitCategories = new HashMap<String, TableInfo.Column>(5);
+        _columnsSplitCategories.put("id", new TableInfo.Column("id", "INTEGER", true, 1, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSplitCategories.put("name", new TableInfo.Column("name", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSplitCategories.put("displayName", new TableInfo.Column("displayName", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSplitCategories.put("color", new TableInfo.Column("color", "TEXT", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        _columnsSplitCategories.put("isSystem", new TableInfo.Column("isSystem", "INTEGER", true, 0, null, TableInfo.CREATED_FROM_ENTITY));
+        final HashSet<TableInfo.ForeignKey> _foreignKeysSplitCategories = new HashSet<TableInfo.ForeignKey>(0);
+        final HashSet<TableInfo.Index> _indicesSplitCategories = new HashSet<TableInfo.Index>(0);
+        final TableInfo _infoSplitCategories = new TableInfo("split_categories", _columnsSplitCategories, _foreignKeysSplitCategories, _indicesSplitCategories);
+        final TableInfo _existingSplitCategories = TableInfo.read(db, "split_categories");
+        if (!_infoSplitCategories.equals(_existingSplitCategories)) {
+          return new RoomOpenHelper.ValidationResult(false, "split_categories(com.example.weeklytotals.data.SplitCategory).\n"
+                  + " Expected:\n" + _infoSplitCategories + "\n"
+                  + " Found:\n" + _existingSplitCategories);
+        }
         return new RoomOpenHelper.ValidationResult(true, null);
       }
-    }, "6da12bc3fbee27b08299658b33c64352", "92102b094806d551bf187df8d17eff24");
+    }, "157363a042ce6151260d36ce5b0e2714", "76739903a8b1e699d971e49c0c27cc6b");
     final SupportSQLiteOpenHelper.Configuration _sqliteConfig = SupportSQLiteOpenHelper.Configuration.builder(config.context).name(config.name).callback(_openCallback).build();
     final SupportSQLiteOpenHelper _helper = config.sqliteOpenHelperFactory.create(_sqliteConfig);
     return _helper;
@@ -150,7 +190,7 @@ public final class AppDatabase_Impl extends AppDatabase {
   protected InvalidationTracker createInvalidationTracker() {
     final HashMap<String, String> _shadowTablesMap = new HashMap<String, String>(0);
     final HashMap<String, Set<String>> _viewTables = new HashMap<String, Set<String>>(0);
-    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "transactions","categories","weekly_savings");
+    return new InvalidationTracker(this, _shadowTablesMap, _viewTables, "transactions","categories","weekly_savings","split_entries","split_categories");
   }
 
   @Override
@@ -162,6 +202,8 @@ public final class AppDatabase_Impl extends AppDatabase {
       _db.execSQL("DELETE FROM `transactions`");
       _db.execSQL("DELETE FROM `categories`");
       _db.execSQL("DELETE FROM `weekly_savings`");
+      _db.execSQL("DELETE FROM `split_entries`");
+      _db.execSQL("DELETE FROM `split_categories`");
       super.setTransactionSuccessful();
     } finally {
       super.endTransaction();
@@ -179,6 +221,8 @@ public final class AppDatabase_Impl extends AppDatabase {
     _typeConvertersMap.put(TransactionDao.class, TransactionDao_Impl.getRequiredConverters());
     _typeConvertersMap.put(CategoryDao.class, CategoryDao_Impl.getRequiredConverters());
     _typeConvertersMap.put(WeeklySavingsDao.class, WeeklySavingsDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(SplitEntryDao.class, SplitEntryDao_Impl.getRequiredConverters());
+    _typeConvertersMap.put(SplitCategoryDao.class, SplitCategoryDao_Impl.getRequiredConverters());
     return _typeConvertersMap;
   }
 
@@ -235,6 +279,34 @@ public final class AppDatabase_Impl extends AppDatabase {
           _weeklySavingsDao = new WeeklySavingsDao_Impl(this);
         }
         return _weeklySavingsDao;
+      }
+    }
+  }
+
+  @Override
+  public SplitEntryDao splitEntryDao() {
+    if (_splitEntryDao != null) {
+      return _splitEntryDao;
+    } else {
+      synchronized(this) {
+        if(_splitEntryDao == null) {
+          _splitEntryDao = new SplitEntryDao_Impl(this);
+        }
+        return _splitEntryDao;
+      }
+    }
+  }
+
+  @Override
+  public SplitCategoryDao splitCategoryDao() {
+    if (_splitCategoryDao != null) {
+      return _splitCategoryDao;
+    } else {
+      synchronized(this) {
+        if(_splitCategoryDao == null) {
+          _splitCategoryDao = new SplitCategoryDao_Impl(this);
+        }
+        return _splitCategoryDao;
       }
     }
   }

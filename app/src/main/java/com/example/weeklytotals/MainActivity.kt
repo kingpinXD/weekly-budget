@@ -21,6 +21,7 @@ import androidx.recyclerview.widget.RecyclerView
 import com.example.weeklytotals.data.BudgetPreferences
 import com.example.weeklytotals.data.CategoryEntity
 import com.example.weeklytotals.data.Transaction
+import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.android.material.button.MaterialButton
 import com.google.firebase.database.FirebaseDatabase
 
@@ -166,8 +167,31 @@ class MainActivity : AppCompatActivity() {
             startActivity(Intent(this, SettingsActivity::class.java))
         }
 
+        // Bottom navigation — set selected BEFORE listener to avoid loop
+        val bottomNav = findViewById<BottomNavigationView>(R.id.bottomNavigation)
+        bottomNav.selectedItemId = R.id.nav_weekly
+        bottomNav.setOnItemSelectedListener { item ->
+            when (item.itemId) {
+                R.id.nav_weekly -> true
+                R.id.nav_split -> {
+                    val intent = Intent(this, SplitActivity::class.java)
+                    intent.addFlags(Intent.FLAG_ACTIVITY_REORDER_TO_FRONT)
+                    startActivity(intent)
+                    overridePendingTransition(0, 0)
+                    true
+                }
+                else -> false
+            }
+        }
+
         // Request SMS permission if auto-transactions is enabled
         requestSmsPermissionIfNeeded()
+    }
+
+    override fun onNewIntent(intent: Intent?) {
+        super.onNewIntent(intent)
+        // Re-select weekly tab when returning via REORDER_TO_FRONT
+        findViewById<BottomNavigationView>(R.id.bottomNavigation)?.selectedItemId = R.id.nav_weekly
     }
 
     private fun requestSmsPermissionIfNeeded() {

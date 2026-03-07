@@ -1,9 +1,9 @@
 -- Merging decision tree log ---
 manifest
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-78:12
-INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-78:12
-INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-78:12
-INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-78:12
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-94:12
+INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-94:12
+INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-94:12
+INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:2:1-94:12
 MERGED from [com.google.android.material:material:1.11.0] /Users/tanmay/.gradle/caches/transforms-3/936694d50863bb2b2ce359d10412e2cf/transformed/material-1.11.0/AndroidManifest.xml:17:1-24:12
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tanmay/.gradle/caches/transforms-3/c0d8a11f186f150bd63e210ac264ed65/transformed/constraintlayout-2.1.4/AndroidManifest.xml:2:1-11:12
 MERGED from [androidx.appcompat:appcompat-resources:1.6.1] /Users/tanmay/.gradle/caches/transforms-3/2fe93699af3d53d7d8168fbca95cfaaa/transformed/appcompat-resources-1.6.1/AndroidManifest.xml:17:1-22:12
@@ -97,8 +97,8 @@ ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/Andro
 	android:name
 		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:6:22-74
 application
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:8:5-76:19
-INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:8:5-76:19
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:8:5-92:19
+INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:8:5-92:19
 MERGED from [com.google.android.material:material:1.11.0] /Users/tanmay/.gradle/caches/transforms-3/936694d50863bb2b2ce359d10412e2cf/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [com.google.android.material:material:1.11.0] /Users/tanmay/.gradle/caches/transforms-3/936694d50863bb2b2ce359d10412e2cf/transformed/material-1.11.0/AndroidManifest.xml:22:5-20
 MERGED from [androidx.constraintlayout:constraintlayout:2.1.4] /Users/tanmay/.gradle/caches/transforms-3/c0d8a11f186f150bd63e210ac264ed65/transformed/constraintlayout-2.1.4/AndroidManifest.xml:9:5-20
@@ -174,91 +174,117 @@ ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/Andro
 	android:name
 		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:19:27-74
 activity#com.example.weeklytotals.MainActivity
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:23:9-25:40
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:23:9-26:46
+	android:launchMode
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:26:13-43
 	android:exported
 		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:25:13-37
 	android:name
 		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:24:13-41
 activity#com.example.weeklytotals.BudgetSetupActivity
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:27:9-29:40
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:28:9-30:40
 	android:exported
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:29:13-37
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:30:13-37
 	android:name
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:28:13-48
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:29:13-48
 activity#com.example.weeklytotals.SettingsActivity
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:31:9-34:57
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:32:9-35:57
 	android:exported
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:33:13-37
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:34:13-37
 	android:theme
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:34:13-54
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:35:13-54
 	android:name
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:32:13-45
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:33:13-45
 activity#com.example.weeklytotals.HistoryActivity
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:36:9-39:57
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:37:9-40:57
 	android:exported
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:38:13-37
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:39:13-37
 	android:theme
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:39:13-54
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:40:13-54
 	android:name
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:37:13-44
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:38:13-44
 activity#com.example.weeklytotals.ManageCategoriesActivity
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:41:9-44:57
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:42:9-45:57
 	android:exported
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:43:13-37
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:44:13-37
 	android:theme
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:44:13-54
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:45:13-54
 	android:name
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:42:13-53
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:43:13-53
 activity#com.example.weeklytotals.MonitoredAppsActivity
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:46:9-49:57
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:47:9-50:57
 	android:exported
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:48:13-37
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:49:13-37
 	android:theme
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:49:13-54
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:50:13-54
 	android:name
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:47:13-50
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:48:13-50
+activity#com.example.weeklytotals.SplitActivity
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:52:9-55:46
+	android:launchMode
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:55:13-43
+	android:exported
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:54:13-37
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:53:13-42
+activity#com.example.weeklytotals.SplitSettingsActivity
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:57:9-60:57
+	android:exported
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:59:13-37
+	android:theme
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:60:13-54
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:58:13-50
+activity#com.example.weeklytotals.SplitManageCategoriesActivity
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:62:9-65:57
+	android:exported
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:64:13-37
+	android:theme
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:65:13-54
+	android:name
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:63:13-58
 activity#com.example.weeklytotals.TransactionPromptActivity
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:51:9-56:39
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:67:9-72:39
 	android:excludeFromRecents
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:55:13-46
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:71:13-46
 	android:exported
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:53:13-37
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:69:13-37
 	android:theme
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:54:13-51
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:70:13-51
 	android:taskAffinity
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:56:13-36
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:72:13-36
 	android:name
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:52:13-54
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:68:13-54
 service#com.example.weeklytotals.notification.TransactionNotificationListenerService
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:58:9-65:19
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:74:9-81:19
 	android:exported
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:60:13-36
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:76:13-36
 	android:permission
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:61:13-87
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:77:13-87
 	android:name
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:59:13-80
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:75:13-80
 intent-filter#action:name:android.service.notification.NotificationListenerService
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:62:13-64:29
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:78:13-80:29
 action#android.service.notification.NotificationListenerService
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:63:17-99
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:79:17-99
 	android:name
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:63:25-96
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:79:25-96
 receiver#com.example.weeklytotals.sms.SmsBroadcastReceiver
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:67:9-74:20
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:83:9-90:20
 	android:exported
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:69:13-36
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:85:13-36
 	android:permission
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:70:13-66
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:86:13-66
 	android:name
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:68:13-53
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:84:13-53
 intent-filter#action:name:android.provider.Telephony.SMS_RECEIVED
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:71:13-73:29
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:87:13-89:29
 	android:priority
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:71:28-50
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:87:28-50
 action#android.provider.Telephony.SMS_RECEIVED
-ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:72:17-82
+ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:88:17-82
 	android:name
-		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:72:25-79
+		ADDED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml:88:25-79
 uses-sdk
 INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml reason: use-sdk injection requested
 INJECTED from /Users/tanmay/IdeaProjects/kingpinXD/weekly_totals/app/src/main/AndroidManifest.xml

@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_weekly"
+        android:icon="@drawable/ic_weekly"
+        android:title="@string/nav_weekly" />
+    <item
+        android:id="@+id/nav_split"
+        android:icon="@drawable/ic_split"
+        android:title="@string/nav_split" />
+</menu>

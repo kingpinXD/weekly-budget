@@ -45,6 +45,22 @@ install-phone: build
 	done < "$$tmpf"; \
 	rm -f "$$tmpf"
 
+VENV := .venv/bin/python3
+FB := $(VENV) scripts/firebase_tool.py
+
+# Firebase tool shortcuts
+fb-tree:
+	$(FB) tree
+
+fb-list:
+	$(FB) list-txn --week $(WEEK)
+
+fb-savings:
+	$(FB) get-savings
+
+fb-split:
+	$(FB) list-split
+
 clean:
 	./gradlew clean
 

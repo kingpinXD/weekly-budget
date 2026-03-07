@@ -22,7 +22,8 @@
 
         <activity
             android:name=".MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleTop" />
 
         <activity
             android:name=".BudgetSetupActivity"
@@ -45,6 +46,21 @@
 
         <activity
             android:name=".MonitoredAppsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.ActionBar" />
+
+        <activity
+            android:name=".SplitActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+
+        <activity
+            android:name=".SplitSettingsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.ActionBar" />
+
+        <activity
+            android:name=".SplitManageCategoriesActivity"
             android:exported="false"
             android:theme="@style/AppTheme.ActionBar" />
 
