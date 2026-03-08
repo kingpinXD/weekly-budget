@@ -7,11 +7,13 @@ import androidx.room.RoomDatabase
 import androidx.room.migration.Migration
 import androidx.sqlite.db.SupportSQLiteDatabase
 
-@Database(entities = [Transaction::class, CategoryEntity::class, WeeklySavings::class], version = 4, exportSchema = false)
+@Database(entities = [Transaction::class, CategoryEntity::class, WeeklySavings::class, SplitEntry::class, SplitCategory::class], version = 6, exportSchema = false)
 abstract class AppDatabase : RoomDatabase() {
     abstract fun transactionDao(): TransactionDao
     abstract fun categoryDao(): CategoryDao
     abstract fun weeklySavingsDao(): WeeklySavingsDao
+    abstract fun splitEntryDao(): SplitEntryDao
+    abstract fun splitCategoryDao(): SplitCategoryDao
 
     companion object {
         @Volatile
@@ -50,6 +52,32 @@ abstract class AppDatabase : RoomDatabase() {
             }
         }
 
+        private val MIGRATION_4_5 = object : Migration(4, 5) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                db.execSQL(
+                    """CREATE TABLE IF NOT EXISTS split_entries (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                        category TEXT NOT NULL,
+                        amount REAL NOT NULL,
+                        comment TEXT NOT NULL,
+                        splitType TEXT NOT NULL,
+                        createdByEmail TEXT NOT NULL,
+                        createdAt INTEGER NOT NULL
+                    )"""
+                )
+                db.execSQL(
+                    """CREATE TABLE IF NOT EXISTS split_categories (
+                        id INTEGER PRIMARY KEY AUTOINCREMENT NOT NULL,
+                        name TEXT NOT NULL,
+                        displayName TEXT NOT NULL,
+                        color TEXT NOT NULL,
+                        isSystem INTEGER NOT NULL DEFAULT 0
+                    )"""
+                )
+                seedDefaultSplitCategories(db)
+            }
+        }
+
         private fun seedDefaultCategories(db: SupportSQLiteDatabase) {
             db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('GAS', 'Gas', '#2196F3', 0)")
             db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('TRAVEL', 'Travel', '#9C27B0', 0)")
@@ -60,6 +88,30 @@ abstract class AppDatabase : RoomDatabase() {
             db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('ADJUSTMENT', 'Adjustment', '#F44336', 1)")
             db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) VALUES ('REFUND', 'Refund', '#009688', 0)")
         }
+
+        private val MIGRATION_5_6 = object : Migration(5, 6) {
+            override fun migrate(db: SupportSQLiteDatabase) {
+                // Replace old split defaults with new ones
+                db.execSQL("DELETE FROM split_categories WHERE name IN ('FOOD', 'GROCERIES', 'ENTERTAINMENT')")
+                db.execSQL("INSERT INTO split_categories (name, displayName, color, isSystem) SELECT 'CREDIT_CARD', 'Credit Card', '#2196F3', 0 WHERE NOT EXISTS (SELECT 1 FROM split_categories WHERE name = 'CREDIT_CARD')")
+            }
+        }
+
+        private fun seedDefaultSplitCategories(db: SupportSQLiteDatabase) {
+            db.execSQL("INSERT INTO split_categories (name, displayName, color, isSystem) VALUES ('CREDIT_CARD', 'Credit Card', '#2196F3', 0)")
+            db.execSQL("INSERT INTO split_categories (name, displayName, color, isSystem) VALUES ('TRAVEL', 'Travel', '#9C27B0', 0)")
+            db.execSQL("INSERT INTO split_categories (name, displayName, color, isSystem) VALUES ('MISC', 'Misc', '#607D8B', 0)")
+        }
+
+        private fun ensureDefaultSplitCategories(db: SupportSQLiteDatabase) {
+            db.execSQL("INSERT INTO split_categories (name, displayName, color, isSystem) SELECT 'CREDIT_CARD', 'Credit Card', '#2196F3', 0 WHERE NOT EXISTS (SELECT 1 FROM split_categories WHERE name = 'CREDIT_CARD')")
+            db.execSQL("INSERT INTO split_categories (name, displayName, color, isSystem) SELECT 'TRAVEL', 'Travel', '#9C27B0', 0 WHERE NOT EXISTS (SELECT 1 FROM split_categories WHERE name = 'TRAVEL')")
+            db.execSQL("INSERT INTO split_categories (name, displayName, color, isSystem) SELECT 'MISC', 'Misc', '#607D8B', 0 WHERE NOT EXISTS (SELECT 1 FROM split_categories WHERE name = 'MISC')")
+        }
+
+        val DEFAULT_SPLIT_CATEGORY_NAMES = setOf(
+            "CREDIT_CARD", "TRAVEL", "MISC"
+        )
 
         private fun ensureDefaultCategories(db: SupportSQLiteDatabase) {
             db.execSQL("INSERT INTO categories (name, displayName, color, isSystem) SELECT 'GAS', 'Gas', '#2196F3', 0 WHERE NOT EXISTS (SELECT 1 FROM categories WHERE name = 'GAS')")
@@ -88,15 +140,17 @@ abstract class AppDatabase : RoomDatabase() {
                     AppDatabase::class.java,
                     "weekly_totals.db"
                 )
-                    .addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4)
+                    .addMigrations(MIGRATION_1_2, MIGRATION_2_3, MIGRATION_3_4, MIGRATION_4_5, MIGRATION_5_6)
                     .addCallback(object : Callback() {
                         override fun onCreate(db: SupportSQLiteDatabase) {
                             super.onCreate(db)
                             seedDefaultCategories(db)
+                            seedDefaultSplitCategories(db)
                         }
                         override fun onOpen(db: SupportSQLiteDatabase) {
                             super.onOpen(db)
                             ensureDefaultCategories(db)
+                            ensureDefaultSplitCategories(db)
                         }
                     })
                     .build().also { INSTANCE = it }

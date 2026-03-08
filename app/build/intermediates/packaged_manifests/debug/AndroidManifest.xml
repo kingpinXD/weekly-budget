@@ -40,7 +40,8 @@
         </activity>
         <activity
             android:name="com.example.weeklytotals.MainActivity"
-            android:exported="false" />
+            android:exported="false"
+            android:launchMode="singleTop" />
         <activity
             android:name="com.example.weeklytotals.BudgetSetupActivity"
             android:exported="false" />
@@ -58,6 +59,18 @@
             android:theme="@style/AppTheme.ActionBar" />
         <activity
             android:name="com.example.weeklytotals.MonitoredAppsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity
+            android:name="com.example.weeklytotals.SplitActivity"
+            android:exported="false"
+            android:launchMode="singleTop" />
+        <activity
+            android:name="com.example.weeklytotals.SplitSettingsActivity"
+            android:exported="false"
+            android:theme="@style/AppTheme.ActionBar" />
+        <activity
+            android:name="com.example.weeklytotals.SplitManageCategoriesActivity"
             android:exported="false"
             android:theme="@style/AppTheme.ActionBar" />
         <activity
