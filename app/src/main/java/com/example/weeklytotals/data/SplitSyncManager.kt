@@ -29,6 +29,8 @@ class SplitSyncManager(context: Context) {
     private var suppressEntrySync = false
     @Volatile
     private var suppressCategorySync = false
+    @Volatile
+    private var isListening = false
 
     /** Completes after the first onDataChange from the entry listener. */
     val initialSyncComplete = CompletableDeferred<Unit>()
@@ -117,7 +119,17 @@ class SplitSyncManager(context: Context) {
         }
 
         val localEntries = entryDao.getAllEntriesSync()
-        val localByCreatedAt = localEntries.associateBy { it.createdAt }
+        // Deduplicate: if multiple local entries have same createdAt, keep only the first
+        val localByCreatedAt = mutableMapOf<Long, SplitEntry>()
+        for (entry in localEntries) {
+            if (entry.createdAt in localByCreatedAt) {
+                // Duplicate — delete it
+                entryDao.delete(entry)
+                Log.d(TAG, "Deleted duplicate local entry with createdAt=${entry.createdAt}")
+            } else {
+                localByCreatedAt[entry.createdAt] = entry
+            }
+        }
 
         // Insert or update remote entries locally
         for ((createdAt, data) in remoteEntries) {
@@ -280,7 +292,12 @@ class SplitSyncManager(context: Context) {
     // ── Start all listeners ─────────────────────────────────────────
 
     fun startListening() {
-        Log.d(TAG, "startListening() called — root: split/")
+        if (isListening) {
+            Log.d(TAG, "startListening() skipped — already listening")
+            return
+        }
+        isListening = true
+        Log.d(TAG, "startListening() called — root: weekly_totals/split/")
         pushAllLocalData()
         startEntryListener()
         startCategoryListener()
