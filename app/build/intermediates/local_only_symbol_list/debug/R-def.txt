@@ -113,6 +113,8 @@ layout item_split_entry
 layout item_transaction
 menu bottom_nav_menu
 menu menu_main
+mipmap ic_launcher
+mipmap ic_launcher_round
 string access_denied
 string add_button
 string add_category_button

@@ -27,7 +27,7 @@
     <string name="amount_format">$%.2f CAD</string>
     <string name="amount_hint">Amount</string>
     <string name="app_icon_description">App icon</string>
-    <string name="app_name">Weekly Totals</string>
+    <string name="app_name">Gulluz</string>
     <string name="auto_transactions_description">When enabled, bank SMS messages and app notifications will trigger a popup to quickly add the transaction to your budget.</string>
     <string name="auto_transactions_section_title">Auto Transactions</string>
     <string name="auto_transactions_toggle">Auto detect transactions</string>
@@ -61,7 +61,7 @@
     <string name="google_app_id" translatable="false">1:230715917738:android:36779ae5a71f81526a57d3</string>
     <string name="google_crash_reporting_api_key" translatable="false">AIzaSyA75OPypJzR3BuBidbLlpNTmw7JYdAiIYE</string>
     <string name="google_storage_bucket" translatable="false">weekly-totals.firebasestorage.app</string>
-    <string name="greeting">Hello, Weekly Totals!</string>
+    <string name="greeting">Hello, Gulluz!</string>
     <string name="history_button">View Spending History</string>
     <string name="history_month">Month</string>
     <string name="history_no_data">No spending data for this period</string>

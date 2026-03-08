@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <string name="app_name">Weekly Totals</string>
-    <string name="greeting">Hello, Weekly Totals!</string>
+    <string name="app_name">Gulluz</string>
+    <string name="greeting">Hello, Gulluz!</string>
 
     <!-- Budget Setup -->
     <string name="budget_setup_title">Set Your Weekly Budget</string>

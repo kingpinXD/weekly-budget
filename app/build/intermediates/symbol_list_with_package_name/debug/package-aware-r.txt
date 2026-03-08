@@ -3936,6 +3936,8 @@ layout select_dialog_singlechoice_material
 layout support_simple_spinner_dropdown_item
 menu bottom_nav_menu
 menu menu_main
+mipmap ic_launcher
+mipmap ic_launcher_round
 plurals mtrl_badge_content_description
 raw firebase_common_keep
 string abc_action_bar_home_description

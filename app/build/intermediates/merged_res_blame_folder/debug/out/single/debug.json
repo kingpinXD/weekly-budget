@@ -4,12 +4,24 @@
         "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/color/bottom_nav_tint.xml"
     },
     {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/mipmap-xxxhdpi_ic_launcher.png.flat",
+        "source": "com.example.weeklytotals.app-main-50:/mipmap-xxxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/mipmap-xhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.weeklytotals.app-main-50:/mipmap-xhdpi/ic_launcher_round.png"
+    },
+    {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_split_settings.xml.flat",
         "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_split_settings.xml"
     },
     {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/drawable_rounded_card.xml.flat",
         "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/drawable/rounded_card.xml"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/mipmap-mdpi_ic_launcher.png.flat",
+        "source": "com.example.weeklytotals.app-main-50:/mipmap-mdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_item_category.xml.flat",
@@ -28,12 +40,24 @@
         "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_main.xml"
     },
     {
-        "merged": "com.example.weeklytotals.app-merged_res-48:/drawable_rounded_balance_box.xml.flat",
-        "source": "com.example.weeklytotals.app-main-50:/drawable/rounded_balance_box.xml"
+        "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/drawable_rounded_balance_box.xml.flat",
+        "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/drawable/rounded_balance_box.xml"
     },
     {
-        "merged": "com.example.weeklytotals.app-merged_res-48:/layout_activity_split.xml.flat",
-        "source": "com.example.weeklytotals.app-main-50:/layout/activity_split.xml"
+        "merged": "com.example.weeklytotals.app-merged_res-48:/mipmap-xxhdpi_ic_launcher.png.flat",
+        "source": "com.example.weeklytotals.app-main-50:/mipmap-xxhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/mipmap-hdpi_ic_launcher_round.png.flat",
+        "source": "com.example.weeklytotals.app-main-50:/mipmap-hdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/mipmap-mdpi_ic_launcher_round.png.flat",
+        "source": "com.example.weeklytotals.app-main-50:/mipmap-mdpi/ic_launcher_round.png"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/mipmap-xxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.weeklytotals.app-main-50:/mipmap-xxhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_item_transaction.xml.flat",
@@ -42,6 +66,14 @@
     {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_monitored_apps.xml.flat",
         "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_monitored_apps.xml"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/mipmap-xhdpi_ic_launcher.png.flat",
+        "source": "com.example.weeklytotals.app-main-50:/mipmap-xhdpi/ic_launcher.png"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/mipmap-xxxhdpi_ic_launcher_round.png.flat",
+        "source": "com.example.weeklytotals.app-main-50:/mipmap-xxxhdpi/ic_launcher_round.png"
     },
     {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/drawable_rounded_input_bg.xml.flat",
@@ -70,6 +102,10 @@
     {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_split.xml.flat",
         "source": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-main-50:/layout/activity_split.xml"
+    },
+    {
+        "merged": "com.example.weeklytotals.app-merged_res-48:/mipmap-hdpi_ic_launcher.png.flat",
+        "source": "com.example.weeklytotals.app-main-50:/mipmap-hdpi/ic_launcher.png"
     },
     {
         "merged": "/Users/tanmay/.gradle/daemon/8.5/com.example.weeklytotals.app-merged_res-48:/layout_activity_transaction_prompt.xml.flat",
